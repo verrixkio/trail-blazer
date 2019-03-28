@@ -1,0 +1,2 @@
+class TrailSolution < ApplicationRecord
+end
