@@ -1,0 +1,3 @@
+class NewTrail < ApplicationRecord
+  
+end
