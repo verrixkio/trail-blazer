@@ -8,7 +8,7 @@ class ListsContainer extends Component {
         }
     }
     componentDidMount() {
-        axios.get('api/v1/lists.json')
+        axios.get('api/v1/new_trails.json')
         .then(response => {
             console.log(response)
             this.setState({
@@ -23,8 +23,7 @@ class ListsContainer extends Component {
                 {this.state.lists.map( list => {
                     return (
                         <div className="single-list" key={list.id}>
-                            <h4>{list.title}</h4>
-                            <p>{list.excerpt}</p>
+                            <h4>{list.name}</h4>
                         </div>
                     )
                 })}
