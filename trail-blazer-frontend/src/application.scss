@@ -1,0 +1,65 @@
+/*
+
+* Description:    CSS Layout for Trail Blazers Application V1A
+* Date Created:   19/03/29
+* Date Updated:   19/03/31
+
+* 01. Variables
+* 02. Layout
+* 03. Typography
+* 04. Top Menu Bar
+* 05. Bottom Menu Bar
+* 06. Form
+* 07. Message Panel
+* 08. Button
+* 09. iFrame
+
+*/
+
+/* ==========================================================================
+Mixins
+========================================================================== */
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+  -webkit-transition: $what $time $how;
+  -moz-transition:    $what $time $how;
+  -ms-transition:     $what $time $how;
+  -o-transition:      $what $time $how;
+  transition:         $what $time $how;
+}
+
+/* ==========================================================================
+Variables \ Brand Colour
+========================================================================== */
+$color-brand-palette-1: #CFB590;
+$color-brand-palette-2: #9E9A41;
+$color-brand-palette-3: #758918;
+$color-brand-palette-4: #564334;
+$color-brand-palette-5: #49281F;
+
+$color-primary-0: #CFB590;	
+$color-primary-1: #FFF6E9;
+$color-primary-2: #F4E2C7;
+$color-primary-3: #AE8F63;
+$color-primary-4: #866940;
+
+$color-grey-1: #230A04;
+$color-grey-2: #888888;
+$color-grey-3: #e7e7e7;
+
+/* ==========================================================================
+Variables \ Brand Fonts
+========================================================================== */
+$sans-serif-primary: "Open Sans", Arial, sans-serif;
+$serif-primary: "Merriweather", serif;
+
+/* ==========================================================================
+Imports
+========================================================================== */
+@import 'reset';
+@import 'layout';
+@import 'typography';
+@import 'top-menu-bar';
+@import 'btm-menu-bar';
+@import 'form';
+@import 'msg-panel';
+@import 'button';
