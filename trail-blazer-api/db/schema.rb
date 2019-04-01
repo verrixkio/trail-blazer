@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20190331211958) do
   end
 
   create_table "ratings", force: :cascade do |t|
-    t.string "feedback"
+    t.integer "feedback"
     t.bigint "trails_id"
     t.bigint "users_id"
     t.datetime "created_at", null: false
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20190331211958) do
 
   create_table "trail_solutions", force: :cascade do |t|
     t.string "description_to_fix"
-    t.integer "timeline"
+    t.integer "timeline_days"
     t.integer "cost"
     t.string "collaboration"
     t.bigint "trails_id"
@@ -55,7 +55,13 @@ ActiveRecord::Schema.define(version: 20190331211958) do
   end
 
   create_table "trails", force: :cascade do |t|
+    t.integer "trail_forks_id"
     t.string "name"
+    t.string "description"
+    t.integer "length"
+    t.integer "difficulty"
+    t.integer "condition"
+    t.string "coded_path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

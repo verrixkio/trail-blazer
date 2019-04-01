@@ -1,0 +1,24 @@
+.btn,
+a.btn {
+  
+    margin: 40px 0 0;
+    padding: 10px;
+    width: 100%;
+    background: $color-brand-palette-3;
+    border-color: $color-brand-palette-3;
+    border-radius: 0px;
+    font: 400 18px/1.5em $sans-serif-primary;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(0,0,0,0.7);
+    @include transition (all, 0.3s, ease-out);
+  &:hover,
+  &:focus {
+    background: $color-brand-palette-3;
+    border-color: $color-brand-palette-3;
+    background: $color-brand-palette-2;
+    border-color: $color-brand-palette-2;
+  }
+}
+.btn-primary {
+    border-color: none;
+}

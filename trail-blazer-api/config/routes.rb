@@ -2,10 +2,15 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :new_trails
-      resources :users, only: [:create, :update, :show]
-      resources :ratings, only: [:create, :update, :show, :delete]
-      resources :comments, only: [:create, :update, :show, :delete]
-      resources :trail_solutions, only: [:create, :update, :show]
+<<<<<<< HEAD
+
+=======
+      resources :trails
+      resources :users
+      resources :ratings
+      resources :comments
+      resources :trail_solutions
+>>>>>>> 51a3744a25b0e764ed5debddf48339a06b682287
     end
 end
 
