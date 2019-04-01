@@ -69,6 +69,20 @@ class App extends Component {
 
       </footer>
 
+      <div className="msg-panel msg-panel--from-right js-msg-panel-main">
+        <div className="msg-panel__container">
+          <div className="msg-panel__content">
+            
+            <a href="#0" className="msg-panel__close js-cd-close">Close</a>
+            
+            <h2>Header Level 2</h2>
+
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    
+          </div>
+        </div> 
+      </div>
+
       </div>
     );
   }
