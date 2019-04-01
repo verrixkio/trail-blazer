@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :new_trails
+      resources :trails
+      resources :users
+      resources :ratings
+      resources :comments
+      resources :trail_solutions
     end
 end
 
