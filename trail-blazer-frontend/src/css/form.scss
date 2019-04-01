@@ -1,0 +1,53 @@
+/* ============================================================================= 
+Form
+================================================================================ */
+form {
+  width: 100%;  
+}
+form label {
+  display: block;
+  margin: 10px 0;
+  font: normal 300 18px/40px $sans-serif-primary;
+  text-transform: uppercase;
+}
+form input,
+form textarea {
+  height: 40px;
+  width: calc(100% - 16px);
+  margin: 0 0 10px 0;
+  padding: 0 7px;
+  background-color: transparent;
+  border: 1px solid $color-grey-2;
+  border-radius: 3px;
+  color: white;
+  font: normal 300 20px/40px $sans-serif-primary;
+  resize: none;
+  @include transition (all, 0.3s, ease-out);
+}
+form input:required,
+form textarea:required {
+  box-shadow: none;
+}
+form input:invalid,
+form textarea:invalid {
+  box-shadow: none;
+}
+form textarea {
+  height: auto;
+  width: calc(100% - 16px);
+  padding: 7px;
+  line-height: 1.4em;
+}
+form input:focus,
+form textarea:focus {
+  background: $color-grey-3;
+  color: $color-grey-1;
+  outline: 0;
+}
+.success,
+.error {
+  display: block;
+  padding: 0 0 10px 0;
+  font-size: 20px;
+  font-weight: 300;
+}
