@@ -186,6 +186,7 @@ Top Menu Bar
   font: 500 18px/20px "Open Sans", Arial, sans-serif;
   text-decoration: none;
   text-transform: uppercase;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.8);
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
@@ -230,7 +231,10 @@ Bottom Menu Bar
 .nav > li {
   display: inline-block;
   width: 30%;
-  margin: 0 1.6665% 0 1.6665%; }
+  margin: 0 1.6665% 0 1.6665%;
+  font: 500 16px/20px "Open Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.8); }
   .nav > li:first-child {
     margin: 0 1.6665% 0 0; }
   .nav > li:last-child {
@@ -293,21 +297,22 @@ form {
 
 form label {
   display: block;
-  margin: 10px 0;
-  font: normal 300 18px/40px "Open Sans", Arial, sans-serif;
+  margin: 0 0 7px;
+  color: #CFB590;
+  font: normal 400 18px/40px "Open Sans", Arial, sans-serif;
   text-transform: uppercase; }
 
 form input,
 form textarea {
   height: 40px;
-  width: calc(100% - 16px);
+  width: 100%;
   margin: 0 0 10px 0;
   padding: 0 7px;
   background-color: transparent;
-  border: 1px solid #888888;
-  border-radius: 3px;
+  border: 1px solid #758918;
+  border-radius: 0px;
   color: white;
-  font: normal 300 20px/40px "Open Sans", Arial, sans-serif;
+  font: normal 400 18px/40px "Open Sans", Arial, sans-serif;
   resize: none;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -341,6 +346,24 @@ form textarea:focus {
   padding: 0 0 10px 0;
   font-size: 20px;
   font-weight: 300; }
+
+.form-group {
+  margin-bottom: 0px; }
+
+.web-form h2 {
+  color: #9E9A41; }
+
+.login-msg {
+  margin: 40px 0 0;
+  color: #CFB590;
+  text-align: center; }
+  .login-msg a,
+  .login-msg a:link,
+  .login-msg a:visited {
+    color: white !important; }
+  .login-msg a:hover,
+  .login-msg a:focus {
+    color: #9E9A41 !important; }
 
 /* ============================================================================= 
 Message Panel
@@ -535,15 +558,17 @@ Message Panel \ CD Panel Content
 
 .btn,
 a.btn {
-  margin: 40px 0 0;
+  margin: 20px 0 0;
   padding: 10px;
   width: 100%;
   background: #758918;
   border-color: #758918;
   border-radius: 0px;
-  font: 400 18px/1.5em "Open Sans", Arial, sans-serif;
+  color: #FFF6E9;
+  font: 400 20px/1.5em "Open Sans", Arial, sans-serif;
   text-decoration: none;
   text-shadow: 0 1px rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
@@ -555,7 +580,8 @@ a.btn {
     background: #758918;
     border-color: #758918;
     background: #9E9A41;
-    border-color: #9E9A41; }
+    border-color: #9E9A41;
+    color: #FFF6E9; }
 
 .btn-primary {
   border-color: none; }
