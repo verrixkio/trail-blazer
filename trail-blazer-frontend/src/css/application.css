@@ -586,6 +586,30 @@ a.btn {
 .btn-primary {
   border-color: none; }
 
+.btn.secondary,
+a.btn.secondary {
+  margin: 20px 0 0;
+  padding: 10px;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #758918;
+  border-radius: 0px;
+  color: #CFB590;
+  font: 400 20px/1.5em "Open Sans", Arial, sans-serif;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.7);
+  text-transform: none;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+  .btn.secondary:hover, .btn.secondary:focus,
+  a.btn.secondary:hover,
+  a.btn.secondary:focus {
+    border-color: #9E9A41;
+    color: #FFF6E9; }
+
 /* ==========================================================================
 08. Responsive iFrame
 ========================================================================== */
@@ -651,3 +675,21 @@ Trail Panel
   .trail ul {
     font-size: 18px;
     font-weight: 400; }
+
+/* ============================================================================= 
+Landing Page
+================================================================================ */
+.landing-page h1 {
+  margin: 0 0 40px;
+  color: #CFB590;
+  font: 400 16px/1.5em "Open Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center; }
+
+.landing-page p {
+  color: #CFB590;
+  font: 500 22px/1.5em "Open Sans", Arial, sans-serif;
+  text-align: center; }
+
+.landing-page .btn.reset {
+  margin: 40px 0 0; }
