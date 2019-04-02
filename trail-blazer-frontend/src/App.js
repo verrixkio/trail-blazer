@@ -1,25 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
 import ListsContainer from './components/ListsContainer';
-<<<<<<< HEAD
-import GoogleApiWrapper from './Map';
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Hello Hiplyst!</h1>
-        </header>
-        <GoogleApiWrapper />
-        <ListsContainer />
-=======
-import logo from './logo.svg';
-import map from './images/trail-demo-image.jpg';
+import MapContainer from './components/mapContainer';
+//import logo from './logo.svg';
+//import map from './images/trail-demo-image.jpg';
 import './css/application.css';
 
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+
+
+  
 function Index() {
       return (
   
@@ -40,7 +32,7 @@ function Index() {
                 <div className="col-sm-8 col-sm-push-4 right">
                 
                   <div className="iframe-rwd">
-                    <img src={map} alt="logo" />
+                    <MapContainer />
                   </div>
       
                 </div> 
@@ -143,16 +135,10 @@ function AppRouter() {
         <Route path="/trail/" component={About} />
         <Route path="/login/" component={Login} />
         <Route path="/register/" component={Register} />
->>>>>>> 51a3744a25b0e764ed5debddf48339a06b682287
       </div>
     </Router>
   );
 }
 
-<<<<<<< HEAD
- 
-export default App;
-=======
 export default AppRouter;
 
->>>>>>> 51a3744a25b0e764ed5debddf48339a06b682287
