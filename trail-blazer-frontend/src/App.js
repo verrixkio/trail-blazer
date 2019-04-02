@@ -1,114 +1,223 @@
 import React, { Component } from 'react';
 import './App.css';
+
 import ListsContainer from './components/ListsContainer';
 import map from './images/trail-demo-image.jpg';
 import './css/application.css';
-
+import TopBar from './components/TopBar';
+import BottomBar from './components/BottomBar';
+import MultiStepForm from './components/MultiStepForm';
+import SignUpForm from './components/SignUpForm';
+import LoginForm from './components/LoginForm';
+import TrailFullInfo from './components/TrailFullInfo';
+import TrailDonations from './components/TrailDonations';
+import TrailFixRequests from './components/TrailFixRequests';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function Index() {
-      return (
   
-        <div className="primary primary--full-width">
-          
-          <header className="primary__top-bar">
-          
-            <a href="/" className="logo">Trail Blazers</a>
+  return (
+
+      <div className="primary">
         
-          </header>
-  
-          <main className="primary__main">
-  
-            <div className="container-fluid">
+        <TopBar />
+
+        <main className="primary__main">
+          <div className="container-fluid">
+            <div className="row">
+
+              <div className="col-sm-8 col-sm-push-4 right">
               
-              <div className="row">
-  
-                <div className="col-sm-8 col-sm-push-4 right">
-                
-                  <div className="iframe-rwd">
-                    <img src={map} alt="logo" />
-                  </div>
-      
-                </div> 
-                  
-                <div className="col-sm-4 col-sm-pull-8 left">
-                
-                  <div className="trail">
-                  
-                    <ListsContainer />
-                      
-                    <button type="button" className="btn btn-primary cd-btn js-msg-panel-trigger" data-panel="main">Submit Request to Fix Trail</button>
-  
-                  </div>
-  
+                <div className="iframe-rwd">
+                  &nbsp;
                 </div>
+    
+              </div> 
                 
+              <div className="col-sm-4 col-sm-pull-8 left">
+              
+                <div className="trail">
+                
+                  <ListsContainer />
+
+                </div>
+
               </div>
-  
+              
             </div>
-            
-          </main>
-  
-          <footer className="primary__btm-bar">
-  
-            <ul className="nav navbar-nav">
-              <li>
-                <a href="#">
-                  <i className="fa fa-map"></i>
-                  Search Trails
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fa fa-map-marker"></i>
-                  My Trails
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fa fa-user"></i>
-                  My Account
-                </a>
-              </li>
-            </ul>
-  
-          </footer>
-  
-          <div className="msg-panel msg-panel--from-right js-msg-panel-main">
-            <div className="msg-panel__container">
-              <div className="msg-panel__content">
-                
-                <a href="#0" className="msg-panel__close js-cd-close">Close</a>
-                
-                <h2>Header Level 2</h2>
-  
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-        
-              </div>
-            </div> 
           </div>
-  
-        </div>
-      );
-    }
+        </main>
+
+        <BottomBar />
+
+      </div>
+    );
+  }
 
 function About() {
-  return <h2>Donations, Requests to fix, Comments, Full Trail info </h2>;
+  return (
+  
+    <div className="primary">
+        
+      <TopBar />
+
+      <main className="primary__main">
+        <div className="container-fluid">
+          <div className="row">
+
+            <div className="col-sm-12">
+              <h1>Donations, Requests to fix, Comments, Full Trail Info</h1>
+            </div>
+            
+          </div>
+          <div className="row">
+
+            <div className="col-sm-4">
+              <div className="trail__info">
+                    
+                  <TrailFullInfo />
+
+              </div>
+            </div>
+              
+            <div className="col-sm-4">
+              <div className="trail__requests">
+                  
+                <TrailDonations />
+
+              </div>
+            </div>
+
+            <div className="col-sm-4">
+              <div className="trail__donations">
+                    
+                <TrailFixRequests />
+
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </main>
+
+      <BottomBar />
+
+    </div>
+  );
 }
 
 function Login() {
-  return <h2>Login</h2>;
+  return (
+  
+    <div className="primary">
+
+      <main className="primary__main">
+        <div className="container-fluid">
+          <div className="row">
+
+            <div className="col-sm-4">
+              &nbsp;
+            </div> 
+              
+            <div className="col-sm-4">
+              <h1>Login</h1>
+              <div className="web-form">
+                  
+                <LoginForm />
+
+              </div>
+            </div>
+
+            <div className="col-sm-4">
+              &nbsp;
+            </div>
+            
+          </div>
+        </div>
+      </main>
+
+    </div>
+  );
 }
 
 function Register() {
-  return <h2>Register</h2>;
+  return (
+  
+    <div className="primary">
+
+      <main className="primary__main">
+        <div className="container-fluid">
+          <div className="row">
+
+            <div className="col-sm-4">
+              &nbsp;
+            </div> 
+              
+            <div className="col-sm-4">
+              <h1>Register</h1>  
+              <div className="web-form">
+                  
+                <SignUpForm />
+
+              </div>
+            </div>
+
+            <div className="col-sm-4">
+              &nbsp;
+            </div>
+            
+          </div>
+        </div>
+      </main>
+
+    </div>
+  );
+}
+
+function FormExample() {
+  return (
+  
+    <div className="primary">
+
+      <TopBar />
+
+      <main className="primary__main">
+        <div className="container-fluid">
+          <div className="row">
+
+            <div className="col-sm-4">
+              &nbsp;
+            </div>
+              
+            {this.state.showdonationform && <div className="col-sm-4">
+              <h1>Multi-Step Form</h1>
+              <div className="web-form">
+                  
+                <MultiStepForm />
+
+              </div>
+            </div>}
+
+            <div className="col-sm-4">
+              &nbsp;
+            </div>
+            
+          </div>
+        </div>
+      </main>
+
+      <BottomBar />
+
+    </div>
+  );
 }
 
 function AppRouter() {
   return (
     <Router>
       <div>
+      {/*
         <nav>
           <ul>
             <li>
@@ -125,11 +234,13 @@ function AppRouter() {
             </li>
           </ul>
         </nav>
+      */}
 
         <Route path="/" exact component={Index} />
         <Route path="/trail/" component={About} />
         <Route path="/login/" component={Login} />
         <Route path="/register/" component={Register} />
+        <Route path="/form-example/" component={FormExample} />
       </div>
     </Router>
   );
