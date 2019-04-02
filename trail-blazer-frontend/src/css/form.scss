@@ -6,21 +6,22 @@ form {
 }
 form label {
   display: block;
-  margin: 10px 0;
-  font: normal 300 18px/40px $sans-serif-primary;
+  margin: 0 0 7px;
+  color: $color-brand-palette-1;
+  font: normal 400 18px/40px $sans-serif-primary;
   text-transform: uppercase;
 }
 form input,
 form textarea {
   height: 40px;
-  width: calc(100% - 16px);
+  width: 100%;
   margin: 0 0 10px 0;
   padding: 0 7px;
   background-color: transparent;
-  border: 1px solid $color-grey-2;
-  border-radius: 3px;
+  border: 1px solid $color-brand-palette-3;
+  border-radius: 0px;
   color: white;
-  font: normal 300 20px/40px $sans-serif-primary;
+  font: normal 400 18px/40px $sans-serif-primary;
   resize: none;
   @include transition (all, 0.3s, ease-out);
 }
@@ -50,4 +51,31 @@ form textarea:focus {
   padding: 0 0 10px 0;
   font-size: 20px;
   font-weight: 300;
+}
+.form-group {
+	margin-bottom: 0px;
+}
+
+.web-form {
+  h2 {
+    color: $color-brand-palette-2;
+  }
+}
+
+.login-msg {
+  margin: 40px 0 0;
+  color: $color-brand-palette-1;
+  text-align: center;
+
+  a,
+  a:link,
+  a:visited {
+    color: white !important;
+  }
+
+  a:hover,
+  a:focus {
+    color: $color-brand-palette-2 !important;
+  }
+
 }
