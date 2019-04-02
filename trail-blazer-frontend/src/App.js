@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import ListsContainer from './components/ListsContainer';
-import logo from './logo.svg';
 import map from './images/trail-demo-image.jpg';
 import './css/application.css';
 
