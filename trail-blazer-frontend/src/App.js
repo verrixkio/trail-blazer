@@ -10,6 +10,8 @@ import LoginForm from './components/LoginForm';
 import TrailFullInfo from './components/TrailFullInfo';
 import TrailDonations from './components/TrailDonations';
 import TrailFixRequests from './components/TrailFixRequests';
+import TrailComments from './components/TrailComments';
+import LandingContent from './components/LandingContent';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -64,34 +66,28 @@ function About() {
         <div className="container-fluid">
           <div className="row">
 
-            <div className="col-sm-12">
-              <h1>Donations, Requests to fix, Comments, Full Trail Info</h1>
-            </div>
-            
-          </div>
-          <div className="row">
-
-            <div className="col-sm-4">
-              <div className="trail__info">
-                    
-                  <TrailFullInfo />
-
+            <div className="col-sm-3">
+              <div>
+                &nbsp;
               </div>
             </div>
               
-            <div className="col-sm-4">
-              <div className="trail__requests">
+            <div className="col-sm-6">
+              <div className="trail__view">
                   
+                <h1>Donations, Requests to fix, Comments, Full Trail Info</h1>
+
+                <TrailFullInfo />
                 <TrailDonations />
+                <TrailFixRequests />
+                <TrailComments />
 
               </div>
             </div>
 
-            <div className="col-sm-4">
-              <div className="trail__donations">
-                    
-                <TrailFixRequests />
-
+            <div className="col-sm-3">
+              <div>
+                &nbsp;
               </div>
             </div>
             
@@ -100,6 +96,37 @@ function About() {
       </main>
 
       <BottomBar />
+
+    </div>
+  );
+}
+
+function Landing() {
+  return (
+  
+    <div className="primary">
+
+      <main className="primary__main">
+        <div className="container-fluid">
+          <div className="row">
+
+            <div className="col-sm-3">
+              &nbsp;
+            </div> 
+              
+            <div className="col-sm-6">
+              
+              <LandingContent />
+
+            </div>
+
+            <div className="col-sm-3">
+              &nbsp;
+            </div>
+            
+          </div>
+        </div>
+      </main>
 
     </div>
   );
@@ -188,14 +215,14 @@ function FormExample() {
               &nbsp;
             </div>
               
-            {this.state.showdonationform && <div className="col-sm-4">
+            <div className="col-sm-4">
               <h1>Multi-Step Form</h1>
               <div className="web-form">
                   
                 <MultiStepForm />
 
               </div>
-            </div>}
+            </div>
 
             <div className="col-sm-4">
               &nbsp;
@@ -236,6 +263,7 @@ function AppRouter() {
 
         <Route path="/" exact component={Index} />
         <Route path="/trail/" component={About} />
+        <Route path="/landing" exact component={Landing} />
         <Route path="/login/" component={Login} />
         <Route path="/register/" component={Register} />
         <Route path="/form-example/" component={FormExample} />
