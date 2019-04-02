@@ -188,14 +188,14 @@ function FormExample() {
               &nbsp;
             </div>
               
-            {this.state.showdonationform && <div className="col-sm-4">
+            <div className="col-sm-4">
               <h1>Multi-Step Form</h1>
               <div className="web-form">
                   
                 <MultiStepForm />
 
               </div>
-            </div>}
+            </div>
 
             <div className="col-sm-4">
               &nbsp;
