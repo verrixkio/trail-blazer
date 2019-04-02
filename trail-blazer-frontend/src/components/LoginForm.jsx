@@ -26,7 +26,7 @@ class LoginForm extends Component {
                 placeholder="Enter password"
               />
             </div>
-            <button className="btn btn-block">Register</button>
+            <button className="btn btn-block">Login</button>
           </form>
 
           <p className="login-msg">Don’t have an account? <a href="/register">Sign up here.</a></p>
