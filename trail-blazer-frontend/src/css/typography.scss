@@ -48,13 +48,66 @@ ul {
   margin: 0;
   padding: 0;
 }
+h3.logo-sml {
+  margin: 0 0 5px;
+  color: $color-brand-palette-1;
+  font: 400 16px/24px $sans-serif-primary;
+  text-align: center;
+}
+
+.push-menu {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 60px;
+  .left,
+  .right {
+    display: inline-block;
+    width: calc(50% - 2px);
+    padding: 2px 20px;
+    border: 1px solid $color-brand-palette-3;
+    color: white;
+    font: 400 12px/20px $sans-serif-primary;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include transition (all, 0.3s, ease-out);
+    &:hover,
+    &:focus {
+      background: $color-brand-palette-2;  
+    }
+  }
+  .left {
+    background: $color-brand-palette-3;
+  }
+}
+
+.push-menu.reverse {
+
+  .left {
+    background: transparent;
+      &:hover,
+      &:focus {
+        background: $color-brand-palette-2;  
+      }
+  }
+  .right {
+    background: $color-brand-palette-3;
+      &:hover,
+      &:focus {
+        background: $color-brand-palette-2;  
+      }
+  }
+  
+}
+
+
 
 /* ============================================================================= 
 02. Typography \ Media Queries
 ================================================================================ */
 @media only screen and (min-width: 800px) and (max-width: 1279px) {
   h1 {
-    font-size: 1.7500rem;
+    font-size: 28px;
   }
   h2 {
     font-size: 24px;
