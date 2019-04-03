@@ -6,7 +6,7 @@ form {
 }
 form label {
   display: block;
-  margin: 0 0 7px;
+  margin: 0 0 3px;
   color: $color-brand-palette-1;
   font: normal 400 18px/40px $sans-serif-primary;
   text-transform: uppercase;
@@ -57,6 +57,11 @@ form textarea:focus {
 }
 
 .web-form {
+  h1 {
+    color: $color-brand-palette-1;
+    font: 500 32px/40px $sans-serif-primary;
+    text-transform: uppercase;
+  }
   h2 {
     color: $color-brand-palette-2;
   }
@@ -78,4 +83,14 @@ form textarea:focus {
     color: $color-brand-palette-2 !important;
   }
 
+}
+
+
+
+
+@media only screen and (max-width: 799px) {
+  .form-row {
+    min-height: 100vh;
+    background: $color-brand-palette-4;
+  }
 }
