@@ -10,9 +10,9 @@ class ListsContainer extends Component {
     componentDidMount() {
         axios.get('api/v1/trails.json')
         .then(response => {
-            this.setState({
+            this.setState([{
                 lists: response.data
-            })
+            }])
         })
         .catch(error => console.log(error))
     }

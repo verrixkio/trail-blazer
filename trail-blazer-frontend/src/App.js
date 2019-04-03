@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import ListsContainer from './components/ListsContainer';
+import MapContainer from './components/mapContainer';
 import './css/application.css';
 import ListsContainer from './components/ListsContainer';
 import TopBar from './components/TopBar';
@@ -15,6 +17,9 @@ import LandingContent from './components/LandingContent';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+
+
+  
 function Index() {
   
   return (
@@ -35,6 +40,13 @@ function Index() {
     
               </div> 
                 
+                  <div className="iframe-rwd">
+                    <MapContainer />
+                  </div>
+      
+                </div> 
+                  
+                <div className="col-sm-4 col-sm-pull-8 left">
               <div className="col-sm-4 col-sm-pull-8 left">
               
                 <div className="trail">
