@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import ListsContainer from './components/ListsContainer';
-import MapContainer from './components/mapContainer';
 import './css/application.css';
 import ListsContainer from './components/ListsContainer';
+import MapContainer from './components/mapContainer';
 import TopBar from './components/TopBar';
 import BottomBar from './components/BottomBar';
 import MultiStepForm from './components/MultiStepForm';
@@ -16,9 +15,6 @@ import TrailComments from './components/TrailComments';
 import LandingContent from './components/LandingContent';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-
-
   
 function Index() {
   
