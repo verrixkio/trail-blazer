@@ -8,7 +8,7 @@ Top Menu Bar
   width: 100%;
   padding: 20px;
   background-color: $color-brand-palette-5;
-  color: white;
+  color: $color-brand-palette-1;
   -webkit-box-shadow: 1px 4px 4px 0 rgba(0,0,0,.25);
   box-shadow: 1px 4px 4px 0 rgba(0,0,0,.25);
   z-index: 2;
@@ -25,7 +25,7 @@ Top Menu Bar
   @include transition (all, 0.3s, ease-out);
   &:link,
   &:visited {
-    color: white;  
+    color: $color-brand-palette-1;  
     text-decoration: none;
   }
   &:hover,
