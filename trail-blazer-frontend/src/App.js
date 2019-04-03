@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-
 import ListsContainer from './components/ListsContainer';
 import MapContainer from './components/mapContainer';
-//import logo from './logo.svg';
-//import map from './images/trail-demo-image.jpg';
 import './css/application.css';
+import ListsContainer from './components/ListsContainer';
 import TopBar from './components/TopBar';
 import BottomBar from './components/BottomBar';
 import MultiStepForm from './components/MultiStepForm';
@@ -89,7 +87,7 @@ function About() {
             <div className="col-sm-6">
               <div className="trail__view">
                   
-                <h1>Donations, Requests to fix, Comments, Full Trail Info</h1>
+                <h1>Trail Information</h1>
 
                 <TrailFullInfo />
                 <TrailDonations />
@@ -154,13 +152,25 @@ function Login() {
       <main className="primary__main">
         <div className="container-fluid">
           <div className="row">
+          
+            <div className="col-sm-12">
+              <h3 className="logo-sml">Trail Blazers</h3>
+              <div className="push-menu reverse">
+                <a href="/register" className="left">Register</a>
+                <a href="/login" className="right">Login</a>
+              </div>
+            </div>
+          
+          </div>  
+        
+          <div className="row form-row">
 
-            <div className="col-sm-4">
+            <div className="col-sm-3">
               &nbsp;
             </div> 
               
-            <div className="col-sm-4">
-              <h1>Login</h1>
+            <div className="col-sm-6">
+              
               <div className="web-form">
                   
                 <LoginForm />
@@ -168,7 +178,7 @@ function Login() {
               </div>
             </div>
 
-            <div className="col-sm-4">
+            <div className="col-sm-3">
               &nbsp;
             </div>
             
@@ -187,14 +197,25 @@ function Register() {
 
       <main className="primary__main">
         <div className="container-fluid">
-          <div className="row">
+        <div className="row">
+          
+        <div className="col-sm-12">
+          <h3 className="logo-sml">Trail Blazers</h3>
+          <div className="push-menu">
+            <a href="/register" className="left">Register</a>
+            <a href="/login" className="right">Login</a>
+          </div>
+        </div>
+      
+      </div>  
+    
+      <div className="row form-row">
 
-            <div className="col-sm-4">
+            <div className="col-sm-3">
               &nbsp;
             </div> 
               
-            <div className="col-sm-4">
-              <h1>Register</h1>  
+            <div className="col-sm-6">
               <div className="web-form">
                   
                 <SignUpForm />
@@ -202,7 +223,7 @@ function Register() {
               </div>
             </div>
 
-            <div className="col-sm-4">
+            <div className="col-sm-3">
               &nbsp;
             </div>
             

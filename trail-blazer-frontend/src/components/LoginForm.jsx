@@ -5,7 +5,8 @@ class LoginForm extends Component {
     return (
 
         <div>
-          <form>
+          <h1>Login</h1>
+          <form className="login-form">
             <div className="form-group">
               <label htmlFor="username">Username</label>
               <input

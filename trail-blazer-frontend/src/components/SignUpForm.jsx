@@ -5,6 +5,7 @@ class SignUpForm extends Component {
     return (
 
         <div>
+          <h1>Register</h1>
           <form>
             <div className="form-group">
               <label htmlFor="username">Username</label>
