@@ -1,3 +1,4 @@
+    
 import './App.css';
 
 import React from 'react'
@@ -20,10 +21,6 @@ import LandingContent from './components/LandingContent';
 
 import { BrowserRouter as Router, Route} from "react-router-dom";
 
-
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-  
-
 function Index() {
   
   return (
@@ -32,41 +29,41 @@ function Index() {
         
         <TopBar />
 
-        <main className="primary__main">
-          <div className="container-fluid reset">
-            <div className="row">
+<main className="primary__main">
+  <div className="container-fluid reset">
+    <div className="row">
 
-              <div className="col-sm-12">
-              
-                <div className="iframe-rwd">
-
-                  <MapContainer />
-
-                </div>
-    
-              </div> 
+      <div className="col-sm-12">
       
-              </div> 
-                  
-              <div className="col-sm-12">
-              
-                <div className="trail">
-                
-                  {/* <ListsContainer /> */}
+        <div className="iframe-rwd">
 
-                </div>
+          <MapContainer />
 
-              </div>
-              
-            </div>
+        </div>
+
+      </div> 
+
+      </div> 
           
-        </main>
+      <div className="col-sm-12">
+      
+        <div className="trail">
+        
+          {/* <ListsContainer /> */}
 
-        <BottomBar />
+        </div>
 
       </div>
-    );
-  }
+      
+    </div>
+  
+</main>
+
+<BottomBar />
+
+</div>
+);
+}
 
 function About() {
   return (
@@ -79,28 +76,34 @@ function About() {
         <div className="container-fluid">
           <div className="row">
 
-            <div className="col-sm-3">
-              <div>
-                &nbsp;
+            <div className="col-sm-12">
+              <h1>Donations, Requests to fix, Comments, Full Trail Info</h1>
+            </div>
+            
+          </div>
+          <div className="row">
+
+            <div className="col-sm-4">
+              <div className="trail__info">
+                    
+                  <TrailFullInfo />
+
               </div>
             </div>
               
-            <div className="col-sm-6">
-              <div className="trail__view">
+            <div className="col-sm-4">
+              <div className="trail__requests">
                   
-                <h1>Trail Information</h1>
-
-                <TrailFullInfo />
                 <TrailDonations />
-                <TrailFixRequests />
-                <TrailComments />
 
               </div>
             </div>
 
-            <div className="col-sm-3">
-              <div>
-                &nbsp;
+            <div className="col-sm-4">
+              <div className="trail__donations">
+                    
+                <TrailFixRequests />
+
               </div>
             </div>
             
@@ -114,29 +117,6 @@ function About() {
   );
 }
 
-function Landing() {
-  return (
-  
-    <div className="primary">
-
-      <main className="primary__main">
-        <div className="container-fluid">
-          <div className="row">
-
-            <div className="col-sm-12">
-              
-              <LandingContent />
-
-            </div>
-            
-          </div>
-        </div>
-      </main>
-
-    </div>
-  );
-}
-
 function Login() {
   return (
   
@@ -145,29 +125,22 @@ function Login() {
       <main className="primary__main">
         <div className="container-fluid">
           <div className="row">
-          
-            <div className="col-sm-12">
 
-              <h3 className="logo-sml">Trail Blazers</h3>
-              <div className="push-menu reverse">
-                <a href="/register" className="left">Register</a>
-                <a href="/login" className="right">Login</a>
-              </div>
-
-            </div>
-          
-          </div>  
-        
-          <div className="row form-row">
-
-            <div className="col-sm-12">
+            <div className="col-sm-4">
+              &nbsp;
+            </div> 
               
+            <div className="col-sm-4">
+              <h1>Login</h1>
               <div className="web-form">
                   
                 <LoginForm />
 
               </div>
-              
+            </div>
+
+            <div className="col-sm-4">
+              &nbsp;
             </div>
             
           </div>
@@ -177,7 +150,6 @@ function Login() {
     </div>
   );
 }
-
 function Register() {
   return (
   
@@ -185,37 +157,28 @@ function Register() {
 
       <main className="primary__main">
         <div className="container-fluid">
-        
-        <div className="row">
-          
-          <div className="col-sm-12">
+          <div className="row">
 
-            <h3 className="logo-sml">Trail Blazers</h3>
-            <div className="push-menu">
-              <a href="/register" className="left">Register</a>
-              <a href="/login" className="right">Login</a>
+            <div className="col-sm-4">
+              &nbsp;
+            </div> 
+              
+            <div className="col-sm-4">
+              <h1>Register</h1>  
+              <div className="web-form">
+                  
+                <SignUpForm />
+
+              </div>
             </div>
 
-          </div>
-        
-        </div>  
-    
-        <div className="row form-row">
-
-          <div className="col-sm-12">
-
-            <div className="web-form">
-                
-              <SignUpForm />
-
+            <div className="col-sm-4">
+              &nbsp;
             </div>
-
+            
           </div>
-
         </div>
-        
-      </div>
-    </main>
+      </main>
 
     </div>
   );
@@ -284,7 +247,6 @@ function AppRouter() {
 
         <Route path="/" exact component={Index} />
         <Route path="/trail/" component={About} />
-        <Route path="/landing" exact component={Landing} />
         <Route path="/login/" component={Login} />
         <Route path="/register/" component={Register} />
         <Route path="/form-example/" component={FormExample} />
@@ -294,4 +256,3 @@ function AppRouter() {
 }
 
 export default AppRouter;
-
