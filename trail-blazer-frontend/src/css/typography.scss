@@ -1,5 +1,5 @@
 /* ============================================================================= 
-Typography
+03. Typography
 ================================================================================ */
 h1, h2, h3, h4, h5, h6 {
   font-family: $sans-serif-primary;  
@@ -48,13 +48,18 @@ ul {
   margin: 0;
   padding: 0;
 }
-
+h3.logo-sml {
+  margin: 0 0 5px;
+  color: $color-brand-palette-01;
+  font: 400 16px/24px $sans-serif-primary;
+  text-align: center;
+}
 /* ============================================================================= 
 02. Typography \ Media Queries
 ================================================================================ */
 @media only screen and (min-width: 800px) and (max-width: 1279px) {
   h1 {
-    font-size: 1.7500rem;
+    font-size: 28px;
   }
   h2 {
     font-size: 24px;

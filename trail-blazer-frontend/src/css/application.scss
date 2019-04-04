@@ -13,6 +13,9 @@
 * 07. Message Panel
 * 08. Button
 * 09. iFrame
+* 10. Trail
+* 11. Landing Page
+* 12. Push Menu
 
 */
 
@@ -30,23 +33,18 @@ Mixins
 }
 
 /* ==========================================================================
-Variables \ Brand Colour
+Variables \ Brand Colours
 ========================================================================== */
-$color-brand-palette-1: #CFB590;
-$color-brand-palette-2: #9E9A41;
-$color-brand-palette-3: #758918;
-$color-brand-palette-4: #564334;
-$color-brand-palette-5: #49281F;
-
-$color-primary-0: #CFB590;	
-$color-primary-1: #FFF6E9;
-$color-primary-2: #F4E2C7;
-$color-primary-3: #AE8F63;
-$color-primary-4: #866940;
-
-$color-grey-1: #230A04;
-$color-grey-2: #888888;
-$color-grey-3: #e7e7e7;
+$color-brand-palette-01: #CFB590;
+$color-brand-palette-02: #9E9A41;
+$color-brand-palette-03: #758918;
+$color-brand-palette-04: #564334;
+$color-brand-palette-05: #49281F;
+$color-brand-palette-06: #FFF6E9;
+$color-brand-palette-07: #F4E2C7;
+$color-brand-palette-08: #AE8F63;
+$color-brand-palette-09: #866940;
+$color-brand-palette-10: #230A04;
 
 /* ==========================================================================
 Variables \ Brand Fonts
@@ -58,7 +56,7 @@ body {
   margin: 80px 0;
   background: white;
   background: url("../images/trail-blazers-desktop-bg.jpg") no-repeat center center fixed;
-  color: $color-grey-1;
+  color: $color-brand-palette-10;
   font: 300 24px/1.5em $sans-serif-primary;
 }
 
@@ -75,3 +73,5 @@ Imports
 @import 'button';
 @import 'iframe';
 @import 'trail';
+@import 'landing-page';
+@import 'push-menu';

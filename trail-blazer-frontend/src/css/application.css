@@ -13,6 +13,8 @@
 * 07. Message Panel
 * 08. Button
 * 09. iFrame
+* 10. Trail
+* 11. Landing Page
 
 */
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
@@ -20,7 +22,7 @@
 Mixins
 ========================================================================== */
 /* ==========================================================================
-Variables \ Brand Colour
+Variables \ Brand Colours
 ========================================================================== */
 /* ==========================================================================
 Variables \ Brand Fonts
@@ -36,7 +38,53 @@ body {
 Imports
 ========================================================================== */
 /* ============================================================================= 
-Layout
+02. Reset \ HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/
+================================================================================ */
+html,
+button,
+input,
+select,
+textarea {
+  color: #230A04; }
+
+html {
+  font-size: 100%;
+  line-height: 1.4em; }
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #CFB590;
+  border-top: none;
+  margin: 0 0 60px;
+  margin: 0 0 20px;
+  padding: 0; }
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+textarea {
+  resize: vertical; }
+
+/* ============================================================================= 
+02. Layout
 ================================================================================ */
 .primary__header {
   grid-area: header; }
@@ -64,18 +112,19 @@ Layout
 
 @media only screen and (min-width: 800px) and (max-width: 1279px) {
   .primary__main {
+    top: -60px;
     margin: 40px; } }
 
 @media only screen and (max-width: 799px) {
   .primary__main {
-    margin: 40px 20px; } }
+    margin: 0 40px; } }
 
 @media only screen and (max-width: 379px) {
   .primary__main {
     margin: 20px 20px 40px; } }
 
 /* ============================================================================= 
-Typography
+03. Typography
 ================================================================================ */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", Arial, sans-serif;
@@ -124,12 +173,18 @@ ul {
   margin: 0;
   padding: 0; }
 
+h3.logo-sml {
+  margin: 0 0 5px;
+  color: #CFB590;
+  font: 400 16px/24px "Open Sans", Arial, sans-serif;
+  text-align: center; }
+
 /* ============================================================================= 
 02. Typography \ Media Queries
 ================================================================================ */
 @media only screen and (min-width: 800px) and (max-width: 1279px) {
   h1 {
-    font-size: 1.7500rem; }
+    font-size: 28px; }
   h2 {
     font-size: 24px; }
   h3 {
@@ -164,16 +219,15 @@ ul {
     font-size: 16px; } }
 
 /* ============================================================================= 
-Top Menu Bar
+04. Top Menu Bar
 ================================================================================ */
 .primary__top-bar {
   position: fixed;
   top: 0;
-  width: calc(100% - 20px);
   width: 100%;
   padding: 20px;
   background-color: #49281F;
-  color: white;
+  color: #CFB590;
   -webkit-box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.25);
   z-index: 2; }
@@ -193,26 +247,26 @@ Top Menu Bar
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out; }
   .primary__top-bar .logo:link, .primary__top-bar .logo:visited {
-    color: white;
+    color: #CFB590;
     text-decoration: none; }
   .primary__top-bar .logo:hover, .primary__top-bar .logo:focus {
     color: #758918; }
 
 /* ============================================================================= 
-Bottom Menu Bar
+05. Bottom Menu Bar
 ================================================================================ */
 .primary__btm-bar {
-  padding: 10px;
-  background-color: #49281F;
-  -webkit-box-shadow: 1px -4px 4px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: 1px -4px 4px 0 rgba(0, 0, 0, 0.25);
-  color: white;
   z-index: 3;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 80px; }
+  height: 80px;
+  padding: 10px;
+  background-color: #49281F;
+  -webkit-box-shadow: 1px -4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 1px -4px 4px 0 rgba(0, 0, 0, 0.25);
+  color: white; }
 
 .primary__btm-bar ul {
   display: block; }
@@ -248,6 +302,9 @@ Bottom Menu Bar
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out; }
 
+.navbar-nav > li > a {
+  padding: 0 15px; }
+
 .nav > li > a:hover,
 .nav > li > a:focus {
   color: #FFF6E9;
@@ -263,6 +320,9 @@ Bottom Menu Bar
   top: 3px;
   line-height: 12px; }
 
+/* ============================================================================= 
+05. Bottom Menu Bar \ Media Queries
+================================================================================ */
 @media (min-width: 768px) {
   .navbar-icon-top .navbar-brand {
     padding: 25px 15px; }
@@ -290,14 +350,14 @@ Bottom Menu Bar
     line-height: 24px; } }
 
 /* ============================================================================= 
-Form
+06. Form
 ================================================================================ */
 form {
   width: 100%; }
 
 form label {
   display: block;
-  margin: 0 0 7px;
+  margin: 0 0 3px;
   color: #CFB590;
   font: normal 400 18px/40px "Open Sans", Arial, sans-serif;
   text-transform: uppercase; }
@@ -336,7 +396,7 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-  background: #e7e7e7;
+  background: #FFF6E9;
   color: #230A04;
   outline: 0; }
 
@@ -350,8 +410,24 @@ form textarea:focus {
 .form-group {
   margin-bottom: 0px; }
 
+.web-form h1 {
+  color: #CFB590;
+  font: 500 32px/40px "Open Sans", Arial, sans-serif;
+  text-transform: uppercase; }
+
 .web-form h2 {
   color: #9E9A41; }
+
+/* ============================================================================= 
+06. Form \ Login & Register Forms
+================================================================================ */
+.login-form,
+.register-form {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px; }
 
 .login-msg {
   margin: 40px 0 0;
@@ -366,7 +442,15 @@ form textarea:focus {
     color: #9E9A41 !important; }
 
 /* ============================================================================= 
-Message Panel
+06. Form \ Media Queries
+================================================================================ */
+@media only screen and (max-width: 799px) {
+  .form-row {
+    min-height: 100vh;
+    background: #564334; } }
+
+/* ============================================================================= 
+07. Message Panel
 ================================================================================ */
 .msg-panel {
   position: fixed;
@@ -380,7 +464,7 @@ Message Panel
   z-index: 11; }
 
 /* ============================================================================= 
-Message Panel \ Overlay Layer
+07. Message Panel \ Overlay Layer
 ================================================================================ */
 .msg-panel::after {
   content: '';
@@ -405,7 +489,7 @@ Message Panel \ Overlay Layer
   transition: background 0.3s 0s; }
 
 /* ============================================================================= 
-Message Panel \ Close Icon
+07. Message Panel \ Close Icon
 ================================================================================ */
 .msg-panel__close {
   position: absolute;
@@ -425,7 +509,7 @@ Message Panel \ Close Icon
   left: 2px;
   height: 3px;
   width: 20px;
-  background-color: #888888;
+  background-color: #CFB590;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
@@ -499,7 +583,7 @@ Message Panel \ Close Icon
     transform: rotate(-45deg); } }
 
 /* ============================================================================= 
-Message Panel \ CD Panel
+07. Message Panel \ CD Panel
 ================================================================================ */
 .msg-panel__container {
   position: fixed;
@@ -532,7 +616,7 @@ Message Panel \ CD Panel
   transition-delay: 0s; }
 
 /* ============================================================================= 
-Message Panel \ CD Panel Content
+07. Message Panel \ CD Panel Content
 ================================================================================ */
 .msg-panel__content {
   position: absolute;
@@ -556,6 +640,9 @@ Message Panel \ CD Panel Content
   .msg-panel__container {
     width: 50%; } }
 
+/* ============================================================================= 
+08. Button
+================================================================================ */
 .btn,
 a.btn {
   margin: 20px 0 0;
@@ -577,8 +664,6 @@ a.btn {
   .btn:hover, .btn:focus,
   a.btn:hover,
   a.btn:focus {
-    background: #758918;
-    border-color: #758918;
     background: #9E9A41;
     border-color: #9E9A41;
     color: #FFF6E9; }
@@ -586,13 +671,37 @@ a.btn {
 .btn-primary {
   border-color: none; }
 
+.btn.secondary,
+a.btn.secondary {
+  margin: 20px 0 0;
+  padding: 10px;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #758918;
+  border-radius: 0px;
+  color: #CFB590;
+  font: 400 20px/1.5em "Open Sans", Arial, sans-serif;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.7);
+  text-transform: none;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+  .btn.secondary:hover, .btn.secondary:focus,
+  a.btn.secondary:hover,
+  a.btn.secondary:focus {
+    border-color: #9E9A41;
+    color: #FFF6E9; }
+
 /* ==========================================================================
-08. Responsive iFrame
+09. Responsive iFrame
 ========================================================================== */
 .iframe-rwd {
   position: relative;
   padding-bottom: 65.25%;
-  padding-top: 30px;
+  padding-top: 0;
   height: 0;
   overflow: hidden;
   border: 1px solid #CFB590;
@@ -613,37 +722,23 @@ a.btn {
     height: 100%;
     z-index: 1; }
 
+@media only screen and (max-width: 799px) {
+  .iframe-rwd iframe {
+    padding: 0;
+    border-radius: zero; } }
+
 /* ============================================================================= 
-Trail Panel
+10. Trail Panel
 ================================================================================ */
 .no-gutter > [class*='col-'] {
   padding-right: 0;
   padding-left: 0; }
 
-.left {
-  padding: 0 40px 0 0; }
-
-.right {
-  padding: 0 0 0 40px; }
-
-@media only screen and (max-width: 799px) {
-  .primary__main {
-    margin: 0 40px; }
-  .iframe-rwd iframe {
-    padding: 0;
-    border-radius: zero; }
-  .row {
-    margin-right: -40px;
-    margin-left: -40px; }
-  .container-fluid {
-    padding-right: 0;
-    padding-left: 0;
-    margin-right: 0;
-    margin-left: 0; }
-  .left,
-  .right {
-    padding: 0;
-    margin: 0 0 20px; } }
+.container-fluid.reset {
+  margin-right: -40px;
+  margin-left: -40px;
+  margin-top: -60px;
+  padding: 0; }
 
 .trail {
   padding: 0 40px;
@@ -651,3 +746,70 @@ Trail Panel
   .trail ul {
     font-size: 18px;
     font-weight: 400; }
+
+/* ============================================================================= 
+11. Landing Page
+================================================================================ */
+.landing-page {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  border: 1px solid #49281F; }
+  .landing-page h1 {
+    margin: 0 0 40px;
+    color: #CFB590;
+    font: 400 16px/1.5em "Open Sans", Arial, sans-serif;
+    text-transform: uppercase;
+    text-align: center; }
+  .landing-page p {
+    color: #CFB590;
+    font: 500 22px/1.5em "Open Sans", Arial, sans-serif;
+    text-align: center; }
+  .landing-page .btn.reset {
+    margin: 40px 0 0; }
+
+@media only screen and (max-width: 799px) {
+  .reset {
+    margin-top: 0; } }
+
+/* ============================================================================= 
+03. Push Menu
+================================================================================ */
+.push-menu {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 60px; }
+  .push-menu .left,
+  .push-menu .right {
+    display: inline-block;
+    width: calc(50% - 2px);
+    padding: 2px 20px;
+    border: 1px solid #758918;
+    color: white;
+    font: 400 12px/20px "Open Sans", Arial, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+    .push-menu .left:hover, .push-menu .left:focus,
+    .push-menu .right:hover,
+    .push-menu .right:focus {
+      background: #9E9A41; }
+  .push-menu .left {
+    background: #758918; }
+
+.push-menu.reverse .left {
+  background: transparent; }
+  .push-menu.reverse .left:hover, .push-menu.reverse .left:focus {
+    background: #9E9A41; }
+
+.push-menu.reverse .right {
+  background: #758918; }
+  .push-menu.reverse .right:hover, .push-menu.reverse .right:focus {
+    background: #9E9A41; }
