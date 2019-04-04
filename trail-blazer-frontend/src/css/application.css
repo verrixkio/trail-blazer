@@ -2,7 +2,7 @@
 
 * Description:    CSS Layout for Trail Blazers Application V1A
 * Date Created:   19/03/29
-* Date Updated:   19/03/31
+* Date Updated:   19/04/04
 
 * 01. Variables
 * 02. Layout
@@ -15,6 +15,8 @@
 * 09. iFrame
 * 10. Trail
 * 11. Landing Page
+* 12. Push Menu
+* 13. Map Pop-up
 
 */
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
@@ -813,3 +815,42 @@ a.btn.secondary {
   background: #758918; }
   .push-menu.reverse .right:hover, .push-menu.reverse .right:focus {
     background: #9E9A41; }
+
+.map-bubble {
+  background: #FFF6E9;
+  color: #230A04;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+  padding: 10px 20px;
+  position: relative;
+  text-align: left;
+  vertical-align: top;
+  min-width: 7em;
+  border-radius: 4px; }
+  .map-bubble h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.136em; }
+  .map-bubble ul {
+    margin: 0 0 10px; }
+
+.map-bubble:after {
+  border: 1em solid transparent;
+  border-top-color: #FFF6E9;
+  content: '';
+  margin-left: -1em;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0; }
+
+.map-bubble.large {
+  font-size: 2em;
+  padding: 0 1em;
+  min-width: 4em; }
+
+.map-bubble.rounded {
+  border-radius: .4em; }
