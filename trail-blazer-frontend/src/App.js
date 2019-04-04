@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
 import './App.css';
-
-import ListsContainer from './components/ListsContainer';
-import map from './images/trail-demo-image.jpg';
+import React from 'react'
+// import ListsContainer from './components/ListsContainer';
 import './css/application.css';
 import TopBar from './components/TopBar';
 import BottomBar from './components/BottomBar';
@@ -13,7 +11,7 @@ import TrailFullInfo from './components/TrailFullInfo';
 import TrailDonations from './components/TrailDonations';
 import TrailFixRequests from './components/TrailFixRequests';
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 
 function Index() {
   
@@ -39,7 +37,7 @@ function Index() {
               
                 <div className="trail">
                 
-                  <ListsContainer />
+                  {/* <ListsContainer /> */}
 
                 </div>
 
