@@ -1,5 +1,9 @@
-import React, { Component } from 'react';
 import './App.css';
+
+import React from 'react'
+// import ListsContainer from './components/ListsContainer';
+
+
 import './css/application.css';
 import ListsContainer from './components/ListsContainer';
 import MapContainer from './components/mapContainer';
@@ -14,8 +18,12 @@ import TrailFixRequests from './components/TrailFixRequests';
 import TrailComments from './components/TrailComments';
 import LandingContent from './components/LandingContent';
 
+import { BrowserRouter as Router, Route} from "react-router-dom";
+
+
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
   
+
 function Index() {
   
   return (
@@ -44,7 +52,7 @@ function Index() {
               
                 <div className="trail">
                 
-                  <ListsContainer />
+                  {/* <ListsContainer /> */}
 
                 </div>
 
