@@ -1,49 +1,21 @@
 /* ============================================================================= 
-Trail Panel
+10. Trail Panel
 ================================================================================ */
 .no-gutter > [class*='col-'] {
-  padding-right:0;
-  padding-left:0;
+  padding-right: 0;
+  padding-left: 0;
 }
-.left {
-  padding: 0 40px 0 0;
+.container-fluid.reset {
+  margin-right: -40px;
+  margin-left: -40px;
+  margin-top: -60px;
+  padding: 0;
 }
-.right {
-  padding: 0 0 0 40px;
-}
-
-@media only screen and (max-width: 799px) {
-  .primary__main { 
-    margin: 0 40px;
-  }
-  .iframe-rwd iframe {
-    padding: 0;
-    border-radius: zero;
-  }
-  .row {
-    margin-right: -40px;
-    margin-left: -40px;
-  }
-  .container-fluid {
-    padding-right: 0;
-    padding-left: 0;
-    margin-right: 0;
-    margin-left: 0;
-  }  
-  .left,
-  .right {
-    padding: 0;
-    margin: 0 0 20px;
-  }
-}
-
 .trail {
   padding: 0 40px;
-  color: $color-brand-palette-1;
+  color: $color-brand-palette-01;
   ul {
     font-size: 18px;
     font-weight: 400;
   }
 }
-
-
