@@ -13,6 +13,8 @@
 * 07. Message Panel
 * 08. Button
 * 09. iFrame
+* 10. Trail
+* 11. Landing Page
 
 */
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
@@ -20,7 +22,7 @@
 Mixins
 ========================================================================== */
 /* ==========================================================================
-Variables \ Brand Colour
+Variables \ Brand Colours
 ========================================================================== */
 /* ==========================================================================
 Variables \ Brand Fonts
@@ -36,7 +38,53 @@ body {
 Imports
 ========================================================================== */
 /* ============================================================================= 
-Layout
+02. Reset \ HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/
+================================================================================ */
+html,
+button,
+input,
+select,
+textarea {
+  color: #230A04; }
+
+html {
+  font-size: 100%;
+  line-height: 1.4em; }
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #CFB590;
+  border-top: none;
+  margin: 0 0 60px;
+  margin: 0 0 20px;
+  padding: 0; }
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+textarea {
+  resize: vertical; }
+
+/* ============================================================================= 
+02. Layout
 ================================================================================ */
 .primary__header {
   grid-area: header; }
@@ -64,18 +112,19 @@ Layout
 
 @media only screen and (min-width: 800px) and (max-width: 1279px) {
   .primary__main {
+    top: -60px;
     margin: 40px; } }
 
 @media only screen and (max-width: 799px) {
   .primary__main {
-    margin: 40px 20px; } }
+    margin: 0 40px; } }
 
 @media only screen and (max-width: 379px) {
   .primary__main {
     margin: 20px 20px 40px; } }
 
 /* ============================================================================= 
-Typography
+03. Typography
 ================================================================================ */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", Arial, sans-serif;
@@ -130,43 +179,6 @@ h3.logo-sml {
   font: 400 16px/24px "Open Sans", Arial, sans-serif;
   text-align: center; }
 
-.push-menu {
-  width: 100%;
-  max-width: 200px;
-  margin: 0 auto 60px; }
-  .push-menu .left,
-  .push-menu .right {
-    display: inline-block;
-    width: calc(50% - 2px);
-    padding: 2px 20px;
-    border: 1px solid #758918;
-    color: white;
-    font: 400 12px/20px "Open Sans", Arial, sans-serif;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out; }
-    .push-menu .left:hover, .push-menu .left:focus,
-    .push-menu .right:hover,
-    .push-menu .right:focus {
-      background: #9E9A41; }
-  .push-menu .left {
-    background: #758918; }
-
-.push-menu.reverse .left {
-  background: transparent; }
-  .push-menu.reverse .left:hover, .push-menu.reverse .left:focus {
-    background: #9E9A41; }
-
-.push-menu.reverse .right {
-  background: #758918; }
-  .push-menu.reverse .right:hover, .push-menu.reverse .right:focus {
-    background: #9E9A41; }
-
 /* ============================================================================= 
 02. Typography \ Media Queries
 ================================================================================ */
@@ -207,12 +219,11 @@ h3.logo-sml {
     font-size: 16px; } }
 
 /* ============================================================================= 
-Top Menu Bar
+04. Top Menu Bar
 ================================================================================ */
 .primary__top-bar {
   position: fixed;
   top: 0;
-  width: calc(100% - 20px);
   width: 100%;
   padding: 20px;
   background-color: #49281F;
@@ -242,20 +253,20 @@ Top Menu Bar
     color: #758918; }
 
 /* ============================================================================= 
-Bottom Menu Bar
+05. Bottom Menu Bar
 ================================================================================ */
 .primary__btm-bar {
-  padding: 10px;
-  background-color: #49281F;
-  -webkit-box-shadow: 1px -4px 4px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: 1px -4px 4px 0 rgba(0, 0, 0, 0.25);
-  color: white;
   z-index: 3;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 80px; }
+  height: 80px;
+  padding: 10px;
+  background-color: #49281F;
+  -webkit-box-shadow: 1px -4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 1px -4px 4px 0 rgba(0, 0, 0, 0.25);
+  color: white; }
 
 .primary__btm-bar ul {
   display: block; }
@@ -309,6 +320,9 @@ Bottom Menu Bar
   top: 3px;
   line-height: 12px; }
 
+/* ============================================================================= 
+05. Bottom Menu Bar \ Media Queries
+================================================================================ */
 @media (min-width: 768px) {
   .navbar-icon-top .navbar-brand {
     padding: 25px 15px; }
@@ -336,7 +350,7 @@ Bottom Menu Bar
     line-height: 24px; } }
 
 /* ============================================================================= 
-Form
+06. Form
 ================================================================================ */
 form {
   width: 100%; }
@@ -382,7 +396,7 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-  background: #e7e7e7;
+  background: #FFF6E9;
   color: #230A04;
   outline: 0; }
 
@@ -404,6 +418,17 @@ form textarea:focus {
 .web-form h2 {
   color: #9E9A41; }
 
+/* ============================================================================= 
+06. Form \ Login & Register Forms
+================================================================================ */
+.login-form,
+.register-form {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px; }
+
 .login-msg {
   margin: 40px 0 0;
   color: #CFB590;
@@ -416,13 +441,16 @@ form textarea:focus {
   .login-msg a:focus {
     color: #9E9A41 !important; }
 
+/* ============================================================================= 
+06. Form \ Media Queries
+================================================================================ */
 @media only screen and (max-width: 799px) {
   .form-row {
     min-height: 100vh;
     background: #564334; } }
 
 /* ============================================================================= 
-Message Panel
+07. Message Panel
 ================================================================================ */
 .msg-panel {
   position: fixed;
@@ -436,7 +464,7 @@ Message Panel
   z-index: 11; }
 
 /* ============================================================================= 
-Message Panel \ Overlay Layer
+07. Message Panel \ Overlay Layer
 ================================================================================ */
 .msg-panel::after {
   content: '';
@@ -461,7 +489,7 @@ Message Panel \ Overlay Layer
   transition: background 0.3s 0s; }
 
 /* ============================================================================= 
-Message Panel \ Close Icon
+07. Message Panel \ Close Icon
 ================================================================================ */
 .msg-panel__close {
   position: absolute;
@@ -481,7 +509,7 @@ Message Panel \ Close Icon
   left: 2px;
   height: 3px;
   width: 20px;
-  background-color: #888888;
+  background-color: #CFB590;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
@@ -555,7 +583,7 @@ Message Panel \ Close Icon
     transform: rotate(-45deg); } }
 
 /* ============================================================================= 
-Message Panel \ CD Panel
+07. Message Panel \ CD Panel
 ================================================================================ */
 .msg-panel__container {
   position: fixed;
@@ -588,7 +616,7 @@ Message Panel \ CD Panel
   transition-delay: 0s; }
 
 /* ============================================================================= 
-Message Panel \ CD Panel Content
+07. Message Panel \ CD Panel Content
 ================================================================================ */
 .msg-panel__content {
   position: absolute;
@@ -612,6 +640,9 @@ Message Panel \ CD Panel Content
   .msg-panel__container {
     width: 50%; } }
 
+/* ============================================================================= 
+08. Button
+================================================================================ */
 .btn,
 a.btn {
   margin: 20px 0 0;
@@ -633,8 +664,6 @@ a.btn {
   .btn:hover, .btn:focus,
   a.btn:hover,
   a.btn:focus {
-    background: #758918;
-    border-color: #758918;
     background: #9E9A41;
     border-color: #9E9A41;
     color: #FFF6E9; }
@@ -667,12 +696,12 @@ a.btn.secondary {
     color: #FFF6E9; }
 
 /* ==========================================================================
-08. Responsive iFrame
+09. Responsive iFrame
 ========================================================================== */
 .iframe-rwd {
   position: relative;
   padding-bottom: 65.25%;
-  padding-top: 30px;
+  padding-top: 0;
   height: 0;
   overflow: hidden;
   border: 1px solid #CFB590;
@@ -693,37 +722,23 @@ a.btn.secondary {
     height: 100%;
     z-index: 1; }
 
+@media only screen and (max-width: 799px) {
+  .iframe-rwd iframe {
+    padding: 0;
+    border-radius: zero; } }
+
 /* ============================================================================= 
-Trail Panel
+10. Trail Panel
 ================================================================================ */
 .no-gutter > [class*='col-'] {
   padding-right: 0;
   padding-left: 0; }
 
-.left {
-  padding: 0 40px 0 0; }
-
-.right {
-  padding: 0 0 0 40px; }
-
-@media only screen and (max-width: 799px) {
-  .primary__main {
-    margin: 0 40px; }
-  .iframe-rwd iframe {
-    padding: 0;
-    border-radius: zero; }
-  .row {
-    margin-right: -40px;
-    margin-left: -40px; }
-  .container-fluid {
-    padding-right: 0;
-    padding-left: 0;
-    margin-right: 0;
-    margin-left: 0; }
-  .left,
-  .right {
-    padding: 0;
-    margin: 0 0 20px; } }
+.container-fluid.reset {
+  margin-right: -40px;
+  margin-left: -40px;
+  margin-top: -60px;
+  padding: 0; }
 
 .trail {
   padding: 0 40px;
@@ -733,19 +748,68 @@ Trail Panel
     font-weight: 400; }
 
 /* ============================================================================= 
-Landing Page
+11. Landing Page
 ================================================================================ */
-.landing-page h1 {
-  margin: 0 0 40px;
-  color: #CFB590;
-  font: 400 16px/1.5em "Open Sans", Arial, sans-serif;
-  text-transform: uppercase;
-  text-align: center; }
+.landing-page {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  border: 1px solid #49281F; }
+  .landing-page h1 {
+    margin: 0 0 40px;
+    color: #CFB590;
+    font: 400 16px/1.5em "Open Sans", Arial, sans-serif;
+    text-transform: uppercase;
+    text-align: center; }
+  .landing-page p {
+    color: #CFB590;
+    font: 500 22px/1.5em "Open Sans", Arial, sans-serif;
+    text-align: center; }
+  .landing-page .btn.reset {
+    margin: 40px 0 0; }
 
-.landing-page p {
-  color: #CFB590;
-  font: 500 22px/1.5em "Open Sans", Arial, sans-serif;
-  text-align: center; }
+@media only screen and (max-width: 799px) {
+  .reset {
+    margin-top: 0; } }
 
-.landing-page .btn.reset {
-  margin: 40px 0 0; }
+/* ============================================================================= 
+03. Push Menu
+================================================================================ */
+.push-menu {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 60px; }
+  .push-menu .left,
+  .push-menu .right {
+    display: inline-block;
+    width: calc(50% - 2px);
+    padding: 2px 20px;
+    border: 1px solid #758918;
+    color: white;
+    font: 400 12px/20px "Open Sans", Arial, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+    .push-menu .left:hover, .push-menu .left:focus,
+    .push-menu .right:hover,
+    .push-menu .right:focus {
+      background: #9E9A41; }
+  .push-menu .left {
+    background: #758918; }
+
+.push-menu.reverse .left {
+  background: transparent; }
+  .push-menu.reverse .left:hover, .push-menu.reverse .left:focus {
+    background: #9E9A41; }
+
+.push-menu.reverse .right {
+  background: #758918; }
+  .push-menu.reverse .right:hover, .push-menu.reverse .right:focus {
+    background: #9E9A41; }

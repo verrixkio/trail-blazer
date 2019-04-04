@@ -25,25 +25,22 @@ function Index() {
         <TopBar />
 
         <main className="primary__main">
-          <div className="container-fluid">
+          <div className="container-fluid reset">
             <div className="row">
 
-              <div className="col-sm-8 col-sm-push-4 right">
+              <div className="col-sm-12">
               
                 <div className="iframe-rwd">
-                  &nbsp;
+
+                  <MapContainer />
+
                 </div>
     
               </div> 
-                
-                  <div className="iframe-rwd">
-                    <MapContainer />
-                  </div>
       
-                </div> 
+              </div> 
                   
-                <div className="col-sm-4 col-sm-pull-8 left">
-              <div className="col-sm-4 col-sm-pull-8 left">
+              <div className="col-sm-12">
               
                 <div className="trail">
                 
@@ -54,7 +51,7 @@ function Index() {
               </div>
               
             </div>
-          </div>
+          
         </main>
 
         <BottomBar />
@@ -118,18 +115,10 @@ function Landing() {
         <div className="container-fluid">
           <div className="row">
 
-            <div className="col-sm-3">
-              &nbsp;
-            </div> 
-              
-            <div className="col-sm-6">
+            <div className="col-sm-12">
               
               <LandingContent />
 
-            </div>
-
-            <div className="col-sm-3">
-              &nbsp;
             </div>
             
           </div>
@@ -150,32 +139,27 @@ function Login() {
           <div className="row">
           
             <div className="col-sm-12">
+
               <h3 className="logo-sml">Trail Blazers</h3>
               <div className="push-menu reverse">
                 <a href="/register" className="left">Register</a>
                 <a href="/login" className="right">Login</a>
               </div>
+
             </div>
           
           </div>  
         
           <div className="row form-row">
 
-            <div className="col-sm-3">
-              &nbsp;
-            </div> 
-              
-            <div className="col-sm-6">
+            <div className="col-sm-12">
               
               <div className="web-form">
                   
                 <LoginForm />
 
               </div>
-            </div>
-
-            <div className="col-sm-3">
-              &nbsp;
+              
             </div>
             
           </div>
@@ -193,39 +177,37 @@ function Register() {
 
       <main className="primary__main">
         <div className="container-fluid">
+        
         <div className="row">
           
-        <div className="col-sm-12">
-          <h3 className="logo-sml">Trail Blazers</h3>
-          <div className="push-menu">
-            <a href="/register" className="left">Register</a>
-            <a href="/login" className="right">Login</a>
+          <div className="col-sm-12">
+
+            <h3 className="logo-sml">Trail Blazers</h3>
+            <div className="push-menu">
+              <a href="/register" className="left">Register</a>
+              <a href="/login" className="right">Login</a>
+            </div>
+
           </div>
-        </div>
-      
-      </div>  
+        
+        </div>  
     
-      <div className="row form-row">
+        <div className="row form-row">
 
-            <div className="col-sm-3">
-              &nbsp;
-            </div> 
-              
-            <div className="col-sm-6">
-              <div className="web-form">
-                  
-                <SignUpForm />
+          <div className="col-sm-12">
 
-              </div>
+            <div className="web-form">
+                
+              <SignUpForm />
+
             </div>
 
-            <div className="col-sm-3">
-              &nbsp;
-            </div>
-            
           </div>
+
         </div>
-      </main>
+        
+      </div>
+    </main>
 
     </div>
   );
