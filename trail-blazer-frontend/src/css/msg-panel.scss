@@ -1,5 +1,5 @@
 /* ============================================================================= 
-Message Panel
+07. Message Panel
 ================================================================================ */
 .msg-panel {
   position: fixed;
@@ -12,9 +12,8 @@ Message Panel
   transition: visibility 0s 0.6s;
   z-index: 11;
 }
-
 /* ============================================================================= 
-Message Panel \ Overlay Layer
+07. Message Panel \ Overlay Layer
 ================================================================================ */
 .msg-panel::after {
   content: '';
@@ -38,9 +37,8 @@ Message Panel \ Overlay Layer
   -webkit-transition: background 0.3s 0s;
   transition: background 0.3s 0s;
 }
-
 /* ============================================================================= 
-Message Panel \ Close Icon
+07. Message Panel \ Close Icon
 ================================================================================ */
 .msg-panel__close {
   position: absolute;
@@ -60,7 +58,7 @@ Message Panel \ Close Icon
   left: 2px;
   height: 3px;
   width: 20px;
-  background-color: $color-grey-2;
+  background-color: $color-brand-palette-01;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -141,17 +139,16 @@ Message Panel \ Close Icon
             transform: rotate(-45deg);
   }
 }
-
 /* ============================================================================= 
-Message Panel \ CD Panel
+07. Message Panel \ CD Panel
 ================================================================================ */
 .msg-panel__container {
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
-  background: $color-brand-palette-3;
-  background: $color-brand-palette-5;
+  background: $color-brand-palette-03;
+  background: $color-brand-palette-05;
   z-index: 10;
   color: white;
   -webkit-transition: -webkit-transform 0.3s 0.3s;
@@ -175,9 +172,8 @@ Message Panel \ CD Panel
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
-
 /* ============================================================================= 
-Message Panel \ CD Panel Content
+07. Message Panel \ CD Panel Content
 ================================================================================ */
 .msg-panel__content {
   position: absolute;
@@ -190,7 +186,6 @@ Message Panel \ CD Panel Content
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
-
 /* ============================================================================= 
 07. Message Panel \ Media Queries
 ================================================================================ */
