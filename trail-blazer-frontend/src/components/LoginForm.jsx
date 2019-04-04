@@ -4,9 +4,9 @@ class LoginForm extends Component {
   render() {
     return (
 
-        <div>
+        <div className="login-form">
           <h1>Login</h1>
-          <form className="login-form">
+          <form>
             <div className="form-group">
               <label htmlFor="username">Username</label>
               <input
@@ -30,7 +30,7 @@ class LoginForm extends Component {
             <button className="btn btn-block">Login</button>
           </form>
 
-          <p className="login-msg">Don’t have an account? <a href="/register">Sign up here.</a></p>
+          <p className="login-msg">Don’t have an account? <a href="/register">Register here.</a></p>
         </div>
     );
   }
