@@ -18,7 +18,7 @@ import TrailDonations from './components/TrailDonations';
 import TrailFixRequests from './components/TrailFixRequests';
 import TrailComments from './components/TrailComments';
 import LandingContent from './components/LandingContent';
-
+import IndividualTrailFull from './components/IndividualTrailFull';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 
 function Index() {
@@ -222,6 +222,24 @@ function FormExample() {
   );
 }
 
+function FullInfo() {
+  return (
+  
+    <div className="primary">
+        
+      <TopBar />
+
+      <main className="primary__main">
+      <IndividualTrailFull />
+        
+      </main>
+
+      <BottomBar />
+
+    </div>
+  );
+}
+
 function AppRouter() {
   return (
     <Router>
@@ -247,6 +265,7 @@ function AppRouter() {
 
         <Route path="/" exact component={Index} />
         <Route path="/trail/" component={About} />
+        <Route path="/trails/:id" component={FullInfo} />
         <Route path="/login/" component={Login} />
         <Route path="/register/" component={Register} />
         <Route path="/form-example/" component={FormExample} />
