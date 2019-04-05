@@ -6,7 +6,7 @@ module Api::V1
         end
 
         def create
-            Comment.create!(id: 3, data: params[:data])
+            Comment.create(data: params[:data], name: params[:name])
         end
             
     end

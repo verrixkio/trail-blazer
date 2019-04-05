@@ -111,6 +111,7 @@ function About() {
             
           </div>
           <CommentBar />
+          <TrailComments />
         </div>
       </main>
      
