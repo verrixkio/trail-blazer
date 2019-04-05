@@ -9,6 +9,7 @@ import './css/application.css';
 import ListsContainer from './components/ListsContainer';
 import MapContainer from './components/mapContainer';
 import TopBar from './components/TopBar';
+import CommentBar from './components/CommentBar';
 import BottomBar from './components/BottomBar';
 import MultiStepForm from './components/MultiStepForm';
 import SignUpForm from './components/SignUpForm';
@@ -103,14 +104,16 @@ function About() {
               <div className="trail__donations">
                     
                 <TrailFixRequests />
+                
 
               </div>
             </div>
             
           </div>
+          <CommentBar />
         </div>
       </main>
-
+     
       <BottomBar />
 
     </div>
