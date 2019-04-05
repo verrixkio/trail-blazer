@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom'
 class TrailPopup extends Component {
   render() {
     return (
       
       <div className="map-bubble">
         <button onClick={this.props.closePopup}>close me</button>  
-        <h3>Trail Name Here</h3>
+        <h3>{this.props.trail.name}</h3>
         <ul className="trail-info">
-          <li>Description length, difficulty, rating</li>
-          <li>Description: <em>Trail description goes here.</em></li>
-          <li>Length: <em>Trail length goes here.</em></li>
-          <li>Difficulty: <em>Trail difficulty goes here.</em></li>
-          <li>Rating: <em>Trail rating goes here.</em></li>
+         
+          <li>Description: <em>{this.props.trail.description}</em></li>
+          <li>Length: <em>{this.props.trail.length / 100} km</em></li>
+          <li>Difficulty: <em>{this.props.trail.difficulty}</em></li>
+         
         </ul>
+      <Link to={`/trails/${this.props.trail.trail_forks_id}`}>
+      <button type="button">
+          See full trail information
+      </button>
+      </Link>
       </div>
 
     );
