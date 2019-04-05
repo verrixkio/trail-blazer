@@ -6,7 +6,6 @@ import React from 'react'
 
 
 import './css/application.css';
-import ListsContainer from './components/ListsContainer';
 import MapContainer from './components/mapContainer';
 import TopBar from './components/TopBar';
 import BottomBar from './components/BottomBar';
@@ -16,8 +15,8 @@ import LoginForm from './components/LoginForm';
 import TrailFullInfo from './components/TrailFullInfo';
 import TrailDonations from './components/TrailDonations';
 import TrailFixRequests from './components/TrailFixRequests';
-import TrailComments from './components/TrailComments';
-import LandingContent from './components/LandingContent';
+import TrailFixRequestDisplay from './components/TrailFixRequestDisplay'
+
 
 import { BrowserRouter as Router, Route} from "react-router-dom";
 
@@ -103,7 +102,7 @@ function About() {
               <div className="trail__donations">
                     
                 <TrailFixRequests />
-
+                <TrailFixRequestDisplay />
               </div>
             </div>
             
