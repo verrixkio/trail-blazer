@@ -14,7 +14,7 @@ class TrailPopup extends Component {
           <li>Difficulty: <em>{this.props.trail.difficulty}</em></li>
          
         </ul>
-      <Link to={`/trails/${this.props.trail.trail_forks_id}`}>
+      <Link to={`/trails/${this.props.trail.id}`}>
       <button type="button">
           See full trail information
       </button>
