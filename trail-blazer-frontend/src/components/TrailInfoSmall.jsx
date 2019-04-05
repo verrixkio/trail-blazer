@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 import axios from 'axios';
 
 class TrailInfoSmall extends Component {
@@ -40,4 +40,4 @@ class TrailInfoSmall extends Component {
     
 
 
-export default TrailInfoSmall;
+export default TrailInfoSmall;*/

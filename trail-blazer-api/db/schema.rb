@@ -17,12 +17,11 @@ ActiveRecord::Schema.define(version: 20190331211958) do
 
   create_table "comments", force: :cascade do |t|
     t.string "data"
+    t.string "name"
     t.bigint "trails_id"
-    t.bigint "users_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["trails_id"], name: "index_comments_on_trails_id"
-    t.index ["users_id"], name: "index_comments_on_users_id"
   end
 
   create_table "new_trails", force: :cascade do |t|
@@ -73,7 +72,6 @@ ActiveRecord::Schema.define(version: 20190331211958) do
   end
 
   add_foreign_key "comments", "trails", column: "trails_id"
-  add_foreign_key "comments", "users", column: "users_id"
   add_foreign_key "ratings", "trails", column: "trails_id"
   add_foreign_key "ratings", "users", column: "users_id"
   add_foreign_key "trail_solutions", "trails", column: "trails_id"
