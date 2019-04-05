@@ -4,7 +4,6 @@ import './App.css';
 import React from 'react'
 // import ListsContainer from './components/ListsContainer';
 
-
 import './css/application.css';
 import ListsContainer from './components/ListsContainer';
 import MapContainer from './components/mapContainer';
@@ -19,55 +18,66 @@ import TrailFixRequests from './components/TrailFixRequests';
 import TrailComments from './components/TrailComments';
 import LandingContent from './components/LandingContent';
 import IndividualTrailFull from './components/IndividualTrailFull';
+import TrailPopup from './components/TrailPopup';
+
 import { BrowserRouter as Router, Route} from "react-router-dom";
 
-function Index() {
+class Index extends React.Component {
   
-  return (
 
-      <div className="primary">
-        
-        <TopBar />
+    render() {
+      return (
 
-<main className="primary__main">
-  <div className="container-fluid reset">
-    <div className="row">
 
-      <div className="col-sm-12">
-      
-        <div className="iframe-rwd">
-
-          <MapContainer />
-
-        </div>
-
-      </div> 
-
-      </div> 
+    
+    
+        <div className="primary">
+            
+            <TopBar />
+    
+    <main className="primary__main">
+      <div className="container-fluid reset">
+        <div className="row">
+    
+          <div className="col-sm-12">
           
-      <div className="col-sm-12">
-      
-        <div className="trail">
-        
-          {/* <ListsContainer /> */}
-
+            <div className="iframe-rwd">
+    
+              <MapContainer />
+    
+            </div>
+    
+            
+    
+          </div> 
+    
+          </div> 
+              
+          <div className="col-sm-12">
+            
+            
+    
+    
+    
+          </div>
+          
         </div>
-
-      </div>
       
+    </main>
+    
+    <BottomBar />
+    
     </div>
+    );  
+    }
+
+
   
-</main>
-
-<BottomBar />
-
-</div>
-);
 }
 
 function About() {
   return (
-  
+    
     <div className="primary">
         
       <TopBar />

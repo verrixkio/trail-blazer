@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import {Map, InfoWindow, Marker, Polyline, GoogleApiWrapper} from 'google-maps-react';
 import axios from 'axios';
+import TrailPopup from './TrailPopup';
+
 const decodePolyline = require('decode-google-map-polyline');
 export class MapContainer extends Component {
-    constructor(props){
+  constructor(props){
     super(props)
     this.state = {
-        trails: []
+        trails: [],
+        showPopup: false
+      // pop up set to state in App.js
     }
   }
   componentDidMount() {
@@ -15,14 +19,38 @@ export class MapContainer extends Component {
         console.log(response.data)
           this.setState({
             trails: response.data
+      })
     })
-  })
-    .catch(error => console.log(error))
-}
+      .catch(error => console.log(error))
+  }
  
   onPolylineClick(props, marker, e) {
     console.log(props)
   }
+  togglePopup = (trail) => {
+    this.setState({
+      showPopup: !this.state.showPopup,
+      trail: trail
+    });
+    
+    
+  }
+/*
+
+  <button onClick={this.togglePopup.bind(this)}>show popup</button>
+    
+  {this.state.showPopup ? 
+    <TrailPopup
+      text='Close Me'
+      closePopup={this.togglePopup.bind(this)}
+    />
+    : null
+  }*/
+
+
+
+
+  
     colorSelect(trail) {
       if (trail.difficulty < 3) {
         return "#7CFC00"
@@ -36,8 +64,9 @@ export class MapContainer extends Component {
    
   
     return (
-      
+ 
       <Map
+  
        google={this.props.google} 
        
        initialCenter={{
@@ -54,11 +83,18 @@ export class MapContainer extends Component {
       strokeColor= {this.colorSelect(trail)}
       strokeOpacity={0.8}
       strokeWeight={5}  
-      Marker onClick={this.onPolylineClick}
+      Marker onClick={() => this.togglePopup(trail)}
       name={'Current location'}
       data={trail}
        />)}
-      
+          {this.state.showPopup ? 
+        <TrailPopup
+          text='Close Me'
+          trail={this.state.trail}
+          closePopup={this.togglePopup.bind(this)}
+        />
+        : null
+      }
           </Map> 
     
    
