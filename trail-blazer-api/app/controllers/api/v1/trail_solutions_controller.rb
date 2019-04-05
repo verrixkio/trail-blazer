@@ -4,5 +4,10 @@ module Api::V1
             @trail_solutions = TrailSolution.all
             render json: @trail_solutions
         end
+
+        def create
+            puts "hello I'm create"
+            TrailSolution.create(description_to_fix: params[:description_to_fix], timeline_days: params[:timeline_to_fix], cost: params[:cost], collaboration: params[:collaboration])
+        end
     end
 end

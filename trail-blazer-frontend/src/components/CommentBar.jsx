@@ -1,0 +1,56 @@
+/* eslint-disable react/prop-types */
+import React, {Component} from 'react';
+import axios from 'axios';
+// This component gets the message info from the user!
+export default class CommentBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      message: ''
+    };
+
+    this.changeNameHandler = this.changeNameHandler.bind(this);
+    this.messageHandler = this.messageHandler.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  changeNameHandler = (event) => {
+    this.setState({name: event.target.value})
+  }
+  messageHandler = (event) => {
+    this.setState({message: event.target.value})
+  }
+
+  handleSubmit = event => {
+    alert(`${this.state.name} ${this.state.message}`)
+ 
+    axios.post('/api/v1/comments', {
+      data: this.state.message, 
+      name: this.state.name})
+
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+    
+
+  render() {
+    return (
+      <form onSubmit ={this.handleSubmit}>
+        <div>
+          <label>Username</label>
+          <input type='text' value={this.state.name} onChange={(this.changeNameHandler)}/>
+        </div>
+        <div>  
+          <label>Message</label>
+          <textarea value={this.state.message} onChange={(this.messageHandler)}></textarea>
+        </div>
+        <button type ='submit'>Submit</button>
+      </form>
+    );
+  }
+}

@@ -4,5 +4,10 @@ module Api::V1
             @comments = Comment.all
             render json: @comments
         end
+
+        def create
+            Comment.create(data: params[:data], name: params[:name])
+        end
+            
     end
 end
