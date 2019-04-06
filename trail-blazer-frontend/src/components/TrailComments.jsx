@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {withRouter} from 'react-router';
 
 class TrailComments extends Component {
   constructor(props){
@@ -9,7 +10,7 @@ class TrailComments extends Component {
     }
   }
   componentDidMount() {
-    axios.get('api/v1/comments.json')
+    axios.get(`api/v1/comments/${this.props.match.params.id}.json`)
       .then(response => {
           this.setState({
             comments: response.data.reverse()
@@ -32,4 +33,4 @@ render() {
   );
 }
 }
-export default TrailComments;
+export default withRouter(TrailComments);

@@ -98,7 +98,9 @@ function About() {
                 <TrailFixRequests />
 
                 <TrailFixRequestDisplay />
-
+                
+                
+                {/* <IndividualTrailFull /> */}
                 
 
               </div>
@@ -285,11 +287,45 @@ function FullInfo() {
       <TopBar />
 
       <main className="primary__main">
-      <IndividualTrailFull />
-      <TrailComments />
-        
-      </main>
+        <div className="container-fluid">
+          
+          <div className="row">
 
+            <div className="col-sm-4">
+              <div className="trail__view">
+                    
+                <TrailFullInfo />
+
+              </div>
+            </div>
+              
+            <div className="col-sm-4">
+              <div className="trail__view">
+                  
+                <TrailComments />
+
+              </div>
+            </div>
+
+            <div className="col-sm-4">
+              <div className="trail__view">
+                        
+                <TrailFixRequests />
+
+                <TrailFixRequestDisplay />
+
+                <IndividualTrailFull />
+
+              </div>
+            </div>
+            
+          </div>
+          <CommentBar />
+          <TrailComments />
+
+        </div>
+      </main>
+     
       <BottomBar />
 
     </div>
@@ -321,7 +357,7 @@ function AppRouter() {
 
         <Route path="/" exact component={Index} />
         <Route path="/trail/" component={About} />
-        <Route path="/trails/:id" component={FullInfo} />
+        <Route path="/:id" component={FullInfo} />
         <Route path="/landing" exact component={Landing} />
         <Route path="/login/" component={Login} />
         <Route path="/register/" component={Register} />
