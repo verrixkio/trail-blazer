@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
 import {withRouter} from 'react-router'
+import RatingsDisplay from './RatingsDisplay'
+import AddRating from './Ratings';
 class IndividualTrailFull extends Component {
 render() {
-
+//<h1>{this.props.match.params.id}</h1>
   return (
-<h1>{this.props.match.params.id}</h1>
+
+
+  <div>
+    <h1>{this.props.match.params.id}</h1>
+    <AddRating trailId={this.props.match.params.id}/>
+    <RatingsDisplay trailId={this.props.match.params.id}/>
+
+  </div>
   );
 }
 }

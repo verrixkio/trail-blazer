@@ -286,6 +286,7 @@ function FullInfo() {
 
       <main className="primary__main">
       <IndividualTrailFull />
+      <TrailComments />
         
       </main>
 
