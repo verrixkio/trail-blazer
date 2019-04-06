@@ -15,5 +15,6 @@ User.create!(name: "Cristof")
 Rating.create!(feedback: 3, trails_id: 1, users_id: 1)
 
 Comment.create!(data: "Pretty nice could use some work", trails_id: 1, name: 'Thomas')
+Comment.create!(data: "Pretty nice could use some work", trails_id: 2, name: 'Thomas')
 
 TrailSolution.create!(description_to_fix: "SO MANY TREE'S", timeline_days: 10, cost: 250, collaboration: "myself", trails_id: 1, users_id: 1)
