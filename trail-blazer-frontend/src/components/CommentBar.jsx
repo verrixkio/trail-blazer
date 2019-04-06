@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import React, {Component} from 'react';
 import axios from 'axios';
+import {withRouter} from 'react-router';
 // This component gets the message info from the user!
-export default class CommentBar extends Component {
+class CommentBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,7 +27,8 @@ export default class CommentBar extends Component {
     alert(`${this.state.name} ${this.state.message}`)
  
     axios.post('/api/v1/comments', {
-      data: this.state.message, 
+      data: this.state.message,
+      trail_id: this.props.match.params.id, 
       name: this.state.name})
 
     .then(function (response) {
@@ -54,3 +56,5 @@ export default class CommentBar extends Component {
     );
   }
 }
+
+export default withRouter(CommentBar);
