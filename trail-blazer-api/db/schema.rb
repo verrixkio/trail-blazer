@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190331211958) do
+ActiveRecord::Schema.define(version: 20190403022712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 20190331211958) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["trails_id"], name: "index_comments_on_trails_id"
+  end
+
+  create_table "donations", force: :cascade do |t|
+    t.integer "amount"
+    t.bigint "trails_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["trails_id"], name: "index_donations_on_trails_id"
   end
 
   create_table "new_trails", force: :cascade do |t|
@@ -72,6 +80,7 @@ ActiveRecord::Schema.define(version: 20190331211958) do
   end
 
   add_foreign_key "comments", "trails", column: "trails_id"
+  add_foreign_key "donations", "trails", column: "trails_id"
   add_foreign_key "ratings", "trails", column: "trails_id"
   add_foreign_key "ratings", "users", column: "users_id"
   add_foreign_key "trail_solutions", "trails", column: "trails_id"
