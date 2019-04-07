@@ -146,6 +146,7 @@ function FullInfo() {
 
                 </div>
 
+
               </div>
             </div>
               

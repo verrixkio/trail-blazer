@@ -24,8 +24,7 @@ class CommentBar extends Component {
   }
 
   handleSubmit = event => {
-    alert(`${this.state.name} ${this.state.message}`)
- 
+    event.preventDefault()
     axios.post('/api/v1/comments', {
       data: this.state.message,
       trail_id: this.props.match.params.id, 
@@ -37,6 +36,7 @@ class CommentBar extends Component {
     .catch(function (error) {
       console.log(error);
     });
+    window.location.reload()
   }
     
 
