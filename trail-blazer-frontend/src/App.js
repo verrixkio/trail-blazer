@@ -296,7 +296,7 @@ function FullInfo() {
             <div className="col-sm-4">
               <div className="trail__view">
                   
-                <TrailComments />
+                
 
               </div>
             </div>
