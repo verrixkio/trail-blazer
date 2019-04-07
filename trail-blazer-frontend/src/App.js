@@ -28,33 +28,18 @@ class Index extends React.Component {
     render() {
       
       return (
-
         <div className="primary">
             
           <TopBar />
     
-          <main className="primary__main">
-            <div className="container-fluid reset">
-              <div className="row">
+          <main className="primary__main reset">
+
+            <div className="iframe-rwd">
+    
+              <MapContainer />
+    
+            </div>
           
-                <div className="col-sm-12">
-                
-                  <div className="iframe-rwd">
-          
-                    <MapContainer />
-          
-                  </div>
-          
-                </div> 
-          
-                </div> 
-                    
-                <div className="col-sm-12">
-          
-                </div>
-                
-              </div>
-            
           </main>
           
           <BottomBar />
@@ -64,7 +49,7 @@ class Index extends React.Component {
   }
 }
 
-function About() {
+function Trail() {
   return (
     
     <div className="primary">
@@ -76,39 +61,31 @@ function About() {
           
           <div className="row">
 
-            <div className="col-sm-4">
-              <div className="trail__view">
+            <div className="col-sm-12 col-md-6">
+              <div className="trail">
                     
                 <TrailFullInfo />
+                
+                <div className="lists-container trail__comments">
+                  
+                  <CommentBar />
+                  <TrailComments />
+
+                </div>
 
               </div>
             </div>
               
-            <div className="col-sm-4">
-              <div className="trail__view">
+            <div className="col-sm-12 col-md-6">
+              <div className="trail">
                   
-                <TrailComments />
-
-              </div>
-            </div>
-
-            <div className="col-sm-4">
-              <div className="trail__view">
-                        
                 <TrailFixRequests />
-
                 <TrailFixRequestDisplay />
-                
-                
-                {/* <IndividualTrailFull /> */}
-                
 
               </div>
             </div>
             
           </div>
-          <CommentBar />
-          <TrailComments />
 
         </div>
       </main>
@@ -291,37 +268,32 @@ function FullInfo() {
           
           <div className="row">
 
-            <div className="col-sm-4">
-              <div className="trail__view">
+            <div className="col-sm-12 col-md-6">
+              <div className="trail">
                     
                 <TrailFullInfo />
+
+                <div className="lists-container trail__comments">
+                  <CommentBar />
+                  <TrailComments />
+                </div>
 
               </div>
             </div>
               
-            <div className="col-sm-4">
-              <div className="trail__view">
-                  
-                <TrailComments />
-
-              </div>
-            </div>
-
-            <div className="col-sm-4">
-              <div className="trail__view">
+            <div className="col-sm-12 col-md-6">
+              <div className="trail">
                         
                 <TrailFixRequests />
-
                 <TrailFixRequestDisplay />
-
                 <IndividualTrailFull />
 
               </div>
             </div>
             
           </div>
-          <CommentBar />
-          <TrailComments />
+          {/*  <CommentBar />
+          <TrailComments /> */} 
 
         </div>
       </main>
@@ -336,27 +308,8 @@ function AppRouter() {
   return (
     <Router>
       <div>
-      {/*
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/trail/">Trail</Link>
-            </li>
-            <li>
-              <Link to="/login/">Login</Link>
-            </li>
-            <li>
-              <Link to="/register/">Register</Link>
-            </li>
-          </ul>
-        </nav>
-      */}
-
         <Route path="/" exact component={Index} />
-        <Route path="/trail/" component={About} />
+        <Route path="/trail/" component={Trail} title="Trail Page" />
         <Route path="/:id" component={FullInfo} />
         <Route path="/landing" exact component={Landing} />
         <Route path="/login/" component={Login} />

@@ -8,7 +8,8 @@ render() {
   return (
 
 
-  <div>
+  <div className="lists-container trail__fix-request">
+  
     <h1>{this.props.match.params.id}</h1>
     <AddRating trailId={this.props.match.params.id}/>
     <RatingsDisplay trailId={this.props.match.params.id}/>

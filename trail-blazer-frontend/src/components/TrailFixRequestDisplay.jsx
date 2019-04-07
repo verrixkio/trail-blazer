@@ -21,20 +21,17 @@ class TrailFixRequestDisplay extends Component {
 
 render() {
     return (
-        <div>
-        {this.state.trails.map( trail => {
-            
-            return (
-                
-                <div className="single-solution" key={trail.id}>
-                    <h2>Trail Fix Requests</h2>
-                    <h2>{trail.description_to_fix}</h2>
-                </div>
-      
-
-            )
+      <div className="lists-container trail__display-fix-requests">
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <h2>Pending Requests to Fix Trail</h2>
+        {this.state.trails.map( trail => { 
+          return (
+            <div className="single-solution" key={trail.id}>
+              <p>{trail.description_to_fix}</p>
+            </div>
+          )
         }
-    )}
+      )}
     </div>
 )}}
 

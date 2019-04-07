@@ -30,7 +30,9 @@ Variables \ Brand Colours
 Variables \ Brand Fonts
 ========================================================================== */
 body {
-  margin: 80px 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
   background: white;
   background: url("../images/trail-blazers-desktop-bg.jpg") no-repeat center center fixed;
   color: #230A04;
@@ -102,28 +104,18 @@ textarea {
   grid-template-areas: "header" "main" "footer";
   grid-template-columns: 100%;
   grid-template-rows: 80px  1fr 80px;
-  min-height: 80vh;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   z-index: 0; }
 
 .primary__main {
-  position: relative;
-  top: -80px;
-  margin: 60px 40px; }
+  margin: 60px 10px; }
 
-@media only screen and (min-width: 800px) and (max-width: 1279px) {
-  .primary__main {
-    top: -60px;
-    margin: 40px; } }
-
-@media only screen and (max-width: 799px) {
-  .primary__main {
-    margin: 0 40px; } }
-
-@media only screen and (max-width: 379px) {
-  .primary__main {
-    margin: 20px 20px 40px; } }
+.primary__main.reset {
+  margin: 0;
+  width: 100%;
+  height: 100%; }
 
 /* ============================================================================= 
 03. Typography
@@ -145,7 +137,7 @@ h1 {
 
 h2 {
   margin: 40px 0 20px;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1.136em; }
 
 h3 {
@@ -443,6 +435,42 @@ form textarea:focus {
   .login-msg a:focus {
     color: #9E9A41 !important; }
 
+.lists-container form {
+  margin: 0 0 40px; }
+
+.lists-container form label {
+  margin: 0 0 3px;
+  color: #230A04;
+  font-weight: 600;
+  text-transform: none; }
+
+.lists-container form input,
+.lists-container form textarea {
+  background: transparent;
+  border: 1px solid #230A04;
+  color: #230A04;
+  font: normal 400 18px/40px "Open Sans", Arial, sans-serif; }
+
+.lists-container form input:required,
+.lists-container form textarea:required {
+  box-shadow: none; }
+
+.lists-container form input:invalid,
+.lists-container form textarea:invalid {
+  box-shadow: none; }
+
+.lists-container form textarea {
+  height: auto;
+  width: 100%;
+  padding: 7px;
+  line-height: 1.4em; }
+
+.lists-container form input:focus,
+.lists-container form textarea:focus {
+  background: #758918;
+  color: #FFF6E9;
+  outline: 0; }
+
 /* ============================================================================= 
 06. Form \ Media Queries
 ================================================================================ */
@@ -705,18 +733,11 @@ a.btn.secondary {
   padding-bottom: 65.25%;
   padding-top: 0;
   height: 0;
+  min-height: 100%;
   overflow: hidden;
   border: 1px solid #CFB590;
   background: rgba(207, 181, 144, 0.25); }
   .iframe-rwd iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    padding: 10px; }
-  .iframe-rwd img {
     position: absolute;
     top: 0;
     left: 0;
@@ -737,17 +758,55 @@ a.btn.secondary {
   padding-left: 0; }
 
 .container-fluid.reset {
-  margin-right: -40px;
-  margin-left: -40px;
+  margin-right: -10px;
+  margin-left: -10px;
   margin-top: -60px;
   padding: 0; }
 
-.trail {
-  padding: 0 40px;
-  color: #CFB590; }
-  .trail ul {
-    font-size: 18px;
+.red-border {
+  border: 1px solid red; }
+
+.lists-container {
+  background: white; }
+
+.lists-container {
+  margin: 0 0 40px;
+  padding: 40px;
+  border-radius: 4px;
+  background: #FFF6E9;
+  color: #230A04; }
+  .lists-container .single-trail {
+    margin: 0 0 20px; }
+  .lists-container h2 {
+    margin: 0 0 20px;
+    color: #758918; }
+  .lists-container h3 {
+    margin: 10px 0; }
+  .lists-container p {
     font-weight: 400; }
+
+.trail__full-info i,
+.trail__fix-request i,
+.trail__comments i,
+.trail__display-fix-requests i {
+  float: left;
+  width: 34px;
+  height: 34px;
+  background-color: #CFB590;
+  border-radius: 100%;
+  color: #758918;
+  text-align: center;
+  font-size: 20px;
+  line-height: 34px;
+  margin: -4px 10px 0 -5px; }
+
+.single-solution {
+  border: 1px solid #758918; }
+
+@media only screen and (max-width: 799px) {
+  .lists-container {
+    margin: 0 0 40px;
+    padding: 20px; } }
 
 /* ============================================================================= 
 11. Landing Page

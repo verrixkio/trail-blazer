@@ -42,17 +42,21 @@ class CommentBar extends Component {
 
   render() {
     return (
-      <form onSubmit ={this.handleSubmit}>
-        <div>
-          <label>Username</label>
-          <input type='text' value={this.state.name} onChange={(this.changeNameHandler)}/>
-        </div>
-        <div>  
-          <label>Message</label>
-          <textarea value={this.state.message} onChange={(this.messageHandler)}></textarea>
-        </div>
-        <button type ='submit'>Submit</button>
-      </form>
+      <div>
+        <i class="fa fa-comment" aria-hidden="true"></i>
+        <h2>Add Comment</h2>
+        <form onSubmit ={this.handleSubmit}>
+          <div>
+            <label>Username</label>
+            <input type='text' value={this.state.name} onChange={(this.changeNameHandler)}/>
+          </div>
+          <div>  
+            <label>Message</label>
+            <textarea value={this.state.message} onChange={(this.messageHandler)}></textarea>
+          </div>
+          <button className="btn btn-block" type ='submit'>Submit</button>
+        </form>
+      </div>
     );
   }
 }

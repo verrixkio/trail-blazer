@@ -20,16 +20,18 @@ class TrailComments extends Component {
 }
 render() {
   return (
-    <div className="lists-container">
-    {this.state.comments.map( comment => {
+    <div>
+      <i class="fa fa-comments" aria-hidden="true"></i>
+      <h2>Trail Comments</h2>
+      {this.state.comments.map( comment => {
         return (
-            <div className="single-trail" key={comment.id}>
-              <h2>{comment.name}</h2>
-              <h4>{comment.data}</h4>
-            </div>
+          <div className="single-trail" key={comment.id}>
+            <h3>{comment.name}</h3>
+            <p>{comment.data}</p>
+          </div>
         )
-    })}
-</div>
+      })}
+    </div>
   );
 }
 }
