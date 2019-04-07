@@ -1,5 +1,8 @@
+import ReactStars from 'react-stars'
 import React, { Component } from 'react';
 import axios from 'axios';
+
+
 
 class RatingsDisplay extends Component {
     constructor(props){
@@ -58,12 +61,26 @@ class RatingsDisplay extends Component {
 }
 
 
-render() {
-    console.log('!!!!!! specific rating', this.state.SpecificRatings)
-    return (
-        <div>
-            <h1>{this.state.average} !!!</h1>
-        {this.state.SpecificRatings.map((Rating, i) => {
+    render() {
+        console.log('!!!!!! specific rating', this.state.SpecificRatings)
+        return (
+            <div className="stars">
+                {/* <h1>{this.state.average} !!!</h1> */}
+
+                <ReactStars
+                count={5}
+                onChange={this.state.SpecificRatings}
+                size={40}
+                color2={'#758918'} />
+                
+            </div>
+        );
+    }
+}  
+
+
+
+        {/* {this.state.SpecificRatings.map((Rating, i) => {
             
             return (
                 
@@ -76,7 +93,7 @@ render() {
             )
         }
     )}
-    </div>
-)}}
+    </div>  
+)}} */}
 
 export default RatingsDisplay; 

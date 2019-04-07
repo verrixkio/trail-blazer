@@ -90,6 +90,44 @@ form textarea:focus {
     color: $color-brand-palette-02 !important;
   }
 }
+.lists-container {
+  form {
+    margin: 0 0 40px;
+  }
+  form label {
+    margin: 0 0 3px;
+    color: $color-brand-palette-10;
+    font-weight: 600;
+    text-transform: none;
+  }
+  form input,
+  form textarea {
+    background: transparent;
+    border: 1px solid $color-brand-palette-10;
+    color: $color-brand-palette-10;
+    font: normal 400 18px/40px $sans-serif-primary;
+  }
+  form input:required,
+  form textarea:required {
+    box-shadow: none;
+  }
+  form input:invalid,
+  form textarea:invalid {
+    box-shadow: none;
+  }
+  form textarea {
+    height: auto;
+    width: 100%;
+    padding: 7px;
+    line-height: 1.4em;
+  }
+  form input:focus,
+  form textarea:focus {
+    background: $color-brand-palette-03;
+    color: $color-brand-palette-06;
+    outline: 0;
+  }
+}
 /* ============================================================================= 
 06. Form \ Media Queries
 ================================================================================ */
