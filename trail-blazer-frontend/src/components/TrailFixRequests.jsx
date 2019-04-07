@@ -30,9 +30,9 @@ addFixRequest = (e) => {
 render() {
   return (
     <div className="lists-container trail__fix-request">
-    <i class="fa fa-tag" aria-hidden="true"></i>
-    <h2>Submit Request to Fix Trail</h2>
-    <form onSubmit={this.addFixRequest}>
+      <i class="fa fa-tag" aria-hidden="true"></i>
+      <h2>Submit Request to Fix Trail</h2>
+      <form onSubmit={this.addFixRequest}>
         <div className="form-group">
           
           <label htmlFor="fix-request">Trail items to fix:</label>
@@ -48,13 +48,10 @@ render() {
           <input className="regular-form" id="collaboration" name="collaberation" type="text" placeholder="Who helped you fix the trail?"></input>
 
         </div>
-
         <button className="btn btn-block" type="submit">Submit</button>
       </form>
     </div>           
   )}
 }
-      
-
 
 export default TrailFixRequests; 

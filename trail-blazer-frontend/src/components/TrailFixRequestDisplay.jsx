@@ -14,7 +14,7 @@ class TrailFixRequestDisplay extends Component {
         this.setState({
             solutons: response.data
         })
-       console.log('whats goooodddd', this.props.trailId) 
+        console.log('whats goooodddd', this.props.trailId) 
     })
     .catch(error => console.log(error))
 }
@@ -26,17 +26,13 @@ render() {
         <h2>Pending Requests to Fix Trail</h2>
         {this.state.solutons.map( soluton => {
             if (soluton.trails_id == this.props.trail_id ) {
-            return (
-                
-                <div className="single-solution" key={soluton.id}>
-                    <h2>Trail Fix Request:</h2>
-                    <h2>{soluton.description_to_fix}</h2>
-                </div>
-      
-
-            ) } 
-        }
-      )}
+                return (
+                    <div className="single-solution" key={soluton.id}>
+                        <p>{soluton.description_to_fix}</p>
+                    </div>
+                ) } 
+            }
+        )}
     </div>
 )}}
 
