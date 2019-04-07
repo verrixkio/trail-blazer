@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import RatingsDisplay from './RatingsDisplay'
 class AddRating extends Component {
 
 AddRating = (e) => {
@@ -17,6 +17,7 @@ AddRating = (e) => {
         throw error;
     })
     e.target.elements["AddRating"].value = ''
+    window.location.reload()
     console.log(this.props.trailId + '!!!!!!!!!!!!!!!!!!!!!!')
 }
 
