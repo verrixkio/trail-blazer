@@ -5,31 +5,36 @@ class TrailFixRequestDisplay extends Component {
     constructor(props){
         super(props)
         this.state = {
-            trails: [],
+            solutons: [],
         }
     }
     componentDidMount() {
         axios.get('api/v1/trail_solutions.json')
     .then(response => {
         this.setState({
-            trails: response.data
+            solutons: response.data
         })
-        
+       console.log('whats goooodddd', this.props.trailId) 
     })
     .catch(error => console.log(error))
 }
 
 render() {
     return (
-      <div className="lists-container trail__display-fix-requests">
+    <div className="lists-container trail__display-fix-requests">
         <i class="fa fa-tags" aria-hidden="true"></i>
         <h2>Pending Requests to Fix Trail</h2>
-        {this.state.trails.map( trail => { 
-          return (
-            <div className="single-solution" key={trail.id}>
-              <p>{trail.description_to_fix}</p>
-            </div>
-          )
+        {this.state.solutons.map( soluton => {
+            if (soluton.trails_id == this.props.trail_id ) {
+            return (
+                
+                <div className="single-solution" key={soluton.id}>
+                    <h2>Trail Fix Request:</h2>
+                    <h2>{soluton.description_to_fix}</h2>
+                </div>
+      
+
+            ) } 
         }
       )}
     </div>

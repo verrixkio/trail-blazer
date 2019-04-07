@@ -52,10 +52,20 @@ export class MapContainer extends Component {
 
   
     colorSelect(trail) {
-      if (trail.difficulty < 3) {
-        return "#7CFC00"
-      } else return "#ff0000"
-    }
+      if (trail.difficulty === 1) {
+          return "#00cc00"
+      } else if (trail.difficulty === 2) {
+          return "#33ccff"
+      } else if (trail.difficulty === 3 ) {
+          return "#cc33ff"
+      } else if (trail.difficulty === 4) {
+          return "#ffff00"
+      } else if (trail.difficulty === 5) {
+          return "#ff9966"
+      } else {
+        return "#ff0000"
+      }
+}
 
   
   render() {

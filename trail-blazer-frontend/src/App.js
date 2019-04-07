@@ -268,15 +268,12 @@ function FullInfo() {
           
           <div className="row">
 
+    
+              
             <div className="col-sm-12 col-md-6">
               <div className="trail">
-                    
-                <TrailFullInfo />
-
-                <div className="lists-container trail__comments">
-                  <CommentBar />
-                  <TrailComments />
-                </div>
+                  
+                <TrailComments />
 
               </div>
             </div>
@@ -284,8 +281,8 @@ function FullInfo() {
             <div className="col-sm-12 col-md-6">
               <div className="trail">
                         
-                <TrailFixRequests />
-                <TrailFixRequestDisplay />
+          
+
                 <IndividualTrailFull />
 
               </div>
