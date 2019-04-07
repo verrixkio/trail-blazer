@@ -7,7 +7,7 @@ module Api::V1
 
         def create
             puts "hello I'm create"
-            TrailSolution.create(description_to_fix: params[:description_to_fix], timeline_days: params[:timeline_to_fix], cost: params[:cost], collaboration: params[:collaboration])
+            TrailSolution.create(trails_id: params[:trails_id], description_to_fix: params[:description_to_fix], timeline_days: params[:timeline_to_fix], cost: params[:cost], collaboration: params[:collaboration])
         end
     end
 end

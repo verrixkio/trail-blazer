@@ -10,13 +10,21 @@ addFixRequest = (e) => {
         timeline_to_fix: e.target.elements["timeline"].value,
         cost: e.target.elements["cost"].value,
         collaboration: e.target.elements["collaboration"].value,
+        trails_id: this.props.trailId
     })
     .then(function(response) {
+
         console.log(response);
+
     })
     .catch(function(error) {
         throw error;
     })
+    e.target.elements["fix-request"].value = ''
+    e.target.elements["timeline"].value = ''
+    e.target.elements["cost"].value = ''
+    e.target.elements["collaboration"].value = ''
+    window.location.reload()
 }
 
 render() {
