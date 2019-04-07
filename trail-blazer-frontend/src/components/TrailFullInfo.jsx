@@ -11,24 +11,26 @@ class TrailFullInfo extends Component {
   componentDidMount() {
     axios.get('api/v1/trails.json')
       .then(response => {
-          this.setState({
-            trails: response.data
+        this.setState({
+          trails: response.data
     })
   })
     .catch(error => console.log(error))
 }
   render() {
     return (
-      <div className="lists-container">
-      {this.state.trails.map( trail => {
+      <div className="lists-container trail__full-info">
+      <i class="fa fa-info" aria-hidden="true"></i>
+      <h2>Trail Information</h2>
+        {this.state.trails.map( trail => {
           return (
-              <div className="single-trail" key={trail.id}>
-                <h2>Trail Information</h2>
-                <h4>{trail.id}</h4>)}
-              </div>
+            <div className="single-trail" key={trail.id}>
+              <h3>Single Trail Information</h3>
+              <p>{trail.id}</p>
+            </div>
           )
-      })}
-  </div>
+        })}
+      </div>
     );
   }
 }

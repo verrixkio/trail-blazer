@@ -10,19 +10,26 @@ render() {
 // this is how you acces the trail id this.props.match.params.id
   return (
 
-<div>
-  <div>
-   
-    <AddRating trailId={this.props.match.params.id}/>
-    <RatingsDisplay trailId={this.props.match.params.id}/>
+    <div>
+      
+      <div className="lists-container trail__display-ratings">
+        
+        <i class="fa fa-tree" aria-hidden="true"></i>
+        <h2>Add Trail Rating</h2>
 
-  </div>
-  <div>
-  <TrailFixRequests trailId={this.props.match.params.id}/>
+        <RatingsDisplay trailId={this.props.match.params.id}/>
+        <AddRating trailId={this.props.match.params.id}/>
 
-<TrailFixRequestDisplay trail_id={this.props.match.params.id}/>
-  </div>
-  </div>
+      </div>
+
+      <div>
+
+        <TrailFixRequests trailId={this.props.match.params.id}/>
+        <TrailFixRequestDisplay trail_id={this.props.match.params.id}/>
+
+      </div>
+      
+    </div>
   );
 }
 }

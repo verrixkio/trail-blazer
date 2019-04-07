@@ -2,7 +2,7 @@
 
 * Description:    CSS Layout for Trail Blazers Application V1A
 * Date Created:   19/03/29
-* Date Updated:   19/04/04
+* Date Updated:   19/04/07
 
 * 01. Variables
 * 02. Layout
@@ -14,9 +14,7 @@
 * 08. Button
 * 09. iFrame
 * 10. Trail
-* 11. Landing Page
-* 12. Push Menu
-* 13. Map Pop-up
+* 11. Map Pop-up
 
 */
 
@@ -54,7 +52,9 @@ $sans-serif-primary: "Open Sans", Arial, sans-serif;
 $serif-primary: "Merriweather", serif;
 
 body {
-  margin: 80px 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
   background: white;
   background: url("../images/trail-blazers-desktop-bg.jpg") no-repeat center center fixed;
   color: $color-brand-palette-10;
@@ -74,6 +74,4 @@ Imports
 @import 'button';
 @import 'iframe';
 @import 'trail';
-@import 'landing-page';
-@import 'push-menu';
-@import 'map-popup';
+@import 'trail-popup';

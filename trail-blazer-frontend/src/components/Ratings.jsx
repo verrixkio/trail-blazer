@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import RatingsDisplay from './RatingsDisplay'
+
 class AddRating extends Component {
 
 AddRating = (e) => {
@@ -22,17 +22,15 @@ AddRating = (e) => {
 }
 
 render() {
-    return (
-           
+    return (        
             <form onSubmit={this.AddRating} >
                 <div className="form-group">
                     <label htmlFor="AddRating">AddRating</label>
                     <input className="regular-form" id="AddRating" name="AddRating" type="integer" ></input>
                 
                 </div>
-                    <button className="btn btn-block" type="submit">Submit</button>
+                <button className="btn btn-block" type="submit">Submit</button>
             </form>
-                    
     )}
 }
       

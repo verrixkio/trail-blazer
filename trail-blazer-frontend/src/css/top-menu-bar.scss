@@ -17,7 +17,7 @@
   float: left;
   padding: 10px 0;
   border-bottom: none;
-  font: 500 18px/20px $sans-serif-primary;
+  font: 600 18px/20px $sans-serif-primary;
   text-decoration: none;
   text-transform: uppercase;
   text-shadow: 0 1px rgba(0, 0, 0, 0.8);
@@ -29,6 +29,6 @@
   }
   &:hover,
   &:focus {
-    color: $color-brand-palette-03;
+    color: $color-brand-palette-06;
   }
 }
