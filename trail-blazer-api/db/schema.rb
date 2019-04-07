@@ -26,10 +26,10 @@ ActiveRecord::Schema.define(version: 20190403022712) do
 
   create_table "donations", force: :cascade do |t|
     t.integer "amount"
-    t.bigint "trails_id"
+    t.bigint "trail_solutions_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["trails_id"], name: "index_donations_on_trails_id"
+    t.index ["trail_solutions_id"], name: "index_donations_on_trail_solutions_id"
   end
 
   create_table "new_trails", force: :cascade do |t|
@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 20190403022712) do
   end
 
   add_foreign_key "comments", "trails", column: "trails_id"
-  add_foreign_key "donations", "trails", column: "trails_id"
+  add_foreign_key "donations", "trail_solutions", column: "trail_solutions_id"
   add_foreign_key "ratings", "trails", column: "trails_id"
   add_foreign_key "ratings", "users", column: "users_id"
   add_foreign_key "trail_solutions", "trails", column: "trails_id"
