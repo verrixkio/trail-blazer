@@ -291,13 +291,7 @@ function FullInfo() {
           
           <div className="row">
 
-            <div className="col-sm-4">
-              <div className="trail__view">
-                    
-                <TrailFullInfo />
-
-              </div>
-            </div>
+    
               
             <div className="col-sm-4">
               <div className="trail__view">
@@ -310,9 +304,7 @@ function FullInfo() {
             <div className="col-sm-4">
               <div className="trail__view">
                         
-                <TrailFixRequests />
-
-                <TrailFixRequestDisplay />
+          
 
                 <IndividualTrailFull />
 
