@@ -40,51 +40,6 @@ class Index extends React.Component {
   }
 }
 
-function Trail() {
-  return (
-    <div className="primary">
-        
-      <TopBar />
-
-      <main className="primary__main">
-        <div className="container-fluid">
-          
-          <div className="row">
-
-            <div className="col-sm-12 col-md-6 left">
-              <div className="trail">
-                    
-                <TrailFullInfo />
-                
-                <div className="lists-container trail__comments">
-                  
-                  <TrailComments />
-
-                </div>
-
-              </div>
-            </div>
-              
-            <div className="col-sm-12 col-md-6 right">
-              <div className="trail">
-                  
-                <TrailFixRequests />
-                <TrailFixRequestDisplay />
-
-              </div>
-            </div>
-            
-          </div>
-
-        </div>
-      </main>
-     
-      <BottomBar />
-
-    </div>
-  );
-}
-
 function FormExample() {
   return (
     <div className="primary">
@@ -174,7 +129,6 @@ function AppRouter() {
     <Router>
       <div>
         <Route path="/" exact component={Index} />
-        <Route path="/trail/" component={Trail} />
         <Route path="/form-example/" component={FormExample} />
         <Route path="/:id" component={FullInfo} />
       </div>
