@@ -60,12 +60,12 @@ render() {
             return (
                 
                 <div className="single-solution" key={solution.id}>
-                    <h2>Trail Fix Request:</h2>
+                    <h1>Trail Fix Request:</h1>
                     <h2>{solution.description_to_fix}</h2>
                     <h2>estimated timeline: {solution.timeline_days}</h2>
                     <h2>estimated cost: {solution.cost}</h2>
                     <h2>original colaborator: {solution.collaboration}</h2>
-                    
+
                     <button onClick={() => this.togglePopup(solution)}>Donate</button>  
                     {this.state.showPopup ? 
                     <FixPopUp
@@ -74,6 +74,17 @@ render() {
                         closePopup={this.togglePopup.bind(this)}
                     />
                     : null }
+                    {this.state.donations.map( donation => {
+            if (donation.trail_solutions_id == solution.id) {
+            return (<div>
+               <h2> Thank you to: </h2>
+                <h2>{donation.name}</h2>
+                <h3>for donating:</h3>
+                <h2>{donation.amount}</h2>
+            </div>)
+                 }})} 
+
+
      
                 </div>
               
@@ -82,7 +93,7 @@ render() {
             ) } 
         }
     )}
-                        
+                        <h1>thank you all contributors!</h1>
                          {this.state.donations.map( donation => {
             if (donation.trails_id == this.props.trail_id ) {
             return (<div>
