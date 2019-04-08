@@ -10,7 +10,7 @@ class TrailPopup extends Component {
         <i class="fa fa-map-marker" aria-hidden="true"></i>
         <h2>{this.props.trail.name}</h2>
         <p><strong>Description: </strong>{this.props.trail.description}</p>
-        <p><strong>Length: </strong><strong className="green">{this.props.trail.length / 100} km</strong></p>
+        <p><strong>Length: </strong><strong className="green">{this.props.trail.length / 1000} km</strong></p>
         <p><strong>Difficulty: </strong><strong className="green">{this.props.trail.difficulty}</strong></p>
 
         <Link to={`/${this.props.trail.id}`}>

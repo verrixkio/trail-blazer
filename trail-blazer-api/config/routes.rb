@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :new_trails
       resources :trails
+      resources :donations
       resources :users
       resources :ratings
       resources :comments
