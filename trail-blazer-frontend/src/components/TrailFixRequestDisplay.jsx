@@ -7,6 +7,7 @@ class TrailFixRequestDisplay extends Component {
         this.state = {
             solutions: [],
             donations: [],
+            solutionD: [],
             showPopup: false
         }
     }
@@ -37,17 +38,23 @@ class TrailFixRequestDisplay extends Component {
         .catch(error => console.log(error))
         
     }
+    
+
+
        togglePopup = (solution) => {
     this.setState({
       showPopup: !this.state.showPopup,
       solution: solution
     });
+
     
     
   }
 render() {
+    
     return (
         <div>
+
         {this.state.solutions.map( solution => {
             if (solution.trails_id == this.props.trail_id ) {
             return (
@@ -67,12 +74,23 @@ render() {
                         closePopup={this.togglePopup.bind(this)}
                     />
                     : null }
+     
                 </div>
+              
       
 
             ) } 
         }
     )}
+                        
+                         {this.state.donations.map( donation => {
+            if (donation.trails_id == this.props.trail_id ) {
+            return (<div>
+                <h2>{donation.name}</h2>
+                <h2>{donation.amount}</h2>
+            </div>)
+                 }})} 
+                    
     </div>
 )}}
 

@@ -23,7 +23,7 @@ class FixPopUp extends Component {
     e.target.elements["name"].value = ''
     e.target.elements["amount"].value = ''
 
-    //window.location.reload()
+    window.location.reload()
 }
   render() {
     return (
