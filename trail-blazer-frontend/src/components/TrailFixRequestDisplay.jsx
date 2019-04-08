@@ -6,20 +6,38 @@ class TrailFixRequestDisplay extends Component {
         super(props)
         this.state = {
             solutions: [],
+            donations: [],
             showPopup: false
         }
     }
+    
     componentDidMount() {
         axios.get('api/v1/trail_solutions.json')
-    .then(response => {
-        this.setState({
-            solutions: response.data
+        .then(response => {
+            this.setState({
+                solutions: response.data
+            })
         })
-       console.log('whats goooodddd', this.props.trailId) 
-    })
-    .catch(error => console.log(error))
-}
-togglePopup = (solution) => {
+        .catch(error => console.log(error))
+
+        axios.get('api/v1/donations.json')
+        .then(response => {
+            this.setState({
+                donations: response.data
+            })
+        })
+   /*         let donations = response.data
+            solutions.forEach(function (solution) {
+                donations.forEach(function(donation) {
+                    if (solution.id == donation.trail_solutions_id)
+                    solution.donation = donation
+                })
+            })*/
+            
+        .catch(error => console.log(error))
+        
+    }
+       togglePopup = (solution) => {
     this.setState({
       showPopup: !this.state.showPopup,
       solution: solution
@@ -40,6 +58,7 @@ render() {
                     <h2>estimated timeline: {solution.timeline_days}</h2>
                     <h2>estimated cost: {solution.cost}</h2>
                     <h2>original colaborator: {solution.collaboration}</h2>
+                    
                     <button onClick={() => this.togglePopup(solution)}>Donate</button>  
                     {this.state.showPopup ? 
                     <FixPopUp
