@@ -1,5 +1,5 @@
 class DonationsController < ApplicationController
-  before_action :set_donation, only: [:show, :update, :destroy]
+  before_action :set_donation, only: [:show, :update, :create, :destroy]
 
   # GET /donations
   def index
@@ -15,7 +15,8 @@ class DonationsController < ApplicationController
 
   # POST /donations
   def create
-    @donation = Donation.new(donation_params)
+   # @donation = Donation.new(donation_params)
+     @donation = Donation.create(amount: params[:amount], trails: params[:trails_id].to_i, name: params[:name], trail_solutions: params[:solutionId])
 
     if @donation.save
       render json: @donation, status: :created, location: @donation
