@@ -1,8 +1,8 @@
 /*
 
-* Description:    CSS Layout for Trail Blazers Application V1A
+* Description:    CSS Layout for Trail Blazers Application V1B
 * Date Created:   19/03/29
-* Date Updated:   19/04/07
+* Date Updated:   19/04/08
 
 * 01. Variables
 * 02. Layout
@@ -12,9 +12,10 @@
 * 06. Form
 * 07. Message Panel
 * 08. Button
-* 09. iFrame
+* 09. Map
 * 10. Trail
-* 11. Map Pop-up
+* 11. Trail Pop-up
+* 12. Trail Rating
 
 */
 
@@ -75,3 +76,4 @@ Imports
 @import 'iframe';
 @import 'trail';
 @import 'trail-popup';
+@import 'trail-rating';
