@@ -19,6 +19,7 @@ class TrailFullInfo extends Component {
     .catch(error => console.log(error))
 }
   render() {
+    console.log(this.props)
     return (
       <div className="lists-container trail__full-info">
       <i class="fa fa-info" aria-hidden="true"></i>
