@@ -1,3 +1,4 @@
+module Api::V1
 class DonationsController < ApplicationController
   before_action :set_donation, only: [:show, :update, :create, :destroy]
 
@@ -16,13 +17,15 @@ class DonationsController < ApplicationController
   # POST /donations
   def create
    # @donation = Donation.new(donation_params)
-     @donation = Donation.create(amount: params[:amount], trails: params[:trails_id].to_i, name: params[:name], trail_solutions: params[:solutionId])
+   # moved logic to unused route /api/v1/users(.:format) api/v1/users#create 
+   #reconnecting withg oup on how to generate the proper route
+     @donation = Donation.create(amount: params[:amount], trails_id: params[:trails_id].to_i, name: params[:name], trail_solutions_id: params[:solutionId])
 
-    if @donation.save
-      render json: @donation, status: :created, location: @donation
-    else
-      render json: @donation.errors, status: :unprocessable_entity
-    end
+   # if @donation.save
+    #  render json: @donation, status: :created, location: @donation
+    #else
+    #  render json: @donation.errors, status: :unprocessable_entity
+   # end
   end
 
   # PATCH/PUT /donations/1
@@ -39,14 +42,22 @@ class DonationsController < ApplicationController
     @donation.destroy
   end
 
-  private
+ private
     # Use callbacks to share common setup or constraints between actions.
     def set_donation
-      @donation = Donation.find(params[:id])
+     # @donation = Donation.create(amount: params[:amount], trails_id: params[:trails_id].to_i, name: params[:name], trail_solutions_id: params[:solutionId])
+
+  #    if @donation.save
+  #      render json: @donation, status: :created, location: @donation
+  #    else
+   #     render json: @donation.errors, status: :unprocessable_entity
+   #   end
     end
 
-    # Only allow a trusted parameter "white list" through.
+     # Only allow a trusted parameter "white list" through.
     def donation_params
       params.fetch(:donation, {})
     end
 end
+end
+
