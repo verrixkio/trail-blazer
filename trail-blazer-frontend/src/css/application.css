@@ -2,7 +2,7 @@
 
 * Description:    CSS Layout for Trail Blazers Application V1A
 * Date Created:   19/03/29
-* Date Updated:   19/04/04
+* Date Updated:   19/04/07
 
 * 01. Variables
 * 02. Layout
@@ -14,9 +14,7 @@
 * 08. Button
 * 09. iFrame
 * 10. Trail
-* 11. Landing Page
-* 12. Push Menu
-* 13. Map Pop-up
+* 11. Map Pop-up
 
 */
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
@@ -30,7 +28,9 @@ Variables \ Brand Colours
 Variables \ Brand Fonts
 ========================================================================== */
 body {
-  margin: 80px 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
   background: white;
   background: url("../images/trail-blazers-desktop-bg.jpg") no-repeat center center fixed;
   color: #230A04;
@@ -102,28 +102,18 @@ textarea {
   grid-template-areas: "header" "main" "footer";
   grid-template-columns: 100%;
   grid-template-rows: 80px  1fr 80px;
-  min-height: 80vh;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   z-index: 0; }
 
 .primary__main {
-  position: relative;
-  top: -80px;
-  margin: 60px 40px; }
+  margin: 60px 10px; }
 
-@media only screen and (min-width: 800px) and (max-width: 1279px) {
-  .primary__main {
-    top: -60px;
-    margin: 40px; } }
-
-@media only screen and (max-width: 799px) {
-  .primary__main {
-    margin: 0 40px; } }
-
-@media only screen and (max-width: 379px) {
-  .primary__main {
-    margin: 20px 20px 40px; } }
+.primary__main.reset {
+  margin: 0;
+  width: 100%;
+  height: 100%; }
 
 /* ============================================================================= 
 03. Typography
@@ -145,8 +135,9 @@ h1 {
 
 h2 {
   margin: 40px 0 20px;
-  font-size: 22px;
-  line-height: 1.136em; }
+  font-size: 24px;
+  line-height: 1.136em;
+  text-transform: uppercase; }
 
 h3 {
   margin: 40px 0 20px;
@@ -165,7 +156,7 @@ p {
   line-height: 1.5em; }
 
 strong {
-  font-weight: 700; }
+  font-weight: 600; }
 
 em {
   font-style: italic; }
@@ -239,7 +230,7 @@ h3.logo-sml {
   float: left;
   padding: 10px 0;
   border-bottom: none;
-  font: 500 18px/20px "Open Sans", Arial, sans-serif;
+  font: 600 18px/20px "Open Sans", Arial, sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   text-shadow: 0 1px rgba(0, 0, 0, 0.8);
@@ -252,7 +243,7 @@ h3.logo-sml {
     color: #CFB590;
     text-decoration: none; }
   .primary__top-bar .logo:hover, .primary__top-bar .logo:focus {
-    color: #758918; }
+    color: #FFF6E9; }
 
 /* ============================================================================= 
 05. Bottom Menu Bar
@@ -288,7 +279,7 @@ h3.logo-sml {
   display: inline-block;
   width: 30%;
   margin: 0 1.6665% 0 1.6665%;
-  font: 500 16px/20px "Open Sans", Arial, sans-serif;
+  font: 600 16px/20px "Open Sans", Arial, sans-serif;
   text-transform: uppercase;
   text-shadow: 0 1px rgba(0, 0, 0, 0.8); }
   .nav > li:first-child {
@@ -442,6 +433,42 @@ form textarea:focus {
   .login-msg a:hover,
   .login-msg a:focus {
     color: #9E9A41 !important; }
+
+.lists-container form {
+  margin: 0 0 40px; }
+
+.lists-container form label {
+  margin: 0 0 3px;
+  color: #230A04;
+  font-weight: 600;
+  text-transform: none; }
+
+.lists-container form input,
+.lists-container form textarea {
+  background: transparent;
+  border: 1px solid #230A04;
+  color: #230A04;
+  font: normal 400 18px/40px "Open Sans", Arial, sans-serif; }
+
+.lists-container form input:required,
+.lists-container form textarea:required {
+  box-shadow: none; }
+
+.lists-container form input:invalid,
+.lists-container form textarea:invalid {
+  box-shadow: none; }
+
+.lists-container form textarea {
+  height: auto;
+  width: 100%;
+  padding: 7px;
+  line-height: 1.4em; }
+
+.lists-container form input:focus,
+.lists-container form textarea:focus {
+  background: #758918;
+  color: #FFF6E9;
+  outline: 0; }
 
 /* ============================================================================= 
 06. Form \ Media Queries
@@ -654,7 +681,7 @@ a.btn {
   border-color: #758918;
   border-radius: 0px;
   color: #FFF6E9;
-  font: 400 20px/1.5em "Open Sans", Arial, sans-serif;
+  font: 600 20px/1.5em "Open Sans", Arial, sans-serif;
   text-decoration: none;
   text-shadow: 0 1px rgba(0, 0, 0, 0.7);
   text-transform: uppercase;
@@ -705,18 +732,11 @@ a.btn.secondary {
   padding-bottom: 65.25%;
   padding-top: 0;
   height: 0;
+  min-height: 100%;
   overflow: hidden;
   border: 1px solid #CFB590;
   background: rgba(207, 181, 144, 0.25); }
   .iframe-rwd iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    padding: 10px; }
-  .iframe-rwd img {
     position: absolute;
     top: 0;
     left: 0;
@@ -737,120 +757,213 @@ a.btn.secondary {
   padding-left: 0; }
 
 .container-fluid.reset {
-  margin-right: -40px;
-  margin-left: -40px;
+  margin-right: -10px;
+  margin-left: -10px;
   margin-top: -60px;
   padding: 0; }
 
-.trail {
-  padding: 0 40px;
-  color: #CFB590; }
-  .trail ul {
-    font-size: 18px;
-    font-weight: 400; }
+.col-md-6.left {
+  padding: 0 30px; }
 
-/* ============================================================================= 
-11. Landing Page
-================================================================================ */
-.landing-page {
-  display: block;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+.col-md-6.right {
+  padding: 0 30px; }
+
+.lists-container {
+  margin: 0 0 40px;
   padding: 40px;
-  border: 1px solid #49281F; }
-  .landing-page h1 {
-    margin: 0 0 40px;
-    color: #CFB590;
-    font: 400 16px/1.5em "Open Sans", Arial, sans-serif;
-    text-transform: uppercase;
-    text-align: center; }
-  .landing-page p {
-    color: #CFB590;
-    font: 500 22px/1.5em "Open Sans", Arial, sans-serif;
-    text-align: center; }
-  .landing-page .btn.reset {
-    margin: 40px 0 0; }
-
-@media only screen and (max-width: 799px) {
-  .reset {
-    margin-top: 0; } }
-
-/* ============================================================================= 
-03. Push Menu
-================================================================================ */
-.push-menu {
-  width: 100%;
-  max-width: 200px;
-  margin: 0 auto 60px; }
-  .push-menu .left,
-  .push-menu .right {
-    display: inline-block;
-    width: calc(50% - 2px);
-    padding: 2px 20px;
-    border: 1px solid #758918;
-    color: white;
-    font: 400 12px/20px "Open Sans", Arial, sans-serif;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out; }
-    .push-menu .left:hover, .push-menu .left:focus,
-    .push-menu .right:hover,
-    .push-menu .right:focus {
-      background: #9E9A41; }
-  .push-menu .left {
-    background: #758918; }
-
-.push-menu.reverse .left {
-  background: transparent; }
-  .push-menu.reverse .left:hover, .push-menu.reverse .left:focus {
-    background: #9E9A41; }
-
-.push-menu.reverse .right {
-  background: #758918; }
-  .push-menu.reverse .right:hover, .push-menu.reverse .right:focus {
-    background: #9E9A41; }
-
-.map-bubble {
+  border-radius: 4px;
   background: #FFF6E9;
   color: #230A04;
-  display: inline-block;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); }
+  .lists-container .single-trail {
+    margin: 0 0 20px; }
+  .lists-container h2 {
+    margin: 0 0 20px;
+    color: #758918; }
+  .lists-container h3 {
+    margin: 10px 0; }
+  .lists-container p {
+    font-weight: 400; }
+
+.trail__full-info i,
+.trail__fix-request i,
+.trail__comments i,
+.trail__display-fix-requests i,
+.trail__display-ratings i,
+.trail__add-ratings i {
+  float: left;
+  width: 34px;
+  height: 34px;
+  background-color: #CFB590;
+  border-radius: 100%;
+  color: #758918;
+  text-align: center;
+  font-size: 20px;
+  line-height: 34px;
+  margin: -4px 10px 0 -5px;
+  -webkit-box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15); }
+
+.single-solution {
+  border-bottom: 1px solid #AE8F63; }
+
+.stars {
+  display: block;
+  margin: 20px auto;
+  width: auto; }
+
+@media only screen and (max-width: 799px) {
+  .col-md-6.left {
+    padding: 0 10px; }
+  .col-md-6.right {
+    padding: 0 10px; }
+  .lists-container {
+    margin: 0 0 40px;
+    padding: 20px; } }
+
+/* ============================================================================= 
+10. Trail Pop-up
+================================================================================ */
+.trail-popup {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin: 60px auto 20px;
+  padding: 40px 20px 20px;
+  background: #FFF6E9;
+  color: #230A04;
   font-size: 14px;
   line-height: 1.5em;
-  margin-bottom: 1em;
-  padding: 10px 20px;
-  position: relative;
-  text-align: left;
   vertical-align: top;
-  min-width: 7em;
-  border-radius: 4px; }
-  .map-bubble h3 {
-    margin: 10px 0;
-    font-size: 18px;
-    line-height: 1.136em; }
-  .map-bubble ul {
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.25); }
+  .trail-popup h2 {
+    margin: 6px 0 20px 0;
+    color: #758918; }
+  .trail-popup p {
     margin: 0 0 10px; }
+  .trail-popup strong.green {
+    color: #758918; }
 
-.map-bubble:after {
-  border: 1em solid transparent;
-  border-top-color: #FFF6E9;
-  content: '';
-  margin-left: -1em;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  width: 0;
-  height: 0; }
-
-.map-bubble.large {
+.trail-popup.large {
   font-size: 2em;
   padding: 0 1em;
   min-width: 4em; }
 
-.map-bubble.rounded {
+.trail-popup.rounded {
   border-radius: .4em; }
+
+.trail-popup i {
+  float: left;
+  width: 34px;
+  height: 34px;
+  background-color: #CFB590;
+  border-radius: 100%;
+  color: #758918;
+  text-align: center;
+  font-size: 20px;
+  line-height: 34px;
+  margin: 0 15px 0 -5px;
+  -webkit-box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15); }
+
+.trail-popup__close {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  box-shadow: none;
+  border: none;
+  background: transparent; }
+
+.trail-popup__close::before, .trail-popup__close::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  height: 3px;
+  width: 26px;
+  background-color: #758918;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.trail-popup__close::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.trail-popup__close::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+.trail-popup__close:hover {
+  background: transparent; }
+
+.trail-popup__close:hover::before, .trail-popup__close:hover::after {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s; }
+
+.trail-popup__close:hover::before {
+  -webkit-transform: rotate(220deg);
+  -ms-transform: rotate(220deg);
+  transform: rotate(220deg); }
+
+.trail-popup__close:hover::after {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg); }
+
+.trail-popup--is-visible .trail-popup__close::before {
+  -webkit-animation: cd-close-1 0.6s 0.3s;
+  animation: cd-close-1 0.6s 0.3s; }
+
+.trail-popup--is-visible .trail-popup__close::after {
+  -webkit-animation: cd-close-2 0.6s 0.3s;
+  animation: cd-close-2 0.6s 0.3s; }
+
+@-webkit-keyframes cd-close-1 {
+  0%, 50% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); } }
+
+@keyframes cd-close-1 {
+  0%, 50% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); } }
+
+@-webkit-keyframes cd-close-2 {
+  0%, 50% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); } }
+
+@keyframes cd-close-2 {
+  0%, 50% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); } }
+
+@media only screen and (max-width: 799px) {
+  .trail-popup {
+    margin: 0 0 20px; } }

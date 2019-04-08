@@ -6,13 +6,13 @@ class BottomBar extends Component {
       <footer className="primary__btm-bar">
         <ul className="nav navbar-nav">
             <li>
-              <a href="/trail"><i className="fa fa-map"></i>View Trails</a>
+              <a href="/"><i className="fa fa-map"></i>View Trails</a>
             </li>
             <li>
-              <a href="#"><i className="fa fa-map-marker"></i>My Trails</a>
+              <a href="/trail/"><i className="fa fa-map-marker"></i>My Trails</a>
             </li>
             <li>
-              <a href="#"><i className="fa fa-user"></i>My Account</a>
+              <a href="/form-example/"><i className="fa fa-user"></i>My Account</a>
             </li>
         </ul>
       </footer>

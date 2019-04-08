@@ -27,6 +27,7 @@ class TrailFixRequestDisplay extends Component {
                 donations: response.data
             })
         })
+
    /*         let donations = response.data
             solutions.forEach(function (solution) {
                 donations.forEach(function(donation) {
@@ -41,6 +42,7 @@ class TrailFixRequestDisplay extends Component {
     
 
 
+
        togglePopup = (solution) => {
     this.setState({
       showPopup: !this.state.showPopup,
@@ -53,18 +55,18 @@ class TrailFixRequestDisplay extends Component {
 render() {
     
     return (
-        <div>
 
+        
+  <div className="lists-container trail__display-fix-requests">
+          <i class="fa fa-tags" aria-hidden="true"></i>
+        <h2>Pending Requests to Fix Trail</h2>
         {this.state.solutions.map( solution => {
             if (solution.trails_id == this.props.trail_id ) {
             return (
                 
-                <div className="single-solution" key={solution.id}>
-                    <h1>Trail Fix Request:</h1>
-                    <h2>{solution.description_to_fix}</h2>
-                    <h2>estimated timeline: {solution.timeline_days}</h2>
-                    <h2>estimated cost: {solution.cost}</h2>
-                    <h2>original colaborator: {solution.collaboration}</h2>
+                   <div className="single-solution" key={soluton.id}>
+                        <p>{soluton.description_to_fix}</p>
+                    
 
                     <button onClick={() => this.togglePopup(solution)}>Donate</button>  
                     {this.state.showPopup ? 
@@ -74,6 +76,7 @@ render() {
                         closePopup={this.togglePopup.bind(this)}
                     />
                     : null }
+                </div>
                     {this.state.donations.map( donation => {
             if (donation.trail_solutions_id == solution.id) {
             return (<div>
@@ -101,7 +104,7 @@ render() {
                 <h2>{donation.amount}</h2>
             </div>)
                  }})} 
-                    
+
     </div>
 )}}
 
