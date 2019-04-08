@@ -64,8 +64,8 @@ render() {
             if (solution.trails_id == this.props.trail_id ) {
             return (
                 
-                   <div className="single-solution" key={soluton.id}>
-                        <p>{soluton.description_to_fix}</p>
+                   <div className="single-solution" key={solution.id}>
+                        <p>{solution.description_to_fix}</p>
                     
 
                     <button onClick={() => this.togglePopup(solution)}>Donate</button>  
@@ -76,34 +76,37 @@ render() {
                         closePopup={this.togglePopup.bind(this)}
                     />
                     : null }
-                </div>
-                    {this.state.donations.map( donation => {
+                    
+                    
+                    ) 
+        
+                
+        {this.state.donations.map( donation => {
             if (donation.trail_solutions_id == solution.id) {
-            return (<div>
+            return (
+            <div>
                <h2> Thank you to: </h2>
                 <h2>{donation.name}</h2>
                 <h3>for donating:</h3>
                 <h2>{donation.amount}</h2>
             </div>)
-                 }})} 
+            
+            }
+        })} 
+        </div>
+    )
+    } } 
+    ) }
 
-
-     
-                </div>
-              
-      
-
-            ) } 
+        <h1>thank you all contributors!</h1>
+    {this.state.donations.map( donation => {
+        if (donation.trails_id == this.props.trail_id ) {
+        return (<div>
+            <h2>{donation.name}</h2>
+            <h2>{donation.amount}</h2>
+        </div>)
         }
-    )}
-                        <h1>thank you all contributors!</h1>
-                         {this.state.donations.map( donation => {
-            if (donation.trails_id == this.props.trail_id ) {
-            return (<div>
-                <h2>{donation.name}</h2>
-                <h2>{donation.amount}</h2>
-            </div>)
-                 }})} 
+    })} 
 
     </div>
 )}}
