@@ -48,7 +48,7 @@ render() {
           <input className="regular-form" id="collaboration" name="collaberation" type="text" placeholder="Who helped you fix the trail?"></input>
 
         </div>
-        <button className="btn btn-block" type="submit">Submit</button>
+        <button className="btn btn-block" type="submit">Submit Request</button>
       </form>
     </div>           
   )}
