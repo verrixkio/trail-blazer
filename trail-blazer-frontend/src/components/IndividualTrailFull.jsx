@@ -14,12 +14,14 @@ render() {
       
       <div className="lists-container trail__display-ratings">
         
-        <i class="fa fa-tree" aria-hidden="true"></i>
+        <i class="fa fa-star-half-empty" aria-hidden="true"></i>
         <h2>Add Trail Rating</h2>
-
-        <RatingsDisplay trailId={this.props.match.params.id}/>
         <AddRating trailId={this.props.match.params.id}/>
-
+        
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <h2>Current Trail Rating</h2>
+        <RatingsDisplay trailId={this.props.match.params.id}/>
+        
       </div>
 
       <div>

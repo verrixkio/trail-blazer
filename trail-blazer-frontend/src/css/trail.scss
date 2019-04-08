@@ -23,8 +23,8 @@
   border-radius: 4px;
   background: $color-brand-palette-06;
   color: $color-brand-palette-10;
-  -webkit-box-shadow: 0 4px 4px 0 rgba(0,0,0,.25);
-  box-shadow: 0 4px 4px 0 rgba(0,0,0,.25);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
   .single-trail {
     margin: 0 0 20px;
   }
@@ -60,11 +60,7 @@
 }
 .single-solution {
   border-bottom: 1px solid $color-brand-palette-08;
-}
-.stars {
-  display: block;
-  margin: 20px auto;
-  width: auto;
+  padding: 20px 0;
 }
 @media only screen and (max-width: 799px) {
   .col-md-6.left {
@@ -78,4 +74,3 @@
   padding: 20px;
   }
 }
-

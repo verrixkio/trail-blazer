@@ -53,17 +53,17 @@ export class MapContainer extends Component {
   
     colorSelect(trail) {
       if (trail.difficulty === 1) {
-          return "#00cc00"
+          return "#0B6B99"
       } else if (trail.difficulty === 2) {
-          return "#33ccff"
+          return "#F1EB06"
       } else if (trail.difficulty === 3 ) {
-          return "#cc33ff"
+          return "#F19C06"
       } else if (trail.difficulty === 4) {
-          return "#ffff00"
+          return "#F10606"
       } else if (trail.difficulty === 5) {
-          return "#ff9966"
+          return "#C40303"
       } else {
-        return "#ff0000"
+        return "#35CD05"
       }
 }
 

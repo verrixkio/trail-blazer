@@ -54,7 +54,7 @@ class CommentBar extends Component {
             <label>Message:</label>
             <textarea value={this.state.message} onChange={(this.messageHandler)}></textarea>
           </div>
-          <button className="btn btn-block" type ='submit'>Submit</button>
+          <button className="btn btn-block" type ='submit'>Submit Comment</button>
         </form>
       </div>
     );
