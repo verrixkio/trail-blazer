@@ -4,11 +4,18 @@ class TopBar extends Component {
   render() {
     return (
       <header className="primary__top-bar">  
-        
-        <div className="tagline">
-          <a href="/" className="logo">Trail Blazers</a>
-          <p><span>Do you know of a mountain bike trail you would like to see fixed in your community?</span> Invest in your community and donate to help maintain a bike trail.</p>
-        </div>
+          <a href="/"><i className="home-logo"><img src={require("../images/trail-blazer-logo.png")} alt = "font logo" style ={{width: '4%', position: "absolute", color: "#9E9A41"}}></img></i></a>
+        <ul className="nav navbar-nav">
+            <li>
+              <a href="/"><i className="fa fa-map"></i>View Trails</a>
+            </li>
+            <li>
+              <a href="/trail/"><i className="fa fa-map-marker"></i>My Trails</a>
+            </li>
+            <li>
+              <a href="/form-example/"><i className="fa fa-user"></i>My Account</a>
+            </li>
+        </ul>
       </header>
     );
   }

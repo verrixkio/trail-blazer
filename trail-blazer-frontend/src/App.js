@@ -28,6 +28,15 @@ class Index extends React.Component {
     
           <main className="primary__main reset">
 
+            <div className="container">
+              <img src={require("./images/trail-blazer-home.jpg")} alt="Biking home" style ={{width: '100%', height: '100%'}}></img>
+              <img src={require("./images/custom-font.png")} alt = "logo" style ={{position: 'relative', bottom: '500px', right: '100px'}}></img>
+            </div>
+            <div className="font-container">
+              <h4 style={{paddingRight: "6em"}}> - Trail Blazers is an app that assits communities in maintaining and creating new trail systems.</h4> 
+              <h4 style={{paddingLeft: "6em"}}>Let the community know you would like a trail fixed and donate to fix your favorite trails -</h4>
+            </div>
+
             <div className="iframe-rwd">
     
               <MapContainer />
@@ -36,7 +45,7 @@ class Index extends React.Component {
           
           </main>
           
-          <BottomBar />
+          {/* <BottomBar /> */}
           
         </div>
     );  
@@ -196,7 +205,7 @@ function FormExample() {
         </div>
       </main>
 
-      <BottomBar />
+      {/* <BottomBar /> */}
 
     </div>
   );
@@ -251,7 +260,7 @@ function FullInfo() {
         </div>
       </main>
     
-      <BottomBar />
+      {/* <BottomBar /> */}
 
     </div>
   );
