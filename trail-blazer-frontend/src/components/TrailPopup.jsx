@@ -13,7 +13,7 @@ class TrailPopup extends Component {
         <p><strong>Length: </strong><strong className="green">{this.props.trail.length / 1000} km</strong></p>
         <p><strong>Difficulty: </strong><strong className="green">{this.props.trail.difficulty}</strong></p>
 
-        <Link to={`/${this.props.trail.id}`}>
+        <Link to={`trails/${this.props.trail.id}`}>
           <button type="button" className="btn">
               See Full Trail Information
           </button>

@@ -13,7 +13,7 @@ class TrailFixRequestDisplay extends Component {
     }
     
     componentDidMount() {
-        axios.get('api/v1/trail_solutions.json')
+        axios.get('http://localhost:3000/trails/api/v1/trail_solutions.json')
         .then(response => {
             this.setState({
                 solutions: response.data
@@ -21,7 +21,7 @@ class TrailFixRequestDisplay extends Component {
         })
         .catch(error => console.log(error))
 
-        axios.get('api/v1/donations.json')
+        axios.get('http://localhost:3000/trails/api/v1/donations.json')
         .then(response => {
             this.setState({
                 donations: response.data

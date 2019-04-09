@@ -106,6 +106,14 @@ function FullInfo() {
             </div>
               
             <div className="col-sm-12 col-md-6 right">
+              <div className="lists-container2">
+               <div className="iframe-rwd">
+    
+                 <MapContainer />
+
+                </div>
+              </div>
+
               <div className="trail">
 
                 <IndividualTrailFull />
@@ -130,7 +138,7 @@ function AppRouter() {
       <div>
         <Route path="/" exact component={Index} />
         <Route path="/form-example/" component={FormExample} />
-        <Route path="/:id" component={FullInfo} />
+        <Route path="/trails/:id" component={FullInfo} />
       </div>
     </Router>
   );
