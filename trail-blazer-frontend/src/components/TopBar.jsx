@@ -4,7 +4,7 @@ class TopBar extends Component {
   render() {
     return (
       <header className="primary__top-bar">  
-          <a href="/"><i className="home-logo"><img src={require("../images/click-home.png")} alt = "font logo" style ={{width: '4%', position: "absolute", color: "#9E9A41"}}></img></i></a>
+          <a href="/"><i className="home-logo"><img src={require("../images/trail-blazer-logo.png")} alt = "font logo" style ={{width: '4%', position: "absolute", color: "#9E9A41"}}></img></i></a>
         <ul className="nav navbar-nav">
             <li>
               <a href="/"><i className="fa fa-map"></i>View Trails</a>
