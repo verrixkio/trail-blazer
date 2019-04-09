@@ -39,7 +39,7 @@ class Index extends React.Component {
           
           </main>
           
-          <BottomBar />
+          {/* <BottomBar /> */}
           
         </div>
     );  

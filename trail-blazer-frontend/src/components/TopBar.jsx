@@ -4,10 +4,20 @@ class TopBar extends Component {
   render() {
     return (
       <header className="primary__top-bar">  
-        
+        <ul className="nav navbar-nav">
+            <li>
+              <a href="/"><i className="fa fa-map"></i>View Trails</a>
+            </li>
+            <li>
+              <a href="/trail/"><i className="fa fa-map-marker"></i>My Trails</a>
+            </li>
+            <li>
+              <a href="/form-example/"><i className="fa fa-user"></i>My Account</a>
+            </li>
+        </ul>
         <div className="tagline">
           <a href="/" className="logo">Trail Blazers</a>
-          <p><span>Do you know of a mountain bike trail you would like to see fixed in your community?</span> Invest in your community and donate to help maintain a bike trail.</p>
+          <p><span>Assisting communities in repairing and maintaining mountain biking trail systems.</span></p>
         </div>
       </header>
     );
