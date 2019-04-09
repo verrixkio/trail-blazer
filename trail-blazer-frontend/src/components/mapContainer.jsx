@@ -14,7 +14,7 @@ export class MapContainer extends Component {
     }
   }
   componentDidMount() {
-    axios.get('api/v1/trails.json')
+    axios.get('http://localhost:3000/trails/api/v1/trails.json')
       .then(response => {
         console.log(response.data)
           this.setState({
