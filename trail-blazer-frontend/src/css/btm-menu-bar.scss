@@ -7,8 +7,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 80px;
-  padding: 10px;
+  height: 120px;
+  padding: 20px;
   background-color: $color-brand-palette-05;
   -webkit-box-shadow: 1px -4px 4px 0 rgba(0,0,0,.25);
   box-shadow: 1px -4px 4px 0 rgba(0,0,0,.25);
@@ -18,7 +18,7 @@
   ul {
     display: block;
     li {
-      width: 30%;
+      width: 32%;
     }
   }
 }
@@ -28,36 +28,51 @@
   margin: 0 0 5px;
 	font: normal normal normal 20px/1 FontAwesome;
 }
+.fa.fa-map {
+  margin: 3px 0 5px;
+  font: normal normal normal 17px/1 FontAwesome;
+}
 .navbar-nav {
 	width: 100%;
+  margin: 7.5px 0px;
 }
 .nav > li {
 	display: inline-block;
-  width: 30%;
-  margin: 0 1.6665% 0 1.6665%;
-  font: 600 16px/20px $sans-serif-primary;
+  width: 32%;
+  margin: 0 1% 0 1%;
+  font: 400 16px/20px $sans-serif-primary;
   text-transform: uppercase;
   text-shadow: 0 1px rgba(0, 0, 0, 0.8);
   &:first-child {
-    margin: 0 1.6665% 0 0;
+    margin: 0 1% 0 0;
   }
   &:last-child {
-    margin: 0 0 0 1.6665%;
+    margin: 0 0 0 1%;
   }
   a {
     color: $color-brand-palette-01;
     text-align: center;
+    border: 1px solid $color-brand-palette-01;
+    border-radius: 4px;
     @include transition (all, 0.3s, ease-out);
+    i {
+      color: $color-brand-palette-02;
+    }
   }
 }
 .navbar-nav > li > a {
-  padding: 0 15px;
+  padding: 10px 15px;
+  height: 70px;
 }
 .nav > li > a:hover, 
 .nav > li > a:focus {
   color: $color-brand-palette-06;
   text-decoration: none;
 	background-color: transparent;
+  border: 1px solid $color-brand-palette-06;
+  i {
+      color: $color-brand-palette-06;
+    }
 }
 .navbar-icon-top .navbar-nav>li>a>.fa {
   position: relative;
@@ -74,6 +89,9 @@
 @media (min-width: 768px) {
   .navbar-icon-top .navbar-brand {
     padding: 25px 15px;
+  }
+  .nav > li {
+    font: 600 18px/20px $sans-serif-primary;
   }   
   .navbar-nav > li > a {
     padding-top: 10px;

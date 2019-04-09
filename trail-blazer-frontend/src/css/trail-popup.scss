@@ -1,7 +1,6 @@
 /* ============================================================================= 
 10. Trail Pop-up
 ================================================================================ */
-
 .trail-popup {
   position: relative;
   display: block;
@@ -11,16 +10,12 @@
   padding: 40px 20px 20px;
   background: $color-brand-palette-06;
   color: $color-brand-palette-10;
-  
   font-size: 14px;
   line-height: 1.5em;
   vertical-align: top;
-  
-  // min-width: 7em;
   border-radius: 4px;
   -webkit-box-shadow: 1px 4px 4px 0 rgba(0,0,0,.25);
   box-shadow: 1px 4px 4px 0 rgba(0,0,0,.25);
-
   h2 {
     margin: 6px 0 20px 0;
     color: $color-brand-palette-03;
@@ -54,7 +49,6 @@
   -webkit-box-shadow: 1px 2px 4px 0 rgba(0,0,0,.15);
   box-shadow: 1px 2px 4px 0 rgba(0,0,0,.15);
 }
-
 .trail-popup__close {
   position: absolute;
   top: 20px;
@@ -76,7 +70,6 @@ background: transparent;
   left: 2px;
   height: 3px;
   width: 26px;
-  
   background-color: $color-brand-palette-03;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;

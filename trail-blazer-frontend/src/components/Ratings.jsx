@@ -18,22 +18,18 @@ AddRating = (e) => {
     })
     e.target.elements["AddRating"].value = ''
     window.location.reload()
-    console.log(this.props.trailId + '!!!!!!!!!!!!!!!!!!!!!!')
 }
 
 render() {
-    return (        
-            <form onSubmit={this.AddRating} >
-                <div className="form-group">
-                    <label htmlFor="AddRating">AddRating</label>
-                    <input className="regular-form" id="AddRating" name="AddRating" type="integer" ></input>
-                
-                </div>
-                <button className="btn btn-block" type="submit">Submit</button>
-            </form>
-    )}
+  return (        
+    <form onSubmit={this.AddRating} >
+      <div className="form-group">
+        <label htmlFor="AddRating">Add Trail Rating:</label>
+        <input className="regular-form" id="AddRating" name="AddRating" type="integer" placeholder="Rate the trail between 1 and 5"></input>
+      </div>
+      <button className="btn btn-block" type="submit">Submit Rating</button>
+    </form>
+  )}
 }
-      
-
 
 export default AddRating; 
