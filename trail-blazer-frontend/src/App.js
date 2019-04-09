@@ -25,6 +25,12 @@ class Index extends React.Component {
     
           <main className="primary__main reset">
 
+            <div className="image-home">
+    
+               
+              <img src={require("./images/trail-blazer-home.jpg")} alt="Biking home" style ={{width: '100%', height: '100%'}}></img>
+
+            </div>
             <div className="iframe-rwd">
     
               <MapContainer />
