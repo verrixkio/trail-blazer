@@ -4,7 +4,7 @@ import axios from 'axios';
 class FixPopUp extends Component {
   addDonation = (e) => {
     e.preventDefault();
-    axios.post("api/v1/donations", {
+    axios.post(" api/v1/donation#create", {
         amount: e.target.elements["amount"].value,
         name: e.target.elements["name"].value,
         solutionId: this.props.solution.id,
