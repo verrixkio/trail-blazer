@@ -12,7 +12,7 @@ class TrailComments extends Component {
   }
 
   componentDidMount() {
-    axios.get(`api/v1/comments/${this.props.match.params.id}.json`)
+    axios.get(`http://localhost:3000/trails/api/v1/comments/${this.props.match.params.id}.json`)
       .then(response => {
           this.setState({
             comments: response.data.reverse()

@@ -14,7 +14,7 @@ class RatingsDisplay extends Component {
         }
     }
     componentDidMount() {
-        axios.get('/api/v1/ratings')
+        axios.get('http://localhost:3000/trails/api/v1/ratings')
     .then(response => {
         // this.setState({
         //     Ratings: response.data

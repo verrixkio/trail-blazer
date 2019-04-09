@@ -10,7 +10,7 @@ class TrailFullInfo extends Component {
     }
   }
   componentDidMount() {
-    axios.get(`api/v1/trails/${this.props.match.params.id}.json`)
+    axios.get(`http://localhost:3000/trails/api/v1/trails/${this.props.match.params.id}.json`)
       .then(response => {
         this.setState({
           trails: response.data

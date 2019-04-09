@@ -138,7 +138,7 @@ function AppRouter() {
       <div>
         <Route path="/" exact component={Index} />
         <Route path="/form-example/" component={FormExample} />
-        <Route path="/:id" component={FullInfo} />
+        <Route path="/trails/:id" component={FullInfo} />
       </div>
     </Router>
   );
