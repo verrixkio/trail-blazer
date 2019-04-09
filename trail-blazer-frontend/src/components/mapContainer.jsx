@@ -91,9 +91,11 @@ export class MapContainer extends Component {
       path={decodePolyline(trail.coded_path)}
       
       strokeColor= {this.colorSelect(trail)}
-      strokeOpacity={0.8}
-      strokeWeight={5}  
-      Marker onClick={() => this.togglePopup(trail)}
+      strokeOpacity={1}
+      strokeWeight={2}  
+      
+      Polyline onmouseenter={console.log('!!!!!! hover', trail)}
+     
       name={'Current location'}
       data={trail}
        />)}
