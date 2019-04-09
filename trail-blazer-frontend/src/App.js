@@ -11,6 +11,9 @@ import TrailFixRequests from './components/TrailFixRequests';
 import TrailFixRequestDisplay from './components/TrailFixRequestDisplay'
 import TrailComments from './components/TrailComments';
 import IndividualTrailFull from './components/IndividualTrailFull';
+import SignUpForm from './components/SignUpForm';
+import LoginForm from './components/LoginForm';
+import LandingPage from './components/LandingPage';
 
 import { BrowserRouter as Router, Route} from "react-router-dom";
 
@@ -38,6 +41,128 @@ class Index extends React.Component {
         </div>
     );  
   }
+}
+
+function Landing() {
+  return (
+  
+    <div className="primary">
+
+      <main className="primary__main">
+        <div className="container-fluid">
+          <div className="row">
+
+            <div className="col-sm-3">
+              &nbsp;
+            </div> 
+              
+            <div className="col-sm-6">
+              
+              <LandingPage />
+
+            </div>
+
+            <div className="col-sm-3">
+              &nbsp;
+            </div>
+            
+          </div>
+        </div>
+      </main>
+
+    </div>
+  );
+}
+
+function Login() {
+  return (
+  
+    <div className="primary">
+
+      <main className="primary__main">
+        <div className="container-fluid">
+          <div className="row">
+          
+            <div className="col-sm-12">
+              <h3 className="logo-sml">Trail Blazers</h3>
+              <div className="push-menu reverse">
+                <a href="/register" className="left">Register</a>
+                <a href="/login" className="right">Login</a>
+              </div>
+            </div>
+          
+          </div>  
+        
+          <div className="row form-row">
+
+            <div className="col-sm-3">
+              &nbsp;
+            </div> 
+              
+            <div className="col-sm-6">
+              
+              <div className="web-form">
+                  
+                <LoginForm />
+
+              </div>
+            </div>
+
+            <div className="col-sm-3">
+              &nbsp;
+            </div>
+            
+          </div>
+        </div>
+      </main>
+
+    </div>
+  );
+}
+
+function Register() {
+  return (
+  
+    <div className="primary">
+
+      <main className="primary__main">
+        <div className="container-fluid">
+        <div className="row">
+          
+        <div className="col-sm-12">
+          <h3 className="logo-sml">Trail Blazers</h3>
+          <div className="push-menu">
+            <a href="/register" className="left">Register</a>
+            <a href="/login" className="right">Login</a>
+          </div>
+        </div>
+      
+      </div>  
+    
+      <div className="row form-row">
+
+            <div className="col-sm-3">
+              &nbsp;
+            </div> 
+              
+            <div className="col-sm-6">
+              <div className="web-form">
+                  
+                <SignUpForm />
+
+              </div>
+            </div>
+
+            <div className="col-sm-3">
+              &nbsp;
+            </div>
+            
+          </div>
+        </div>
+      </main>
+
+    </div>
+  );
 }
 
 function FormExample() {
@@ -137,6 +262,9 @@ function AppRouter() {
     <Router>
       <div>
         <Route path="/" exact component={Index} />
+        <Route path="/landing" exact component={Landing} />
+        <Route path="/login/" component={Login} />
+        <Route path="/register/" component={Register} />
         <Route path="/form-example/" component={FormExample} />
         <Route path="/trails/:id" component={FullInfo} />
       </div>
