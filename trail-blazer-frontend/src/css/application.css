@@ -97,54 +97,46 @@ textarea {
   text-align: center;
   padding-left: 0px;
   padding-right: 0px;
-  color: white;
-}
+  color: white; }
 
 .font-container {
-    color: white;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 1em;
-    border-top-width: 1em;
-    padding-top: 0px;
-}
-
+  color: white;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  border-top-width: 1em;
+  padding-top: 0px; }
 
 /* Bottom left text */
 .bottom-left {
   position: absolute;
   bottom: 500px;
-  left: 100px;
-}
+  left: 100px; }
 
 /* Top left text */
 .top-left {
   position: absolute;
   top: 125px;
-  left: -100px;
-}
+  left: -100px; }
 
 /* Top right text */
 .top-right {
   position: absolute;
   top: 8px;
-  right: 16px;
-}
+  right: 16px; }
 
 /* Bottom right text */
 .bottom-right {
   position: absolute;
   bottom: 8px;
-  right: 16px;
-}
+  right: 16px; }
 
 /* Centered text */
 .centered {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-}
+  transform: translate(-50%, -50%); }
 
 .primary__header {
   grid-area: header; }
@@ -169,11 +161,17 @@ textarea {
   margin: 40px 10px; }
 
 .primary__main.reset {
-  position: absolute;
   margin: 0;
   width: 100%;
-  height: 100%;
- }
+  height: 100%; }
+
+hr.seperator {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #758918;
+  margin: 40px 0;
+  padding: 0; }
 
 @media only screen and (max-width: 799px) {
   .primary {
@@ -282,13 +280,13 @@ h3.logo-sml {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 75px;
   padding: 20px;
   background-color: #49281F;
   color: #CFB590;
   -webkit-box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.25);
-  z-index: 2; }
+  z-index: 2;
+  height: 180px; }
   .primary__top-bar .logo {
     display: block;
     padding: 20px 0 10px;
@@ -325,7 +323,7 @@ h3.logo-sml {
 
 @media only screen and (max-width: 799px) {
   .primary__top-bar {
-    height: 75px; }
+    height: 240px; }
     .primary__top-bar .logo {
       float: none;
       font: 600 18px/1.5em "Open Sans", Arial, sans-serif;
@@ -378,15 +376,12 @@ h3.logo-sml {
   font: normal normal normal 17px/1 FontAwesome; }
 
 .navbar-nav {
-  width: 75%;
-  position: absolute;
-  right: -350px;
-  margin: 7.5px 0px;
-  margin-top: -15px }
+  width: 100%;
+  margin: 7.5px 0px; }
 
 .nav > li {
   display: inline-block;
-  width: 16%;
+  width: 32%;
   margin: 0 1% 0 1%;
   font: 400 16px/20px "Open Sans", Arial, sans-serif;
   text-transform: uppercase;
@@ -869,6 +864,10 @@ a.btn.secondary {
     padding: 0;
     border-radius: zero; } }
 
+.image-home {
+  width: 100px;
+  height: 100px; }
+
 /* ============================================================================= 
 10. Trail Panel
 ================================================================================ */
@@ -915,6 +914,19 @@ a.btn.secondary {
   float: left;
   width: 34px;
   height: 34px;
+  background-color: #CFB590;
+  border-radius: 100%;
+  color: #758918;
+  text-align: center;
+  font-size: 20px;
+  line-height: 34px;
+  margin: -4px 10px 0 -5px;
+  -webkit-box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15); }
+
+.lists-container2 {
+  float: left;
+  width: 10px;
   background-color: #CFB590;
   border-radius: 100%;
   color: #758918;
