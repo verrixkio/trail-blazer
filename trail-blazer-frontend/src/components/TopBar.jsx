@@ -4,6 +4,7 @@ class TopBar extends Component {
   render() {
     return (
       <header className="primary__top-bar">  
+          <a href="/"><i className="home-logo"><img src={require("../images/click-home.png")} alt = "font logo" style ={{width: '4%', position: "absolute", color: "#9E9A41"}}></img></i></a>
         <ul className="nav navbar-nav">
             <li>
               <a href="/"><i className="fa fa-map"></i>View Trails</a>
@@ -15,10 +16,6 @@ class TopBar extends Component {
               <a href="/form-example/"><i className="fa fa-user"></i>My Account</a>
             </li>
         </ul>
-        <div className="tagline">
-          <a href="/" className="logo">Trail Blazers</a>
-          <p><span>Assisting communities in repairing and maintaining mountain biking trail systems.</span></p>
-        </div>
       </header>
     );
   }

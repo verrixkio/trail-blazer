@@ -25,11 +25,12 @@ class Index extends React.Component {
     
           <main className="primary__main reset">
 
-            <div className="image-home">
-    
-               
+            <div className="container">
               <img src={require("./images/trail-blazer-home.jpg")} alt="Biking home" style ={{width: '100%', height: '100%'}}></img>
-
+              <div className="tagline">
+                <div className="top-left"><img src={require("./images/custom-logo.png")} alt = "font logo" style ={{width: '10%', height: '10%'}}></img></div>
+                <div className="bottom-left"><img src={require("./images/custom-font.png")} alt = "logo"></img></div>
+              </div>
             </div>
             <div className="iframe-rwd">
     
@@ -77,7 +78,7 @@ function FormExample() {
         </div>
       </main>
 
-      <BottomBar />
+      {/* <BottomBar /> */}
 
     </div>
   );
@@ -132,7 +133,7 @@ function FullInfo() {
         </div>
       </main>
     
-      <BottomBar />
+      {/* <BottomBar /> */}
 
     </div>
   );

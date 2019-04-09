@@ -89,6 +89,52 @@ textarea {
 /* ============================================================================= 
 02. Layout
 ================================================================================ */
+/* Container holding the image and the text */
+.container {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding-left: 0px;
+  padding-right: 0px;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 500px;
+  left: 100px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 125px;
+  left: -100px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .primary__header {
   grid-area: header; }
 
@@ -112,9 +158,11 @@ textarea {
   margin: 60px 10px; }
 
 .primary__main.reset {
+  position: absolute;
   margin: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+ }
 
 @media only screen and (max-width: 799px) {
   .primary {
@@ -319,12 +367,15 @@ h3.logo-sml {
   font: normal normal normal 17px/1 FontAwesome; }
 
 .navbar-nav {
-  width: 100%;
-  margin: 7.5px 0px; }
+  width: 75%;
+  position: absolute;
+  right: -350px;
+  margin: 7.5px 0px;
+  margin-top: -15px }
 
 .nav > li {
   display: inline-block;
-  width: 32%;
+  width: 16%;
   margin: 0 1% 0 1%;
   font: 400 16px/20px "Open Sans", Arial, sans-serif;
   text-transform: uppercase;
