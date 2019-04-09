@@ -29,7 +29,7 @@ addFixRequest = (e) => {
 
 render() {
   return (
-    <div className="lists-container trail__fix-request">
+    <div>
       <i class="fa fa-tag" aria-hidden="true"></i>
       <h2>Submit Request to Fix Trail</h2>
       <form onSubmit={this.addFixRequest}>
