@@ -921,7 +921,9 @@ a.btn.secondary {
     margin: 0 0 20px;
     color: #BE7900; }
   .lists-container h3 {
-    margin: 20px 0 10px; }
+    margin: 20px 0;
+    font-weight: 600;
+    text-transform: uppercase; }
   .lists-container p {
     font-weight: 400; }
 
@@ -985,15 +987,15 @@ a.btn.secondary {
       background: #49281F;
       color: #FFF6E9; }
   .single-solution button.donate {
-    margin: 20px 0 0;
-    padding: 10px 10px;
+    margin: 0 0 10px;
+    padding: 5px 10px;
     width: auto;
     background: #49281F;
     border-color: #49281F;
     border: none;
     border-radius: 4px;
     color: #FFF6E9;
-    font: 600 20px/1.5em "Open Sans", Arial, sans-serif;
+    font: 600 18px/1.5em "Open Sans", Arial, sans-serif;
     text-decoration: none;
     text-shadow: 0 1px rgba(0, 0, 0, 0.7);
     text-transform: uppercase;
@@ -1031,8 +1033,21 @@ a.btn.secondary {
       border: 1px solid #BE7900;
       color: #FFF6E9; }
 
-.trail-fix {
+.trail-fix,
+.donation-thank-you {
+  margin: 0 0 10px;
+  padding: 10px;
+  border: 1px solid #CFB590;
+  border-radius: 4px;
+  background: #F4E2C7; }
+  .trail-fix p,
+  .donation-thank-you p {
+    margin: 0; }
+
+.map-bubble form {
   margin: 0; }
+  .map-bubble form .btn {
+    margin: 20px 0; }
 
 @media only screen and (max-width: 799px) {
   .col-md-6.left {

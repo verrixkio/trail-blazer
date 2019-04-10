@@ -28,8 +28,8 @@ class TrailFullInfo extends Component {
         <div className="single-trail" key={this.state.trails.id}>
           <h3>{this.state.trails.name}</h3>
           <p>{this.state.trails.description}</p>
-          <p>{this.state.trails.length / 1000}km</p>
-          <p><strong>Difficulty:</strong> {this.state.trails.difficulty}</p>
+          <p><strong>Length: </strong>{this.state.trails.length / 1000}km</p>
+          <p><strong>Difficulty: </strong>{this.state.trails.difficulty}</p>
           <p>{this.state.trails.condition}</p>
         </div>
 
