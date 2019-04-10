@@ -1,6 +1,7 @@
     
 import React from 'react'
 import './css/application.css';
+import logo from './images/trail-blazer-logo-lrg.png';
 import MapContainer from './components/mapContainer';
 import TopBar from './components/TopBar';
 import CommentBar from './components/CommentBar';
@@ -14,6 +15,8 @@ import SignUpForm from './components/SignUpForm';
 import LoginForm from './components/LoginForm';
 import LandingPage from './components/LandingPage';
 
+
+
 import { BrowserRouter as Router, Route} from "react-router-dom";
 
 class Index extends React.Component {
@@ -25,15 +28,14 @@ class Index extends React.Component {
             
           <TopBar />
     
-          <main className="primary__main reset">
+          <main className="primary__main reset home">
 
-            <div className="container">
-              <img src={require("./images/trail-blazer-home.jpg")} alt="Biking home" style ={{width: '100%', height: '100%'}}></img>
-              <img src={require("./images/custom-font.png")} alt = "logo" style ={{position: 'relative', bottom: '500px', right: '100px'}}></img>
-            </div>
-            <div className="font-container">
-              <h4 style={{paddingRight: "6em"}}> - Trail Blazers is an app that assits communities in maintaining and creating new trail systems.</h4> 
-              <h4 style={{paddingLeft: "6em"}}>Let the community know you would like a trail fixed and donate to fix your favorite trails -</h4>
+            <div className="home-image">
+
+              <img src={logo} className="home-page-logo" alt="Trail Blazer Logo" />
+              <p>Trail Blazers is an app that assists communities in maintaining and creating new trail systems.</p> 
+              <p>Let the community know if you would like a trail fixed and donate to fix your favorite trails.</p>
+
             </div>
 
             <div className="iframe-rwd">
@@ -43,9 +45,7 @@ class Index extends React.Component {
             </div>
           
           </main>
-          
-          {/* <BottomBar /> */}
-          
+                    
         </div>
     );  
   }
@@ -204,8 +204,6 @@ function FormExample() {
         </div>
       </main>
 
-      {/* <BottomBar /> */}
-
     </div>
   );
 }
@@ -248,11 +246,6 @@ function FullInfo() {
                 </div>
               </div>
 
-              <div className="trail">
-
-                {/* <IndividualTrailFull /> */}
-
-              </div>
             </div>
             
           </div>
@@ -260,8 +253,6 @@ function FullInfo() {
         </div>
       </main>
     
-      {/* <BottomBar /> */}
-
     </div>
   );
 }
