@@ -12,17 +12,13 @@ class IndividualTrailFull extends Component {
       <div>
         <div>     
           <div><RatingsDisplay trailId={this.props.match.params.id}/></div>
-          <hr className="seperator" />
         </div>
 
         <div>
 
           <TrailFixRequestDisplay trail_id={this.props.match.params.id}/>
           <TrailFixRequests trailId={this.props.match.params.id}/>
-          
-          <i class="fa fa-star-half-empty" aria-hidden="true"></i>
-          <h2>Add Trail Rating</h2>
-          <div><AddRating trailId={this.props.match.params.id}/></div>
+          <AddRating trailId={this.props.match.params.id}/>
 
         </div>
       </div>
