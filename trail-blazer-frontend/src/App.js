@@ -230,9 +230,9 @@ function FullInfo() {
 
                 <IndividualTrailFull />
 
-                <hr className="seperator" />
-
                 <CommentBar />
+
+                <hr className="seperator" />
                 
                 <TrailComments />
 

@@ -2,7 +2,9 @@
 06. Form
 ================================================================================ */
 form {
-  width: 100%;  
+  width: 100%;
+  margin: 0;
+  padding: 20px 0 0; 
 }
 form label {
   display: block;
@@ -19,7 +21,7 @@ form textarea {
   padding: 0 7px;
   background-color: transparent;
   border: 1px solid $color-brand-palette-03;
-  border-radius: 0px;
+  border-radius: 4px;
   color: white;
   font: normal 400 18px/40px $sans-serif-primary;
   resize: none;

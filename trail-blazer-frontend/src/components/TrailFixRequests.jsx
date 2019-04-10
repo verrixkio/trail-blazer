@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import SlideToggle from "react-slide-toggle";
+import eases from 'eases';
 
-const ToggleText = () => "Submit Request to Fix Trail";
-// const defaultEase = eases["cubicInOut"];
+const ToggleText = () => "+ Submit Request to Fix Trail";
+const defaultEase = eases["cubicInOut"];
 
 class TrailFixRequests extends Component {
 
@@ -64,8 +65,7 @@ render() {
                 style={{ opacity: Math.max(0.5, range) }}
               >
               
-                <i class="fa fa-tag" aria-hidden="true"></i>
-                <h2>Submit Request to Fix Trail</h2>
+                
                 <form onSubmit={this.addFixRequest}>
                   <div className="form-group">
                     
@@ -84,10 +84,6 @@ render() {
                   </div>
                   <button className="btn btn-block" type="submit">Submit Request</button>
                 </form>
-
-                <button onClick={onToggle}>
-                  <ToggleText />
-                </button>
                 
               </div>
             </div>

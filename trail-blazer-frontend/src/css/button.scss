@@ -6,9 +6,9 @@ a.btn {
   margin: 20px 0 0;
   padding: 10px;
   width: 100%;
-  background: $color-brand-palette-03;
-  border-color: $color-brand-palette-03;
-  border-radius: 0px;
+  background: $color-brand-palette-05;
+  border-color: $color-brand-palette-05;
+  border-radius: 4px;
   color: $color-brand-palette-06;
   font: 600 20px/1.5em $sans-serif-primary;
   text-decoration: none;
@@ -18,7 +18,7 @@ a.btn {
   &:hover,
   &:focus {
     background: $color-brand-palette-02;
-    border-color: $color-brand-palette-02;
+    border-color: $color-brand-palette-05;
     color: $color-brand-palette-06;
   }
 }

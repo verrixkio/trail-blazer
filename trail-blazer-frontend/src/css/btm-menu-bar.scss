@@ -49,11 +49,12 @@
   a {
     color: $color-brand-palette-01;
     text-align: center;
-    border: 1px solid $color-brand-palette-03;
+    // background: $color-brand-palette-01;
+    border: 1px solid $color-brand-palette-01;
     border-radius: 4px;
     @include transition (all, 0.3s, ease-out);
     i {
-      color: $color-brand-palette-01;
+      color: $color-brand-palette-07;
       @include transition (all, 0.3s, ease-out);
       
     }
@@ -74,7 +75,7 @@
   border: 1px solid $color-brand-palette-06;
   @include transition (all, 0.3s, ease-out);
   i {
-      color: $color-brand-palette-02;
+      color: $color-brand-palette-06;
     }
 }
 .navbar-icon-top .navbar-nav>li>a>.fa {
@@ -90,6 +91,11 @@
 05. Bottom Menu Bar \ Media Queries
 ================================================================================ */
 @media (min-width: 768px) {
+  .navbar-nav {
+    float: right;
+    width: 60%;
+    margin: 10px 0 0;
+  }
   .navbar-icon-top .navbar-brand {
     padding: 25px 15px;
   }
@@ -134,5 +140,12 @@
         display: block;
       }
     }
+  }
+}
+@media (min-width: 1280px) {
+.navbar-nav {
+    float: right;
+    width: 50%;
+    margin: 10px 0 0;
   }
 }

@@ -2,6 +2,12 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {withRouter} from 'react-router';
+import SlideToggle from "react-slide-toggle";
+import eases from 'eases';
+
+const ToggleText = () => "+ Submit Trail Comment";
+const defaultEase = eases["cubicInOut"];
+
 // This component gets the message info from the user!
 class CommentBar extends Component {
   constructor(props) {
@@ -43,20 +49,57 @@ class CommentBar extends Component {
   render() {
     return (
       <div>
-        <i class="fa fa-comment" aria-hidden="true"></i>
-        <h2>Add Comment</h2>
-        <form onSubmit ={this.handleSubmit}>
-          <div>
-            <label>Username:</label>
-            <input type='text' value={this.state.name} onChange={(this.changeNameHandler)}/>
-          </div>
-          <div>  
-            <label>Message:</label>
-            <textarea value={this.state.message} onChange={(this.messageHandler)}></textarea>
-          </div>
-          <button className="btn btn-block" type ='submit'>Submit Comment</button>
-        </form>
+      
+        <SlideToggle
+          duration={500}
+          collapsed
+          render={({
+            onToggle,
+            setCollapsibleElement,
+            toggleState,
+            isMoving,
+            hasReversed,
+            range,
+            progress
+          }) => (
+            <div
+              className={
+                "slide-toggle slide-toggle--special " +
+                (toggleState || "").toLowerCase()
+              }
+            >
+              <div className="slide-toggle__header">
+                <button className="slide-toggle__toggle" onClick={onToggle}>
+                  <ToggleText />
+                </button>
+              </div>
+              <div className="slide-toggle__box" ref={setCollapsibleElement}>
+                <div
+                  className="slide-toggle__box-inner"
+                  style={{ opacity: Math.max(0.5, range) }}
+                >
+                
+                  <form onSubmit ={this.handleSubmit}>
+                    <div>
+                      <label>Username:</label>
+                      <input type='text' value={this.state.name} onChange={(this.changeNameHandler)}/>
+                    </div>
+                    <div>  
+                      <label>Message:</label>
+                      <textarea value={this.state.message} onChange={(this.messageHandler)}></textarea>
+                    </div>
+                    <button className="btn btn-block" type ='submit'>Submit Comment</button>
+                  </form>
+                  
+                </div>
+              </div>
+
+            </div>
+          )}
+        />
+              
       </div>
+
     );
   }
 }
