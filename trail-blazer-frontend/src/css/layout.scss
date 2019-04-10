@@ -10,7 +10,7 @@
   "main"
   "footer";
   grid-template-columns: 100%;
-  grid-template-rows: 180px 
+  grid-template-rows: 132px 
   1fr
   120px;
   min-height: 100vh;
@@ -22,15 +22,83 @@
   margin: 40px 10px;
 }
 .primary__main.reset { 
+  position: absolute;
   margin: 0;
   width: 100%;
   height: 100%;
 }
+hr.seperator {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $color-brand-palette-03 ;
+  margin: 40px 0;
+  padding: 0;
+}
 
 @media only screen and (max-width: 799px) {
   .primary {
-    grid-template-rows: 240px 
+    grid-template-rows: 132px 
     1fr
     120px;
   }
 }
+
+
+/* Container holding the image and the text */
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  padding-left: 0px;
+  padding-right: 0px;
+  color: white;
+}
+
+.font-container {
+    color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    border-top-width: 1em;
+    padding-top: 0px;
+}
+
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 500px;
+  left: 100px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 125px;
+  left: -100px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+

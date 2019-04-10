@@ -57,7 +57,7 @@ render() {
     return (
 
         
-  <div className="lists-container trail__display-fix-requests">
+  <div>
           <i class="fa fa-tags" aria-hidden="true"></i>
         <h2>Pending Requests to Fix Trail</h2>
         {this.state.solutions.map( solution => {

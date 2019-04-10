@@ -223,20 +223,21 @@ function FullInfo() {
           <div className="row">
 
             <div className="col-sm-12 col-md-6 left">
-              <div className="trail">
+              
+              <div className="lists-container trail__full-info">
 
                 <TrailFullInfo />
-                    
-                <div className="lists-container trail__comments">
-                    
-                  <CommentBar />
-                  <hr />
-                  <TrailComments />
 
-                </div>
+                <IndividualTrailFull />
 
+                <hr className="seperator" />
+
+                <CommentBar />
+                
+                <TrailComments />
 
               </div>
+
             </div>
               
             <div className="col-sm-12 col-md-6 right">
@@ -250,7 +251,7 @@ function FullInfo() {
 
               <div className="trail">
 
-                <IndividualTrailFull />
+                {/* <IndividualTrailFull /> */}
 
               </div>
             </div>
