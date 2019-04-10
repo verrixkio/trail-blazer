@@ -7,7 +7,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 120px;
+  height: 70px;
   padding: 20px;
   background-color: $color-brand-palette-05;
   -webkit-box-shadow: 1px -4px 4px 0 rgba(0,0,0,.25);
@@ -25,22 +25,23 @@
 .fa {
   display: block;
   text-align: center;
-  margin: 0 0 5px;
-	font: normal normal normal 20px/1 FontAwesome;
+  margin: 8px 0 5px;
+	font: normal normal normal 30px/1 FontAwesome;
 }
-.fa.fa-map {
-  margin: 3px 0 5px;
-  font: normal normal normal 17px/1 FontAwesome;
-}
+// .fa.fa-map {
+//   margin: 0 0 5px;
+//   font: normal normal normal 17px/1 FontAwesome;
+// }
 .navbar-nav {
-	width: 100%;
-  margin: 7.5px 0px;
+	float: right;
+  width: 70%;
+  margin: 10px 0 0;
 }
 .nav > li {
 	display: inline-block;
   width: 32%;
   margin: 0 1% 0 1%;
-  font: 400 16px/20px $sans-serif-primary;
+  font: 400 14px/20px $sans-serif-primary;
   text-transform: uppercase;
   text-shadow: 0 1px rgba(0, 0, 0, 0.8);
   &:first-child {
@@ -52,17 +53,23 @@
   a {
     color: $color-brand-palette-01;
     text-align: center;
-    border: 1px solid $color-brand-palette-01;
+    border: 1px solid $color-brand-palette-03;
+    // border: none;
     border-radius: 4px;
     @include transition (all, 0.3s, ease-out);
     i {
-      color: $color-brand-palette-02;
+      color: $color-brand-palette-01;
+      @include transition (all, 0.3s, ease-out);
+      
     }
+    span {
+        display: none;
+      }
   }
 }
 .navbar-nav > li > a {
-  padding: 10px 15px;
-  height: 70px;
+  padding: 5px 15px;
+  height: 60px;
 }
 .nav > li > a:hover, 
 .nav > li > a:focus {
@@ -70,8 +77,9 @@
   text-decoration: none;
 	background-color: transparent;
   border: 1px solid $color-brand-palette-06;
+  @include transition (all, 0.3s, ease-out);
   i {
-      color: $color-brand-palette-06;
+      color: $color-brand-palette-02;
     }
 }
 .navbar-icon-top .navbar-nav>li>a>.fa {
@@ -90,12 +98,9 @@
   .navbar-icon-top .navbar-brand {
     padding: 25px 15px;
   }
-  .nav > li {
-    font: 600 18px/20px $sans-serif-primary;
-  }   
   .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
   .navbar-icon-top .navbar-text {
     margin-top: 25px;
@@ -121,3 +126,23 @@
     line-height: 24px;
   }
 }
+
+@media (min-width: 768px) {
+.fa {
+  // display: block;
+  // text-align: center;
+  margin: -1px 0 5px;
+	font: normal normal normal 20px/1 FontAwesome;
+}
+.nav > li {
+
+  font: 400 16px/20px $sans-serif-primary;
+  
+  a {
+    
+    span {
+        display: block;
+      }
+  }
+}
+  }
