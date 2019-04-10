@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import FixPopUp from './FixPopUp';
+
+
 class TrailFixRequestDisplay extends Component {
     constructor(props){
         super(props)
@@ -58,17 +60,17 @@ render() {
 
         
   <div>
-          <i class="fa fa-tags" aria-hidden="true"></i>
-        <h2>Pending Requests to Fix Trail</h2>
+
         {this.state.solutions.map( solution => {
             if (solution.trails_id == this.props.trail_id ) {
             return (
                 
                    <div className="single-solution" key={solution.id}>
-                        <p>{solution.description_to_fix}</p>
+                   <p><strong>Current Requests to Fix Trail: </strong></p>      
+                   <p className="trail-fix">{solution.description_to_fix}</p>
                     
 
-                    <button onClick={() => this.togglePopup(solution)}>Donate</button>  
+                    <button onClick={() => this.togglePopup(solution)}>+ Donate to Fix Trail</button>  
                     {this.state.showPopup ? 
                     <FixPopUp
                         text='Close Me'
@@ -78,7 +80,7 @@ render() {
                     : null }
                     
                     
-                    ) 
+                
         
                 
         {this.state.donations.map( donation => {
@@ -98,7 +100,7 @@ render() {
     } } 
     ) }
 
-        <h1>thank you all contributors!</h1>
+    {/* <h1>thank you all contributors!</h1> */}
     {this.state.donations.map( donation => {
         if (donation.trails_id == this.props.trail_id ) {
         return (<div>
