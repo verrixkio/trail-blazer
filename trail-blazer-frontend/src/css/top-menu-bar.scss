@@ -11,27 +11,41 @@
   -webkit-box-shadow: 1px 4px 4px 0 rgba(0,0,0,.25);
   box-shadow: 1px 4px 4px 0 rgba(0,0,0,.25);
   z-index: 2;
-  height: 180px;
-  .logo {
+  height: 120px;
+  // .logo {
+  //   display: block;
+  //   padding: 20px 0 10px;
+  //   padding: 0;
+  //   margin: 10px 0;
+  //   border-bottom: none;
+  //   font: 600 22px/1.5em $sans-serif-primary;
+  //   text-decoration: none;
+  //   text-transform: uppercase;
+  //   text-shadow: 0 1px rgba(0, 0, 0, 0.8);
+  //   @include transition (all, 0.3s, ease-out);
+  //   &:link,
+  //   &:visited {
+  //     color: $color-brand-palette-01;  
+  //     text-decoration: none;
+  //   }
+  //   &:hover,
+  //   &:focus {
+  //     color: $color-brand-palette-06;
+  //   }
+  // }
+  .image {
+    float: left;
     display: block;
-    padding: 20px 0 10px;
+    // margin: 5px 0 0 5px;
+    margin: 0;
     padding: 0;
-    margin: 10px 0;
+
+    // padding: 5px;
+    // width: 40px;
+    height: 80px;
     border-bottom: none;
-    font: 600 22px/1.5em $sans-serif-primary;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
     @include transition (all, 0.3s, ease-out);
-    &:link,
-    &:visited {
-      color: $color-brand-palette-01;  
-      text-decoration: none;
-    }
-    &:hover,
-    &:focus {
-      color: $color-brand-palette-06;
-    }
   }
   p {
     display: block;
@@ -45,13 +59,28 @@
     }
   }
 }
+  // .primary__header .bird {
+  //   float: left;
+  //   display: block;
+  //   margin: 5px 0 0 5px;
+  //   padding: 5px;
+  //   width: 40px;
+  //   height: 40px;
+  //   border-bottom: none;
+  //   cursor: pointer;
+  //   @include transition (all, 0.3s, ease-out);
+  //   &:hover {
+  //     width: 50px;
+  //     height: 50px;
+  //     padding: 0;
+  //   }
+  // }
 .tagline {
   margin: 0 10px;
   max-width: 800px;
 }
 @media only screen and (max-width: 799px) {
   .primary__top-bar {
-    height: 240px;
     .logo {
       float: none;
       font: 600 18px/1.5em $sans-serif-primary;
