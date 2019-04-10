@@ -4,7 +4,6 @@ import './css/application.css';
 import MapContainer from './components/mapContainer';
 import TopBar from './components/TopBar';
 import CommentBar from './components/CommentBar';
-import BottomBar from './components/BottomBar';
 import MultiStepForm from './components/MultiStepForm';
 import TrailFullInfo from './components/TrailFullInfo';
 import TrailFixRequests from './components/TrailFixRequests';
