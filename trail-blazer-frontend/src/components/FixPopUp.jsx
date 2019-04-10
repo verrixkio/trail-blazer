@@ -29,8 +29,6 @@ class FixPopUp extends Component {
     return (
       
       <div className="map-bubble">
-        <h3>Selected cause:</h3>  
-        <p>{this.props.solution.description_to_fix}</p>
         <form onSubmit={this.addDonation}>
           <div className="form-group">
               <label htmlFor="name">Name:</label>
