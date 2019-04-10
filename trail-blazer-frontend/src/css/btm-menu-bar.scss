@@ -28,10 +28,6 @@
   margin: 8px 0 5px;
 	font: normal normal normal 30px/1 FontAwesome;
 }
-// .fa.fa-map {
-//   margin: 0 0 5px;
-//   font: normal normal normal 17px/1 FontAwesome;
-// }
 .navbar-nav {
 	float: right;
   width: 70%;
@@ -54,7 +50,6 @@
     color: $color-brand-palette-01;
     text-align: center;
     border: 1px solid $color-brand-palette-03;
-    // border: none;
     border-radius: 4px;
     @include transition (all, 0.3s, ease-out);
     i {
@@ -129,20 +124,15 @@
 
 @media (min-width: 768px) {
 .fa {
-  // display: block;
-  // text-align: center;
   margin: -1px 0 5px;
 	font: normal normal normal 20px/1 FontAwesome;
 }
 .nav > li {
-
   font: 400 16px/20px $sans-serif-primary;
-  
   a {
-    
     span {
         display: block;
       }
+    }
   }
 }
-  }
