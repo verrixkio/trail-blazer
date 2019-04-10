@@ -5,12 +5,14 @@
   "dependencies": {
     "axios": "^0.18.0",
     "decode-google-map-polyline": "^1.0.1",
+    "eases": "^1.0.8",
     "google-maps-react": "^2.0.2",
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "react-slide-toggle": "^0.2.5"
   },
   "scripts": {
     "start": "react-scripts start",
