@@ -80,6 +80,11 @@
 .single-solution {
   // border-bottom: 1px solid $color-brand-palette-08;
   // padding: 20px 0;
+  margin: 20px 0 0;
+
+  &:first-child {
+    margin: -20px 0 0;
+  }
 
   button {
     margin: 20px 0 0;
@@ -101,6 +106,27 @@
           background: $color-brand-palette-05;
           color: $color-brand-palette-06;
       }
+  }
+  button.donate {
+    margin: 20px 0 0;
+    padding: 10px 10px;
+    width: auto;
+    background: $color-brand-palette-05;
+    border-color: $color-brand-palette-05;
+    border: none;
+    border-radius: 4px;
+    color: $color-brand-palette-06;
+    font: 600 20px/1.5em $sans-serif-primary;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(0,0,0,0.7);
+    text-transform: uppercase;
+    text-align: left;
+    @include transition (all, 0.3s, ease-out);
+    &:hover,
+    &:focus {
+        background: $color-brand-palette-02;
+        color: $color-brand-palette-06;
+    }
   }
   button.btn {
     margin: 20px 0 0;
