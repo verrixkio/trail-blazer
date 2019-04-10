@@ -94,7 +94,7 @@ export class MapContainer extends Component {
       strokeOpacity={1}
       strokeWeight={2}  
       
-      Polyline onmouseenter={console.log('!!!!!! hover', trail)}
+      Marker onClick={() => this.togglePopup(trail)}
      
       name={'Current location'}
       data={trail}

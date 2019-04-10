@@ -2,7 +2,7 @@
 
 * Description:    CSS Layout for Trail Blazers Application V1B
 * Date Created:   19/03/29
-* Date Updated:   19/04/09
+* Date Updated:   19/04/10
 
 * 01. Variables
 * 02. Layout
@@ -958,53 +958,78 @@ a.btn.secondary {
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15);
   width: 100%; }
 
-.single-solution button {
-  margin: 20px 0 0;
-  padding: 10px 10px;
-  width: 100%;
-  background: #BE7900;
-  border-color: #BE7900;
-  border: none;
-  border-radius: 4px;
-  color: #FFF6E9;
-  font: 600 20px/1.5em "Open Sans", Arial, sans-serif;
-  text-decoration: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.7);
-  text-transform: uppercase;
-  text-align: left;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out; }
-  .single-solution button:hover, .single-solution button:focus {
-    background: #49281F;
-    color: #FFF6E9; }
-
-.single-solution button.btn {
-  margin: 20px 0 0;
-  padding: 10px 10px;
-  width: 100%;
-  background: #49281F;
-  border-color: #49281F;
-  border: 1px solid #49281F;
-  border-radius: 4px;
-  color: #FFF6E9;
-  font: 600 20px/1.5em "Open Sans", Arial, sans-serif;
-  text-decoration: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.7);
-  text-transform: uppercase;
-  text-align: center;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out; }
-  .single-solution button.btn:hover, .single-solution button.btn:focus {
+.single-solution {
+  margin: 20px 0 0; }
+  .single-solution:first-child {
+    margin: -20px 0 0; }
+  .single-solution button {
+    margin: 20px 0 0;
+    padding: 10px 10px;
+    width: 100%;
     background: #BE7900;
     border-color: #BE7900;
-    border: 1px solid #BE7900;
-    color: #FFF6E9; }
+    border: none;
+    border-radius: 4px;
+    color: #FFF6E9;
+    font: 600 20px/1.5em "Open Sans", Arial, sans-serif;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    text-align: left;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+    .single-solution button:hover, .single-solution button:focus {
+      background: #49281F;
+      color: #FFF6E9; }
+  .single-solution button.donate {
+    margin: 20px 0 0;
+    padding: 10px 10px;
+    width: auto;
+    background: #49281F;
+    border-color: #49281F;
+    border: none;
+    border-radius: 4px;
+    color: #FFF6E9;
+    font: 600 20px/1.5em "Open Sans", Arial, sans-serif;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    text-align: left;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+    .single-solution button.donate:hover, .single-solution button.donate:focus {
+      background: #F19C06;
+      color: #FFF6E9; }
+  .single-solution button.btn {
+    margin: 20px 0 0;
+    padding: 10px 10px;
+    width: 100%;
+    background: #49281F;
+    border-color: #49281F;
+    border: 1px solid #49281F;
+    border-radius: 4px;
+    color: #FFF6E9;
+    font: 600 20px/1.5em "Open Sans", Arial, sans-serif;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+    .single-solution button.btn:hover, .single-solution button.btn:focus {
+      background: #BE7900;
+      border-color: #BE7900;
+      border: 1px solid #BE7900;
+      color: #FFF6E9; }
 
 .trail-fix {
   margin: 0; }
