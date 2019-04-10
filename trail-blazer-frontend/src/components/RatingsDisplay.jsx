@@ -92,6 +92,7 @@ class RatingsDisplay extends Component {
         return (
             <div className="trail-rating">
 
+                <p><strong>Trail Rating: </strong></p>    
                 {this.renderRatings()}
 
             </div>
