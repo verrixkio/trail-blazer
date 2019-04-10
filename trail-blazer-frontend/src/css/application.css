@@ -382,7 +382,7 @@ h3.logo-sml {
   .nav > li a {
     color: #CFB590;
     text-align: center;
-    border: 1px solid #BE7900;
+    border: 1px solid #CFB590;
     border-radius: 4px;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
@@ -390,7 +390,7 @@ h3.logo-sml {
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out; }
     .nav > li a i {
-      color: #CFB590;
+      color: #BE7900;
       -webkit-transition: all 0.3s ease-out;
       -moz-transition: all 0.3s ease-out;
       -ms-transition: all 0.3s ease-out;
@@ -431,6 +431,10 @@ h3.logo-sml {
 05. Bottom Menu Bar \ Media Queries
 ================================================================================ */
 @media (min-width: 768px) {
+  .navbar-nav {
+    float: right;
+    width: 60%;
+    margin: 10px 0 0; }
   .navbar-icon-top .navbar-brand {
     padding: 25px 15px; }
   .navbar-nav > li > a {
@@ -465,11 +469,19 @@ h3.logo-sml {
     .nav > li a span {
       display: block; } }
 
+@media (min-width: 1280px) {
+  .navbar-nav {
+    float: right;
+    width: 50%;
+    margin: 10px 0 0; } }
+
 /* ============================================================================= 
 06. Form
 ================================================================================ */
 form {
-  width: 100%; }
+  width: 100%;
+  margin: 0;
+  padding: 20px 0 0; }
 
 form label {
   display: block;
@@ -486,7 +498,7 @@ form textarea {
   padding: 0 7px;
   background-color: transparent;
   border: 1px solid #BE7900;
-  border-radius: 0px;
+  border-radius: 4px;
   color: white;
   font: normal 400 18px/40px "Open Sans", Arial, sans-serif;
   resize: none;
@@ -800,9 +812,9 @@ a.btn {
   margin: 20px 0 0;
   padding: 10px;
   width: 100%;
-  background: #BE7900;
-  border-color: #BE7900;
-  border-radius: 0px;
+  background: #49281F;
+  border-color: #49281F;
+  border-radius: 4px;
   color: #FFF6E9;
   font: 600 20px/1.5em "Open Sans", Arial, sans-serif;
   text-decoration: none;
@@ -817,7 +829,7 @@ a.btn {
   a.btn:hover,
   a.btn:focus {
     background: #F19C06;
-    border-color: #F19C06;
+    border-color: #49281F;
     color: #FFF6E9; }
 
 .btn-primary {
@@ -909,7 +921,7 @@ a.btn.secondary {
     margin: 0 0 20px;
     color: #BE7900; }
   .lists-container h3 {
-    margin: 10px 0; }
+    margin: 20px 0 10px; }
   .lists-container p {
     font-weight: 400; }
 
@@ -943,11 +955,59 @@ a.btn.secondary {
   line-height: 34px;
   margin: -4px 10px 0 -5px;
   -webkit-box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15); }
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15);
+  width: 100%; }
 
-.single-solution {
-  border-bottom: 1px solid #AE8F63;
-  padding: 20px 0; }
+.single-solution button {
+  margin: 20px 0 0;
+  padding: 10px 10px;
+  width: 100%;
+  background: #BE7900;
+  border-color: #BE7900;
+  border: none;
+  border-radius: 4px;
+  color: #FFF6E9;
+  font: 600 20px/1.5em "Open Sans", Arial, sans-serif;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  text-align: left;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+  .single-solution button:hover, .single-solution button:focus {
+    background: #49281F;
+    color: #FFF6E9; }
+
+.single-solution button.btn {
+  margin: 20px 0 0;
+  padding: 10px 10px;
+  width: 100%;
+  background: #49281F;
+  border-color: #49281F;
+  border: 1px solid #49281F;
+  border-radius: 4px;
+  color: #FFF6E9;
+  font: 600 20px/1.5em "Open Sans", Arial, sans-serif;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+  .single-solution button.btn:hover, .single-solution button.btn:focus {
+    background: #BE7900;
+    border-color: #BE7900;
+    border: 1px solid #BE7900;
+    color: #FFF6E9; }
+
+.trail-fix {
+  margin: 0; }
 
 @media only screen and (max-width: 799px) {
   .col-md-6.left {
@@ -1215,26 +1275,38 @@ a.btn.secondary {
     outline: 1px solid black;
     outline: none;
     position: relative;
-    background: linear-gradient(90deg, #08bdbd, #08bdbd);
     background: none; }
   .slide-toggle__toggle {
-    font-size: 1rem;
-    border: 1px solid gray;
+    margin: 20px 0 0;
+    padding: 10px 10px;
+    width: 100%;
+    background: #BE7900;
+    border-color: #BE7900;
     border: none;
-    padding: 0.5rem;
-    box-shadow: none; }
+    border-radius: 4px;
+    color: #FFF6E9;
+    font: 600 20px/1.5em "Open Sans", Arial, sans-serif;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    text-align: left;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+    .slide-toggle__toggle:hover, .slide-toggle__toggle:focus {
+      background: #49281F;
+      color: #FFF6E9; }
   .slide-toggle__box {
     overflow: hidden; }
   .slide-toggle__box-inner {
-    padding: 1rem;
+    padding: 20px;
     padding: 0; }
     .slide-toggle__box-inner p {
       margin: 0;
       padding: 0;
       margin-bottom: 1rem; }
-    .slide-toggle__box-inner button {
-      margin: 1rem auto 0;
-      display: block; }
 
 .progress-bar {
   height: 2px;
