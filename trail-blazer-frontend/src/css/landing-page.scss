@@ -17,13 +17,14 @@
   }
   p {
     color: $color-brand-palette-06;
-    font: 500 22px/1.5em $sans-serif-primary;
+    font: 600 22px/1.5em $sans-serif-primary;
     text-align: center;
   }
   .btn.reset {
     margin: 40px 0 0;
   }
 }
+
 @media only screen and (max-width: 799px) {
   .reset {
     margin-top: 0;

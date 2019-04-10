@@ -1,6 +1,6 @@
 /*
 
-* Description:    CSS Layout for Trail Blazers Application V1B
+* Description:    CSS Layout for Trail Blazers Application V1C
 * Date Created:   19/03/29
 * Date Updated:   19/04/10
 
@@ -102,7 +102,7 @@ textarea {
   display: grid;
   grid-template-areas: "header" "main" "footer";
   grid-template-columns: 100%;
-  grid-template-rows: 132px  1fr 120px;
+  grid-template-rows: 100px  1fr 120px;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -113,9 +113,23 @@ textarea {
 
 .primary__main.reset {
   position: absolute;
-  margin: 0;
+  margin: 130px 0 0;
   width: 100%;
   height: 100%; }
+
+.primary__main .home-image {
+  padding: 70px 40px 60px;
+  background: url("../images/trail-blazers-desktop-bg.jpg") no-repeat center center fixed; }
+  .primary__main .home-image p {
+    color: #FFF6E9;
+    font-weight: 600;
+    text-align: center; }
+
+.primary__main .home-page-logo {
+  display: block;
+  margin: 0 auto 60px;
+  width: 100%;
+  max-width: 360px; }
 
 hr.seperator {
   display: block;
@@ -127,7 +141,7 @@ hr.seperator {
 
 @media only screen and (max-width: 799px) {
   .primary {
-    grid-template-rows: 132px  1fr 120px; } }
+    grid-template-rows: 100px  1fr 120px; } }
 
 /* Container holding the image and the text */
 .container {
@@ -287,13 +301,13 @@ h3.logo-sml {
   -webkit-box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.25);
   z-index: 2;
-  height: 120px; }
+  height: 100px; }
   .primary__top-bar .image {
     float: left;
     display: block;
-    margin: 0;
+    margin: -5px 0 0;
     padding: 0;
-    height: 80px;
+    height: 70px;
     border-bottom: none;
     cursor: pointer;
     -webkit-transition: all 0.3s ease-out;
@@ -473,7 +487,7 @@ h3.logo-sml {
   .navbar-nav {
     float: right;
     width: 50%;
-    margin: 10px 0 0; } }
+    margin: -1px 0 0; } }
 
 /* ============================================================================= 
 06. Form
@@ -829,7 +843,7 @@ a.btn {
   a.btn:hover,
   a.btn:focus {
     background: #F19C06;
-    border-color: #49281F;
+    border-color: #F19C06;
     color: #FFF6E9; }
 
 .btn-primary {
@@ -1127,7 +1141,7 @@ a.btn.secondary {
   left: 2px;
   height: 3px;
   width: 26px;
-  background-color: #BE7900;
+  background-color: #F19C06;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
@@ -1249,7 +1263,7 @@ a.btn.secondary {
     text-align: center; }
   .landing-page p {
     color: #FFF6E9;
-    font: 500 22px/1.5em "Open Sans", Arial, sans-serif;
+    font: 600 22px/1.5em "Open Sans", Arial, sans-serif;
     text-align: center; }
   .landing-page .btn.reset {
     margin: 40px 0 0; }
