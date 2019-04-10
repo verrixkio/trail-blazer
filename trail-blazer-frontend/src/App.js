@@ -228,8 +228,6 @@ function FullInfo() {
 
                 <TrailFullInfo />
 
-                <hr className="seperator" />
-
                 <IndividualTrailFull />
 
                 <hr className="seperator" />
