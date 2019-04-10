@@ -9,7 +9,7 @@ class TrailFixRequestDisplay extends Component {
         this.state = {
             solutions: [],
             donations: [],
-            solutionD: [],
+            solutionid: '',
             showPopup: false
         }
     }
@@ -48,7 +48,8 @@ class TrailFixRequestDisplay extends Component {
        togglePopup = (solution) => {
     this.setState({
       showPopup: !this.state.showPopup,
-      solution: solution
+      solution: solution,
+      solutionid: solution.id
     });
 
     
@@ -68,12 +69,12 @@ render() {
             return (
                 
                    <div className="single-solution" key={solution.id}>
-                   <p><i class="fa fa-tag" aria-hidden="true"></i><strong>Request to Fix Trail: </strong></p>      
+                   <h3><strong>Request to Fix Trail: </strong></h3>      
                    <p className="trail-fix">{solution.description_to_fix}</p>
                     
 
                     <button className="donate" onClick={() => this.togglePopup(solution)}>+ Donate to Fix Trail</button>  
-                    {this.state.showPopup ? 
+                    {this.state.showPopup && this.state.solutionid === solution.id? 
                     <FixPopUp
                         text='Close Me'
                         solution={this.state.solution}
@@ -88,9 +89,9 @@ render() {
         {this.state.donations.map( donation => {
             if (donation.trail_solutions_id == solution.id) {
             return (
-            <div>
-                <p><strong>Thank you to: </strong><span>{donation.name}</span></p>
-                <p><strong>Donation Amount: </strong><span>{donation.amount}</span></p>
+            <div className="donation-thank-you">
+                <p><strong>Thank you to: </strong><span>{donation.name}</span><br />
+                <strong>Donation Amount: </strong><span>{donation.amount}</span></p>
             </div>)
             
             }
@@ -107,7 +108,7 @@ render() {
     {this.state.donations.map( donation => {
         if (donation.trails_id == this.props.trail_id ) {
         return (
-            <div>
+            <div className="donation-thank-you">
                 <p><strong>{donation.name}: </strong><span>{donation.amount}</span></p>
             </div>
             )
