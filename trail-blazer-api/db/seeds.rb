@@ -228,6 +228,336 @@ User.create!(name: "Cristof")
 
 Rating.create!(feedback: 3, trails_id: 1, users_id: 1)
 
+Rating.create!(feedback: 4, trails_id: 1, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 1, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 2, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 2, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 3, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 3, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 4, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 4, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 5, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 5, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 6, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 6, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 7, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 7, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 8, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 8, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 9, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 9, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 10, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 10, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 11, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 11, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 12, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 12, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 13, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 13, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 14, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 14, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 15, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 15, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 16, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 16, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 17, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 17, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 18, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 18, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 19, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 19, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 20, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 20, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 21, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 21, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 22, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 22, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 23, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 23, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 24, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 24, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 25, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 25, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 26, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 26, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 27, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 27, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 28, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 28, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 29, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 29, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 30, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 30, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 31, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 31, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 32, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 32, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 33, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 33, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 34, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 34, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 35, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 35, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 36, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 36, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 37, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 37, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 38, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 38, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 39, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 39, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 40, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 40, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 41, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 41, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 42, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 42, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 43, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 43, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 44, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 44, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 45, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 45, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 46, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 46, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 47, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 47, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 48, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 48, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 49, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 49, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 50, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 50, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 51, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 51, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 52, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 52, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 53, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 53, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 54, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 54, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 55, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 55, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 56, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 56, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 57, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 57, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 58, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 58, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 59, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 59, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 60, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 60, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 61, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 61, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 62, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 62, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 63, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 63, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 64, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 64, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 65, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 65, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 66, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 66, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 67, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 67, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 68, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 68, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 69, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 69, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 70, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 70, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 71, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 71, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 72, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 72, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 73, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 73, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 74, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 74, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 75, users_id: 1)
+
+Rating.create!(feedback: 2, trails_id: 75, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 76, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 76, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 77, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 77, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 78, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 78, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 79, users_id: 1)
+
+Rating.create!(feedback: 5, trails_id: 79, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 80, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 80, users_id: 1)
+
+Rating.create!(feedback: 1, trails_id: 81, users_id: 1)
+
+Rating.create!(feedback: 3, trails_id: 81, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 82, users_id: 1)
+
+Rating.create!(feedback: 4, trails_id: 82, users_id: 1)
+
+
+
 Comment.create!(data: "Pretty nice could use some work", trails_id: 1, name: 'Thomas')
 Comment.create!(data: "Pretty nice could use some work", trails_id: 2, name: 'Thomas')
 

@@ -84,6 +84,7 @@ export class MapContainer extends Component {
           lng: -114.069984
         }}
         zoom={12}
+        scrollwheel={false}
         >
        {this.state.trails.map(trail => 
       

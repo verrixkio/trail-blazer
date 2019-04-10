@@ -9,7 +9,7 @@ class TrailFixRequestDisplay extends Component {
         this.state = {
             solutions: [],
             donations: [],
-            solutionD: [],
+           solutionid: '',
             showPopup: false
         }
     }
@@ -47,8 +47,10 @@ class TrailFixRequestDisplay extends Component {
 
        togglePopup = (solution) => {
     this.setState({
+    
       showPopup: !this.state.showPopup,
-      solution: solution
+      solution: solution,
+      solutionid: solution.id
     });
 
     
@@ -73,7 +75,7 @@ render() {
                     
 
                     <button className="donate" onClick={() => this.togglePopup(solution)}>+ Donate to Fix Trail</button>  
-                    {this.state.showPopup ? 
+                    {this.state.showPopup && this.state.solutionid ===  solution.id? 
                     <FixPopUp
                         text='Close Me'
                         solution={this.state.solution}
