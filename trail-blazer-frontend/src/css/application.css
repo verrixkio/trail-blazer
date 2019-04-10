@@ -390,7 +390,7 @@ h3.logo-sml {
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out; }
     .nav > li a i {
-      color: #BE7900;
+      color: #F4E2C7;
       -webkit-transition: all 0.3s ease-out;
       -moz-transition: all 0.3s ease-out;
       -ms-transition: all 0.3s ease-out;
@@ -416,7 +416,7 @@ h3.logo-sml {
   transition: all 0.3s ease-out; }
   .nav > li > a:hover i,
   .nav > li > a:focus i {
-    color: #F19C06; }
+    color: #FFF6E9; }
 
 .navbar-icon-top .navbar-nav > li > a > .fa {
   position: relative;
