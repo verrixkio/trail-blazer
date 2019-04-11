@@ -79,7 +79,7 @@ export class MapContainer extends Component {
       <Map
   
        google={this.props.google} 
-       
+       scrollwheel={false}
        initialCenter={{
           lat: 51.045015,
           lng: -114.069984
@@ -94,7 +94,7 @@ export class MapContainer extends Component {
       strokeColor= {this.colorSelect(trail)}
       strokeOpacity={1}
       strokeWeight={2}  
-      
+      scrollwheel={false}
       Marker onClick={() => this.togglePopup(trail)}
      
       name={'Current location'}
