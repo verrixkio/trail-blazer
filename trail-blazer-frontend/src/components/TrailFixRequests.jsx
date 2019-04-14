@@ -72,7 +72,7 @@ render() {
                     <label htmlFor="fix-request">Trail items to fix:</label>
                     <input className="regular-form" id="fix-request" name="fix-request" type="text" placeholder="What would you like fixed?"></input>
                     
-                    <label htmlFor="timeline">Days to fix:</label>
+                    <label htmlFor="timeline">Hours to fix:</label>
                     <input className="regular-form" id="timeline" name="timeline" type="integer" placeholder="How many days will this fix-request take?"></input>
                     
                     <label htmlFor="cost">Cost to fix:</label>

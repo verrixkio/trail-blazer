@@ -14,6 +14,8 @@ import IndividualTrailFull from './components/IndividualTrailFull';
 import SignUpForm from './components/SignUpForm';
 import LoginForm from './components/LoginForm';
 import LandingPage from './components/LandingPage';
+import TrailInformationMap from './components/TrailInformationMap';
+
 
 
 
@@ -241,7 +243,7 @@ function FullInfo() {
               <div className="lists-container2">
                <div className="iframe-rwd">
     
-                 <MapContainer />
+                 <TrailInformationMap />
 
                 </div>
               </div>

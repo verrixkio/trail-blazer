@@ -37,8 +37,12 @@ componentDidMount() {
         Ratings.forEach(function(Rate) {
             total += Rate
         })
-    
+        if (total === 0) {
+          total = 1
+          Ratings.push(1)
+        }
         let average = (total / Ratings.length);
+        
         let averageRnd = Math.round(average);
     
         

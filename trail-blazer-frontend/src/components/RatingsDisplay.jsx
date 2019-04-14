@@ -19,9 +19,7 @@ class RatingsDisplay extends Component {
             const serverRate  = response.data
             let Ratings = [];
 
-            console.log('Ratings', Ratings)
-            console.log("!!!!!!!!!  state ratings 1   ", serverRate)
-            console.log('the props from component did mount',this.props.trailId)
+
             
             let theProp = this.props.trailId
 
